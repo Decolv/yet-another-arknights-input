@@ -51,15 +51,17 @@ export class ArknightsNameInputElement extends HTMLElement {
     wrapper.append(this.#input, this.#list, this.#status);
     root.append(wrapper);
 
-    this.#input.addEventListener('input', (event) => {
-      event.stopPropagation();
+    this.addEventListener('input', (event) => {
+      if (event.composedPath()[0] !== this.#input) return;
+
+      event.stopImmediatePropagation();
       this.#setValue(this.#input.value, true);
       this.dispatchEvent(new InputEvent('input', {
         bubbles: true,
         composed: true,
         inputType: event instanceof InputEvent ? event.inputType : '',
       }));
-    });
+    }, { capture: true });
   }
 
   attributeChangedCallback(

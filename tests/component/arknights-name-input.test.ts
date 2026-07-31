@@ -83,8 +83,10 @@ describe('ArknightsNameInputElement public API', () => {
 
   it('re-emits one composed bubbling input event for genuine user editing', () => {
     const element = document.createElement('arknights-name-input');
-    const listener = vi.fn();
-    element.addEventListener('input', listener);
+    const captureListener = vi.fn();
+    const bubbleListener = vi.fn();
+    element.addEventListener('input', captureListener, { capture: true });
+    element.addEventListener('input', bubbleListener);
     document.body.append(element);
     const input = element.shadowRoot?.querySelector('input');
     expect(input).toBeInstanceOf(HTMLInputElement);
@@ -97,8 +99,10 @@ describe('ArknightsNameInputElement public API', () => {
       inputType: 'insertText',
     }));
 
-    expect(listener).toHaveBeenCalledOnce();
-    const event = listener.mock.calls[0]?.[0] as InputEvent;
+    expect(captureListener).toHaveBeenCalledOnce();
+    expect(bubbleListener).toHaveBeenCalledOnce();
+    const event = captureListener.mock.calls[0]?.[0] as InputEvent;
+    expect(event).toBe(bubbleListener.mock.calls[0]?.[0]);
     expect(event).toBeInstanceOf(InputEvent);
     expect(event.bubbles).toBe(true);
     expect(event.composed).toBe(true);
