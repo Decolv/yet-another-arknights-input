@@ -142,7 +142,7 @@ export class ArknightsNameInputElement extends HTMLElement {
         this.#input.placeholder = newValue ?? '';
         break;
       case 'disabled':
-        this.#input.disabled = newValue !== null;
+        this.#setDisabled(newValue !== null, false);
         break;
       case 'max-results':
         this.#setMaxResults(newValue ?? '', true);
@@ -173,9 +173,7 @@ export class ArknightsNameInputElement extends HTMLElement {
   }
 
   set disabled(value: boolean) {
-    const nextValue = Boolean(value);
-    this.#input.disabled = nextValue;
-    this.#reflectBooleanAttribute('disabled', nextValue);
+    this.#setDisabled(Boolean(value), true);
   }
 
   get maxResults(): number {
@@ -225,6 +223,12 @@ export class ArknightsNameInputElement extends HTMLElement {
     if (reflect) {
       this.#reflectStringAttribute('max-results', String(this.#maxResults));
     }
+  }
+
+  #setDisabled(value: boolean, reflect: boolean): void {
+    this.#input.disabled = value;
+    if (value) this.#closeResults();
+    if (reflect) this.#reflectBooleanAttribute('disabled', value);
   }
 
   #search(): void {

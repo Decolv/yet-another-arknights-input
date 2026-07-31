@@ -298,22 +298,34 @@ describe('ArknightsNameInputElement autocomplete interaction', () => {
     expect(element.value).toBe('铃兰');
   });
 
-  it('does not select an open option after becoming disabled', () => {
-    const { element, input, list } = componentParts();
-    const selectListener = vi.fn();
-    element.addEventListener('character-select', selectListener);
-    edit(input, 'linglan');
-    const option = list.querySelector<HTMLElement>('[role="option"]');
-    expect(option).toBeInstanceOf(HTMLElement);
-    if (!(option instanceof HTMLElement)) return;
-    element.disabled = true;
+  it.each(['property', 'attribute'] as const)(
+    'closes open options and blocks selection when disabled via %s',
+    (disabledVia) => {
+      const { element, input, list } = componentParts();
+      const selectListener = vi.fn();
+      element.addEventListener('character-select', selectListener);
+      edit(input, 'linglan');
+      const option = list.querySelector<HTMLElement>('[role="option"]');
+      expect(option).toBeInstanceOf(HTMLElement);
+      if (!(option instanceof HTMLElement)) return;
+      if (disabledVia === 'property') {
+        element.disabled = true;
+      } else {
+        element.setAttribute('disabled', '');
+      }
 
-    option.click();
+      expect(element.disabled).toBe(true);
+      expect(input.getAttribute('aria-expanded')).toBe('false');
+      expect(list.hidden).toBe(true);
+      expect(list.querySelectorAll('[role="option"]')).toHaveLength(0);
 
-    expect(element.value).toBe('linglan');
-    expect(element.valid).toBe(false);
-    expect(selectListener).not.toHaveBeenCalled();
-  });
+      option.click();
+
+      expect(element.value).toBe('linglan');
+      expect(element.valid).toBe(false);
+      expect(selectListener).not.toHaveBeenCalled();
+    },
+  );
 
   it('does not search during composition and searches once after compositionend', () => {
     const { element, input, list } = componentParts();
