@@ -298,6 +298,23 @@ describe('ArknightsNameInputElement autocomplete interaction', () => {
     expect(element.value).toBe('铃兰');
   });
 
+  it('does not select an open option after becoming disabled', () => {
+    const { element, input, list } = componentParts();
+    const selectListener = vi.fn();
+    element.addEventListener('character-select', selectListener);
+    edit(input, 'linglan');
+    const option = list.querySelector<HTMLElement>('[role="option"]');
+    expect(option).toBeInstanceOf(HTMLElement);
+    if (!(option instanceof HTMLElement)) return;
+    element.disabled = true;
+
+    option.click();
+
+    expect(element.value).toBe('linglan');
+    expect(element.valid).toBe(false);
+    expect(selectListener).not.toHaveBeenCalled();
+  });
+
   it('does not search during composition and searches once after compositionend', () => {
     const { element, input, list } = componentParts();
     edit(input, 'll');

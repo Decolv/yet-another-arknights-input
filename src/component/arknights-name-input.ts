@@ -365,6 +365,8 @@ export class ArknightsNameInputElement extends HTMLElement {
   }
 
   #selectResult(result: SearchResult): void {
+    if (this.disabled) return;
+
     this.value = result.operator.name;
     this.#closeResults();
     const detail: CharacterSelectDetail = {
