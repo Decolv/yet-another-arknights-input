@@ -1,0 +1,21 @@
+{
+  "query": {
+    "pages": [
+      {
+        "pageid": 147,
+        "title": "File:头像_铃兰.png",
+        "imageinfo": [{ "thumburl": "https://prts.wiki/images/thumb-linglan.png", "url": "https://prts.wiki/images/linglan.png" }]
+      },
+      {
+        "pageid": 268,
+        "title": "文件:头像_重岳.png",
+        "imageinfo": [{ "thumburl": "https://prts.wiki/images/thumb-chongyue.png", "url": "https://prts.wiki/images/chongyue.png" }]
+      },
+      {
+        "pageid": 352,
+        "title": "File:头像_忍冬.png",
+        "imageinfo": [{ "url": "https://prts.wiki/images/rendong.png" }]
+      }
+    ]
+  }
+}
