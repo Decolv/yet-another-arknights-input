@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>明日方舟干员名输入组件</title>
+    <script src="/dist/arknights-name-input.js"></script>
+  </head>
+  <body>
+    <arknights-name-input
+      id="operator"
+      placeholder="输入干员名称、拼音或别号"
+      max-results="8"
+    ></arknights-name-input>
+    <pre id="output">尚未选择</pre>
+    <script>
+      document.querySelector('#operator').addEventListener('character-select', (event) => {
+        document.querySelector('#output').textContent = JSON.stringify(event.detail, null, 2);
+      });
+    </script>
+  </body>
+</html>
