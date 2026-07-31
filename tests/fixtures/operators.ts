@@ -65,4 +65,28 @@ export const operators: OperatorRecord[] = [
       },
     ],
   },
+  {
+    id: 'prts:9',
+    name: '数值九',
+    avatarUrl: 'https://example.test/9.png',
+    nameSearch: {
+      primaryPinyin: 'samequality',
+      alternatePinyin: [],
+      primaryInitials: 'szj',
+      alternateInitials: [],
+    },
+    aliases: [],
+  },
+  {
+    id: 'prts:10',
+    name: '数值十',
+    avatarUrl: 'https://example.test/10.png',
+    nameSearch: {
+      primaryPinyin: 'samequality',
+      alternatePinyin: [],
+      primaryInitials: 'szs',
+      alternateInitials: [],
+    },
+    aliases: [],
+  },
 ];

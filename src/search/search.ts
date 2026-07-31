@@ -51,7 +51,7 @@ function bestMatch(operator: OperatorRecord, query: string): SearchResult | null
   return best;
 }
 
-export function searchOperators(operators: OperatorRecord[], query: string, limit: number): SearchResult[] {
+export function searchOperators(operators: readonly OperatorRecord[], query: string, limit: number): SearchResult[] {
   const normalizedQuery = normalizeSearchText(query);
   if (normalizedQuery.length === 0 || !Number.isInteger(limit) || limit <= 0) return [];
 
@@ -62,6 +62,6 @@ export function searchOperators(operators: OperatorRecord[], query: string, limi
     .slice(0, limit);
 }
 
-export function findExactOperator(operators: OperatorRecord[], value: string): OperatorRecord | null {
+export function findExactOperator(operators: readonly OperatorRecord[], value: string): OperatorRecord | null {
   return operators.find((operator) => operator.name === value) ?? null;
 }
