@@ -45,3 +45,30 @@ it('uses batches of fifty and warns instead of accepting unexpanded templates', 
   expect(result.aliasesByName.size).toBe(0);
   expect(result.warnings).toEqual(['Moegirl page 干员1 has an unexpanded 别号 template']);
 });
+
+it('keeps multiline nested templates and refs inside 别号 until the real next field', async () => {
+  const nestedTemplate = `{{干员信息
+|别号={{别名模板
+|参数=不能截断
+}}
+|职业=近卫
+}}`;
+  const multilineRef = `{{干员信息
+|别号=甲<ref name="source">
+|引用参数=不是字段
+</ref>、乙
+|职业=近卫
+}}`;
+  const query = vi.fn().mockResolvedValue({
+    query: { pages: [
+      { title: '模板干员', revisions: [{ slots: { main: { content: nestedTemplate } } }] },
+      { title: '引文干员', revisions: [{ slots: { main: { content: multilineRef } } }] },
+    ] },
+  });
+
+  const result = await fetchMoegirlAliases({ query } as never, ['模板干员', '引文干员']);
+
+  expect(parseMoegirlAliases(multilineRef)).toEqual(['甲', '乙']);
+  expect(result.aliasesByName).toEqual(new Map([['引文干员', ['甲', '乙']]]));
+  expect(result.warnings).toEqual(['Moegirl page 模板干员 has an unexpanded 别号 template']);
+});

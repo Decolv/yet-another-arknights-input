@@ -54,7 +54,7 @@ export async function fetchMoegirlAliases(
       for (const name of pageNames) {
         if (value === undefined) {
           warnings.push(`Moegirl page ${name} has no 别号 field`);
-        } else if (/\{\{[\s\S]*?\}\}/.test(value)) {
+        } else if (/\{\{/.test(value)) {
           warnings.push(`Moegirl page ${name} has an unexpanded 别号 template`);
         } else {
           const aliases = cleanAliasValue(value);
@@ -69,8 +69,34 @@ export async function fetchMoegirlAliases(
 }
 
 function aliasField(wikitext: string): string | undefined {
-  const match = /(?:^|\n)\s*\|\s*别号\s*=([\s\S]*?)(?=\n\s*\|\s*[^=\n]+\s*=|$)/.exec(wikitext);
-  return match?.[1];
+  const match = /(?:^|\n)\s*\|\s*别号\s*=/.exec(wikitext);
+  if (!match) return undefined;
+  const start = match.index + match[0].length;
+  let templateDepth = 0;
+  let refDepth = 0;
+  let index = start;
+  while (index < wikitext.length) {
+    if (wikitext.startsWith('{{', index)) {
+      templateDepth += 1;
+      index += 2;
+    } else if (wikitext.startsWith('}}', index) && templateDepth > 0) {
+      templateDepth -= 1;
+      index += 2;
+    } else if (wikitext[index] === '<') {
+      const tag = /^<\/?ref\b[^>]*>/i.exec(wikitext.slice(index));
+      if (tag) {
+        if (/^<\/ref\b/i.test(tag[0])) refDepth = Math.max(0, refDepth - 1);
+        else if (!/\/\s*>$/.test(tag[0])) refDepth += 1;
+        index += tag[0].length;
+      } else index += 1;
+    } else if (wikitext[index] === '\n' && templateDepth === 0 && refDepth === 0
+      && /^\n\s*\|\s*[^=\n]+\s*=/.test(wikitext.slice(index))) {
+      return wikitext.slice(start, index);
+    } else {
+      index += 1;
+    }
+  }
+  return wikitext.slice(start);
 }
 
 function cleanAliasValue(value: string): string[] {
