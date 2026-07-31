@@ -36,8 +36,8 @@ function validateVariants(value: unknown, path: string, issues: string[]): void 
   }
   for (const field of ['alternatePinyin', 'alternateInitials'] as const) {
     const variants = value[field];
-    if (!Array.isArray(variants) || variants.length === 0 || variants.some((item) => !isNonEmptyString(item))) {
-      issues.push(`${path}.${field} must be a nonempty array of nonempty strings`);
+    if (!Array.isArray(variants) || variants.some((item) => !isNonEmptyString(item))) {
+      issues.push(`${path}.${field} must be an array of nonempty strings`);
     }
   }
 }

@@ -19,6 +19,12 @@ describe('assertOperatorSnapshot', () => {
     expect(() => assertOperatorSnapshot(valid)).not.toThrow();
     expect(stableIdNumber('prts:268')).toBe(268);
   });
+  it('accepts empty alternate pinyin and initials arrays', () => {
+    const noAlternateReadings = structuredClone(valid);
+    noAlternateReadings.operators[0]!.nameSearch.alternatePinyin = [];
+    noAlternateReadings.operators[0]!.nameSearch.alternateInitials = [];
+    expect(() => assertOperatorSnapshot(noAlternateReadings)).not.toThrow();
+  });
   it('rejects duplicate IDs', () => {
     const duplicate = { ...valid, operators: [valid.operators[0]!, valid.operators[0]!] };
     expect(() => assertOperatorSnapshot(duplicate)).toThrow(/duplicate operator id prts:268/);
