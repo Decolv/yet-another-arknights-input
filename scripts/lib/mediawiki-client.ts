@@ -15,6 +15,7 @@ export interface MediaWikiClientOptions {
   endpoint: string;
   cacheDir: string;
   minIntervalMs?: number;
+  requestTimeoutMs?: number;
   fetchImpl?: typeof fetch;
   sleep?: (milliseconds: number) => Promise<void>;
 }
@@ -25,6 +26,7 @@ export class MediaWikiClient {
   readonly #endpoint: string;
   readonly #cacheDir: string;
   readonly #minIntervalMs: number;
+  readonly #requestTimeoutMs: number;
   readonly #fetch: typeof fetch;
   readonly #sleep: (milliseconds: number) => Promise<void>;
   #lastStartedAt = 0;
@@ -34,6 +36,7 @@ export class MediaWikiClient {
     this.#endpoint = options.endpoint;
     this.#cacheDir = options.cacheDir;
     this.#minIntervalMs = options.minIntervalMs ?? 100;
+    this.#requestTimeoutMs = options.requestTimeoutMs ?? 30_000;
     this.#fetch = options.fetchImpl ?? fetch;
     this.#sleep = options.sleep ?? ((milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds)));
   }
@@ -48,6 +51,15 @@ export class MediaWikiClient {
     });
     MediaWikiClient.#inFlight.set(url, request);
     return request;
+  }
+
+  fetchRenderedPage(title: string): Promise<string> {
+    const endpoint = new URL(this.#endpoint);
+    const url = new URL(
+      `/rest.php/v1/page/${encodeURIComponent(title)}/html`,
+      endpoint.origin,
+    ).toString();
+    return this.#fetchText(url);
   }
 
   #buildUrl(params: Record<string, string>): string {
@@ -87,6 +99,8 @@ export class MediaWikiClient {
         } catch (error) {
           throw this.#sourceError(url, error);
         }
+        const mediaWikiError = this.#apiError(value);
+        if (mediaWikiError) throw this.#sourceError(url, mediaWikiError);
         await this.#writeCache(cachePath, {
           etag: response.headers.get('etag'),
           lastModified: response.headers.get('last-modified'),
@@ -95,6 +109,42 @@ export class MediaWikiClient {
         return value;
       }
 
+      if (!this.#isRetryable(response.status) || attempt === RETRY_DELAYS_MS.length) {
+        throw this.#sourceError(url, new Error(`HTTP ${response.status} ${response.statusText}`.trim()));
+      }
+      await this.#sleep(RETRY_DELAYS_MS[attempt]!);
+    }
+
+    throw this.#sourceError(url, new Error('exhausted retry attempts'));
+  }
+
+  async #fetchText(url: string): Promise<string> {
+    const cachePath = join(this.#cacheDir, `${createHash('sha256').update(url).digest('hex')}.json`);
+    const cached = await this.#readCache(cachePath);
+    const headers: Record<string, string> = { 'User-Agent': USER_AGENT };
+    if (cached?.etag) headers['If-None-Match'] = cached.etag;
+    if (cached?.lastModified) headers['If-Modified-Since'] = cached.lastModified;
+
+    for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt += 1) {
+      let response: Response;
+      try {
+        response = await this.#startFetch(url, headers);
+      } catch (error) {
+        throw this.#sourceError(url, error);
+      }
+      if (response.status === 304) {
+        if (!cached) throw this.#sourceError(url, new Error('received HTTP 304 without a cached response'));
+        return cached.body;
+      }
+      if (response.ok) {
+        const body = await response.text();
+        await this.#writeCache(cachePath, {
+          etag: response.headers.get('etag'),
+          lastModified: response.headers.get('last-modified'),
+          body,
+        });
+        return body;
+      }
       if (!this.#isRetryable(response.status) || attempt === RETRY_DELAYS_MS.length) {
         throw this.#sourceError(url, new Error(`HTTP ${response.status} ${response.statusText}`.trim()));
       }
@@ -113,7 +163,10 @@ export class MediaWikiClient {
     if (wait > 0) await this.#sleep(wait);
     this.#lastStartedAt = Date.now();
     release();
-    return this.#fetch(url, { headers });
+    return this.#fetch(url, {
+      headers,
+      signal: AbortSignal.timeout(this.#requestTimeoutMs),
+    });
   }
 
   async #readCache(cachePath: string): Promise<CachedResponse | undefined> {
@@ -137,5 +190,13 @@ export class MediaWikiClient {
   #sourceError(url: string, error: unknown): Error {
     const message = error instanceof Error ? error.message : String(error);
     return new Error(`MediaWiki request failed for ${url}: ${message}`);
+  }
+
+  #apiError(value: unknown): Error | undefined {
+    if (!value || typeof value !== 'object') return undefined;
+    const apiError = (value as { error?: unknown }).error;
+    if (!apiError || typeof apiError !== 'object') return undefined;
+    const { code, info } = apiError as { code?: unknown; info?: unknown };
+    return new Error(`${String(code ?? 'unknown')}: ${String(info ?? 'unknown MediaWiki API error')}`);
   }
 }

@@ -19,6 +19,7 @@ export interface PinyinOverride {
 }
 
 export type PinyinOverrides = Record<`prts:${number}`, PinyinOverride>;
+export type PinyinOverrideFile = PinyinOverrides;
 
 export interface PinyinOverrideTarget {
   id: `prts:${number}`;

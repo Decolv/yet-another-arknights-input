@@ -71,3 +71,62 @@ it('does not retry an ordinary 404', async () => {
   await expect(client.query({ action: 'query' })).rejects.toThrow(/404/);
   expect(fetchImpl).toHaveBeenCalledTimes(1);
 });
+
+it('rejects an HTTP 200 MediaWiki error instead of treating it as source data', async () => {
+  const fetchImpl = vi.fn(async () => new Response(JSON.stringify({
+    error: { code: 'action-notallowed', info: 'Unauthorized API call' },
+  }), { status: 200 }));
+  const client = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php', cacheDir: await cacheDir(), fetchImpl, minIntervalMs: 0,
+  });
+
+  await expect(client.query({ action: 'query' })).rejects.toThrow(
+    /MediaWiki request failed.*action-notallowed.*Unauthorized API call/,
+  );
+});
+
+it('fetches a rendered page from the endpoint origin and reuses it only after a 304', async () => {
+  const fetchImpl = vi.fn()
+    .mockResolvedValueOnce(new Response('<main>铃兰妈</main>', {
+      status: 200,
+      headers: { etag: '"page-v1"' },
+    }))
+    .mockResolvedValueOnce(new Response(null, { status: 304 }));
+  const directory = await cacheDir();
+  const first = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php', cacheDir: directory, fetchImpl, minIntervalMs: 0,
+  });
+  const second = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php', cacheDir: directory, fetchImpl, minIntervalMs: 0,
+  });
+
+  expect(await first.fetchRenderedPage('忍冬')).toBe('<main>铃兰妈</main>');
+  expect(await second.fetchRenderedPage('忍冬')).toBe('<main>铃兰妈</main>');
+  expect(fetchImpl.mock.calls[0]?.[0]).toBe(
+    'https://example.test/rest.php/v1/page/%E5%BF%8D%E5%86%AC/html',
+  );
+  expect(fetchImpl.mock.calls[1]?.[1]?.headers).toMatchObject({ 'If-None-Match': '"page-v1"' });
+});
+
+it('aborts a source-labelled request after the configured timeout', async () => {
+  const fetchImpl = vi.fn((_url: string | URL | Request, init?: RequestInit) => new Promise<Response>((_, reject) => {
+    init?.signal?.addEventListener('abort', () => reject(new Error('request timed out')), { once: true });
+  }));
+  const client = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php',
+    cacheDir: await cacheDir(),
+    fetchImpl,
+    minIntervalMs: 0,
+    requestTimeoutMs: 5,
+  });
+
+  const result = await Promise.race([
+    client.query({ action: 'query' }).then(
+      () => 'resolved',
+      (error: unknown) => error instanceof Error ? error.message : String(error),
+    ),
+    new Promise<string>((resolve) => setTimeout(() => resolve('no timeout'), 50)),
+  ]);
+
+  expect(result).toMatch(/MediaWiki request failed.*request timed out/);
+});

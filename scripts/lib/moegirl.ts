@@ -1,3 +1,4 @@
+import { JSDOM } from 'jsdom';
 import type { MediaWikiClient } from './mediawiki-client.js';
 
 interface MoegirlPage {
@@ -18,6 +19,10 @@ export interface MoegirlAliasResult {
   warnings: string[];
 }
 
+export interface MoegirlRenderedPageClient {
+  fetchRenderedPage(title: string): Promise<string>;
+}
+
 export function parseMoegirlAliases(wikitext: string): string[] {
   const value = aliasField(wikitext);
   if (value === undefined) return [];
@@ -35,6 +40,7 @@ export async function fetchMoegirlAliases(
     const batch = names.slice(offset, offset + 50);
     const response = await client.query<MoegirlResponse>({
       action: 'query',
+      origin: '*',
       prop: 'revisions',
       rvslots: 'main',
       rvprop: 'content',
@@ -65,6 +71,51 @@ export async function fetchMoegirlAliases(
     }
   }
 
+  return { aliasesByName, warnings };
+}
+
+export async function fetchMoegirlRenderedAliases(
+  client: MoegirlRenderedPageClient,
+  names: readonly string[],
+): Promise<MoegirlAliasResult> {
+  const results = new Array<{ aliases?: string[]; warning?: string; hardError?: string }>(names.length);
+  let nextIndex = 0;
+  const workers = Array.from({ length: Math.min(2, names.length) }, async () => {
+    while (nextIndex < names.length) {
+      const index = nextIndex;
+      nextIndex += 1;
+      const name = names[index]!;
+      try {
+        const html = await client.fetchRenderedPage(name);
+        const parsed = parseRenderedAliasField(html);
+        if (parsed === undefined) {
+          results[index] = { warning: `Moegirl page ${name} has no 别号 field` };
+        } else if (parsed.length === 0) {
+          results[index] = { warning: `Moegirl page ${name} has an empty 别号 field` };
+        } else {
+          results[index] = { aliases: parsed };
+        }
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        results[index] = /HTTP 404\b/.test(message)
+          ? { warning: `Moegirl page ${name} is missing` }
+          : { hardError: `Moegirl page ${name} fetch failed: ${message}` };
+      }
+    }
+  });
+  await Promise.all(workers);
+
+  const aliasesByName = new Map<string, string[]>();
+  const warnings: string[] = [];
+  const hardErrors: string[] = [];
+  results.forEach((result, index) => {
+    if (result?.aliases) aliasesByName.set(names[index]!, result.aliases);
+    if (result?.warning) warnings.push(result.warning);
+    if (result?.hardError) hardErrors.push(result.hardError);
+  });
+  if (hardErrors.length > 0) {
+    throw new Error(`Moegirl rendered page failures:\n${hardErrors.join('\n')}`);
+  }
   return { aliasesByName, warnings };
 }
 
@@ -112,6 +163,29 @@ function cleanAliasValue(value: string): string[] {
     if (alias && !aliases.includes(alias)) aliases.push(alias);
   }
   return aliases;
+}
+
+function parseRenderedAliasField(html: string): string[] | undefined {
+  const dom = new JSDOM(html);
+  try {
+    const heading = [...dom.window.document.querySelectorAll('th')]
+      .find((element) => element.textContent?.trim() === '别号');
+    if (!heading) return undefined;
+    const cell = [...(heading.parentElement?.children ?? [])]
+      .find((element) => element.tagName === 'TD');
+    if (!cell) return [];
+    const values = [...cell.querySelectorAll('[itemprop="nickname"]')].map((element) => {
+      const copy = element.cloneNode(true) as Element;
+      copy.querySelectorAll('.reference, sup').forEach((reference) => reference.remove());
+      copy.querySelectorAll('br').forEach((lineBreak) => {
+        lineBreak.replaceWith(dom.window.document.createTextNode('\n'));
+      });
+      return copy.textContent ?? '';
+    });
+    return cleanAliasValue(values.join('\n'));
+  } finally {
+    dom.window.close();
+  }
 }
 
 function requestedNamesByTitle(batch: readonly string[], redirects: unknown): Map<string, string[]> {

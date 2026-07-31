@@ -1,6 +1,10 @@
 import { expect, it, vi } from 'vitest';
 import revisionsResponse from '../fixtures/moegirl-revisions-api.json';
-import { fetchMoegirlAliases, parseMoegirlAliases } from '../../scripts/lib/moegirl.js';
+import {
+  fetchMoegirlAliases,
+  fetchMoegirlRenderedAliases,
+  parseMoegirlAliases,
+} from '../../scripts/lib/moegirl.js';
 
 it('extracts only a top-level 别号 field and removes its markup', () => {
   const wikitext = `{{干员信息\n|别号=[[目标|标签]]<ref>source</ref><br/>乙、丙，丁；戊/己\n|梗=绝不能采集\n}}\n正文别号=也不能采集`;
@@ -15,6 +19,7 @@ it('collects aliases by requested official name with redirects and explicit data
 
   expect(query).toHaveBeenCalledWith({
     action: 'query',
+    origin: '*',
     prop: 'revisions',
     rvslots: 'main',
     rvprop: 'content',
@@ -71,4 +76,52 @@ it('keeps multiline nested templates and refs inside 别号 until the real next 
   expect(parseMoegirlAliases(multilineRef)).toEqual(['甲', '乙']);
   expect(result.aliasesByName).toEqual(new Map([['引文干员', ['甲', '乙']]]));
   expect(result.warnings).toEqual(['Moegirl page 模板干员 has an unexpanded 别号 template']);
+});
+
+it('extracts aliases only from the rendered 别号 row nickname element', async () => {
+  const fetchRenderedPage = vi.fn(async (name: string) => ({
+    忍冬: `<table><tr><th>别号</th><td><span itemprop="nickname">铃兰妈<br>冬妈、<s>角峰p</s><sup class="reference"><a><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup></span></td></tr></table>
+      <p>正文里的忍冬妈绝不能采集</p>`,
+    铃兰: '<table><tr><th>别号</th><td>正文称作小狐狸，但没有 nickname 标记</td></tr></table>',
+  })[name]!);
+
+  const result = await fetchMoegirlRenderedAliases({ fetchRenderedPage }, ['忍冬', '铃兰']);
+
+  expect(fetchRenderedPage).toHaveBeenCalledTimes(2);
+  expect(result.aliasesByName).toEqual(new Map([['忍冬', ['铃兰妈', '冬妈', '角峰p']]]));
+  expect(result.warnings).toEqual(['Moegirl page 铃兰 has an empty 别号 field']);
+});
+
+it('warns explicitly when an official rendered page or its 别号 field is unavailable', async () => {
+  const fetchRenderedPage = vi.fn(async (name: string) => {
+    if (name === '缺页') throw new Error('HTTP 404 Not Found');
+    if (name === '失败') throw new Error('HTTP 503 Service Unavailable');
+    return '<table><tr><th>性别</th><td>女</td></tr></table>';
+  });
+
+  await expect(fetchMoegirlRenderedAliases(
+    { fetchRenderedPage },
+    ['缺页', '失败', '缺字段'],
+  )).rejects.toThrow(/Moegirl rendered page failures.*失败.*HTTP 503 Service Unavailable/s);
+  expect(fetchRenderedPage).toHaveBeenCalledTimes(3);
+});
+
+it('processes every rendered page with two bounded in-flight requests', async () => {
+  let inFlight = 0;
+  let peakInFlight = 0;
+  const fetchRenderedPage = vi.fn(async (name: string) => {
+    inFlight += 1;
+    peakInFlight = Math.max(peakInFlight, inFlight);
+    await new Promise((resolve) => setTimeout(resolve, 5));
+    inFlight -= 1;
+    if (name === '干员4') throw new Error('HTTP 403 Forbidden');
+    return '<table><tr><th>别号</th><td><span itemprop="nickname">别号</span></td></tr></table>';
+  });
+  const names = Array.from({ length: 6 }, (_, index) => `干员${index + 1}`);
+
+  await expect(fetchMoegirlRenderedAliases({ fetchRenderedPage }, names))
+    .rejects.toThrow(/Moegirl rendered page failures.*干员4.*HTTP 403 Forbidden/s);
+
+  expect(fetchRenderedPage).toHaveBeenCalledTimes(6);
+  expect(peakInFlight).toBe(2);
 });

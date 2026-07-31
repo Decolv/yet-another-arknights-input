@@ -1,4 +1,28 @@
 import type { OperatorRecord } from '../../src/data/types.js';
+import type { OperatorSnapshot } from '../../src/data/types.js';
+
+export function makeSnapshot(count: number): OperatorSnapshot {
+  return {
+    schemaVersion: 1,
+    generatedAt: '2026-07-31T00:00:00.000Z',
+    sources: { prts: 'https://prts.wiki/', moegirl: 'https://mzh.moegirl.org.cn/' },
+    operators: Array.from({ length: count }, (_, index) => {
+      const number = index + 1;
+      return {
+        id: `prts:${number}` as const,
+        name: `干员${number}`,
+        avatarUrl: `https://example.test/${number}.png`,
+        nameSearch: {
+          primaryPinyin: `ganyuan${number}`,
+          alternatePinyin: [],
+          primaryInitials: `gy${number}`,
+          alternateInitials: [],
+        },
+        aliases: [],
+      };
+    }),
+  };
+}
 
 export const operators: OperatorRecord[] = [
   {
