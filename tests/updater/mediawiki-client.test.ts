@@ -1,4 +1,5 @@
-import { mkdtemp } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { mkdtemp, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { expect, it, vi } from 'vitest';
@@ -78,6 +79,27 @@ it('rejects an HTTP 200 MediaWiki error instead of treating it as source data', 
   }), { status: 200 }));
   const client = new MediaWikiClient({
     endpoint: 'https://example.test/api.php', cacheDir: await cacheDir(), fetchImpl, minIntervalMs: 0,
+  });
+
+  await expect(client.query({ action: 'query' })).rejects.toThrow(
+    /MediaWiki request failed.*action-notallowed.*Unauthorized API call/,
+  );
+});
+
+it('rejects a source-labelled MediaWiki error restored from a legacy cache after 304', async () => {
+  const directory = await cacheDir();
+  const url = 'https://example.test/api.php?action=query&format=json&formatversion=2';
+  const cachePath = join(directory, `${createHash('sha256').update(url).digest('hex')}.json`);
+  await writeFile(cachePath, JSON.stringify({
+    etag: '"legacy-error"',
+    lastModified: null,
+    body: JSON.stringify({
+      error: { code: 'action-notallowed', info: 'Unauthorized API call' },
+    }),
+  }));
+  const fetchImpl = vi.fn(async () => new Response(null, { status: 304 }));
+  const client = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php', cacheDir: directory, fetchImpl, minIntervalMs: 0,
   });
 
   await expect(client.query({ action: 'query' })).rejects.toThrow(

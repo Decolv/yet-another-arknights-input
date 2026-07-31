@@ -80,9 +80,9 @@ it('keeps multiline nested templates and refs inside 别号 until the real next 
 
 it('extracts aliases only from the rendered 别号 row nickname element', async () => {
   const fetchRenderedPage = vi.fn(async (name: string) => ({
-    忍冬: `<table><tr><th>别号</th><td><span itemprop="nickname">铃兰妈<br>冬妈、<s>角峰p</s><sup class="reference"><a><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup></span></td></tr></table>
+    忍冬: `<table class="infotemplatebox"><tr><th>别号</th><td><span itemprop="nickname">铃兰妈<br>冬妈、<s>角峰p</s><sup class="reference"><a><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup></span></td></tr></table>
       <p>正文里的忍冬妈绝不能采集</p>`,
-    铃兰: '<table><tr><th>别号</th><td>正文称作小狐狸，但没有 nickname 标记</td></tr></table>',
+    铃兰: '<table class="infotemplatebox"><tr><th>别号</th><td>正文称作小狐狸，但没有 nickname 标记</td></tr></table>',
   })[name]!);
 
   const result = await fetchMoegirlRenderedAliases({ fetchRenderedPage }, ['忍冬', '铃兰']);
@@ -90,6 +90,18 @@ it('extracts aliases only from the rendered 别号 row nickname element', async 
   expect(fetchRenderedPage).toHaveBeenCalledTimes(2);
   expect(result.aliasesByName).toEqual(new Map([['忍冬', ['铃兰妈', '冬妈', '角峰p']]]));
   expect(result.warnings).toEqual(['Moegirl page 铃兰 has an empty 别号 field']);
+});
+
+it('ignores a fake 别号 row outside the official character information box', async () => {
+  const fetchRenderedPage = vi.fn(async () => `
+    <table><tr><th>别号</th><td><span itemprop="nickname">正文伪值</span></td></tr></table>
+    <table class="infotemplatebox"><tr><th>性别</th><td>女</td></tr></table>
+  `);
+
+  const result = await fetchMoegirlRenderedAliases({ fetchRenderedPage }, ['忍冬']);
+
+  expect(result.aliasesByName.size).toBe(0);
+  expect(result.warnings).toEqual(['Moegirl page 忍冬 has no 别号 field']);
 });
 
 it('warns explicitly when an official rendered page or its 别号 field is unavailable', async () => {
@@ -115,7 +127,7 @@ it('processes every rendered page with two bounded in-flight requests', async ()
     await new Promise((resolve) => setTimeout(resolve, 5));
     inFlight -= 1;
     if (name === '干员4') throw new Error('HTTP 403 Forbidden');
-    return '<table><tr><th>别号</th><td><span itemprop="nickname">别号</span></td></tr></table>';
+    return '<table class="infotemplatebox"><tr><th>别号</th><td><span itemprop="nickname">别号</span></td></tr></table>';
   });
   const names = Array.from({ length: 6 }, (_, index) => `干员${index + 1}`);
 

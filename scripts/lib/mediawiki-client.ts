@@ -88,19 +88,12 @@ export class MediaWikiClient {
 
       if (response.status === 304) {
         if (!cached) throw this.#sourceError(url, new Error('received HTTP 304 without a cached response'));
-        return JSON.parse(cached.body) as T;
+        return this.#parseApiResponse<T>(url, cached.body);
       }
 
       if (response.ok) {
         const body = await response.text();
-        let value: T;
-        try {
-          value = JSON.parse(body) as T;
-        } catch (error) {
-          throw this.#sourceError(url, error);
-        }
-        const mediaWikiError = this.#apiError(value);
-        if (mediaWikiError) throw this.#sourceError(url, mediaWikiError);
+        const value = this.#parseApiResponse<T>(url, body);
         await this.#writeCache(cachePath, {
           etag: response.headers.get('etag'),
           lastModified: response.headers.get('last-modified'),
@@ -198,5 +191,17 @@ export class MediaWikiClient {
     if (!apiError || typeof apiError !== 'object') return undefined;
     const { code, info } = apiError as { code?: unknown; info?: unknown };
     return new Error(`${String(code ?? 'unknown')}: ${String(info ?? 'unknown MediaWiki API error')}`);
+  }
+
+  #parseApiResponse<T>(url: string, body: string): T {
+    let value: T;
+    try {
+      value = JSON.parse(body) as T;
+    } catch (error) {
+      throw this.#sourceError(url, error);
+    }
+    const mediaWikiError = this.#apiError(value);
+    if (mediaWikiError) throw this.#sourceError(url, mediaWikiError);
+    return value;
   }
 }

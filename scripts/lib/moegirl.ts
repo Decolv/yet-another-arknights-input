@@ -168,7 +168,9 @@ function cleanAliasValue(value: string): string[] {
 function parseRenderedAliasField(html: string): string[] | undefined {
   const dom = new JSDOM(html);
   try {
-    const heading = [...dom.window.document.querySelectorAll('th')]
+    const informationBox = dom.window.document.querySelector('.infotemplatebox');
+    if (!informationBox) return undefined;
+    const heading = [...informationBox.querySelectorAll('th')]
       .find((element) => element.textContent?.trim() === '别号');
     if (!heading) return undefined;
     const cell = [...(heading.parentElement?.children ?? [])]
