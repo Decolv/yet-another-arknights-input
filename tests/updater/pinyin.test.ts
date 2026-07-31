@@ -27,6 +27,18 @@ it('preserves the curated 重岳 primary and alternate readings', () => {
   });
 });
 
+it('preserves 仇白 official-name reading without treating the generic 仇 reading as an alternate', () => {
+  const overrides = loadPinyinOverrides(new URL('../../data/pinyin-overrides.json', import.meta.url));
+  const override = overrides['prts:270']?.name;
+
+  expect(buildSearchVariants('仇白', override)).toEqual({
+    primaryPinyin: 'qiubai',
+    alternatePinyin: [],
+    primaryInitials: 'qb',
+    alternateInitials: [],
+  });
+});
+
 it('normalizes Latin characters, digits, dots, and hyphens in generated keys', () => {
   expect(buildSearchVariants(' A-1.Ｂ ')).toEqual({
     primaryPinyin: 'a1b',

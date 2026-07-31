@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { mkdtemp, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { expect, it, vi } from 'vitest';
@@ -48,6 +48,53 @@ it('never falls back to cached JSON after a network error', async () => {
     .query({ action: 'query' });
   await expect(new MediaWikiClient({ endpoint: 'https://example.test/api.php', cacheDir: directory, fetchImpl, minIntervalMs: 0 })
     .query({ action: 'query' })).rejects.toThrow(/offline/);
+});
+
+it('labels a cache read failure with its source URL and phase', async () => {
+  const directory = await cacheDir();
+  const url = 'https://example.test/api.php?action=query&format=json&formatversion=2';
+  const cachePath = join(directory, `${createHash('sha256').update(url).digest('hex')}.json`);
+  await writeFile(cachePath, 'not JSON');
+  const client = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php', cacheDir: directory, minIntervalMs: 0,
+  });
+
+  await expect(client.query({ action: 'query' })).rejects.toThrow(
+    /MediaWiki request failed for https:\/\/example\.test\/api\.php\?.*action=query.*cache read failed/,
+  );
+});
+
+it('labels a cache directory creation failure with its source URL and write phase', async () => {
+  const parent = await cacheDir();
+  const directory = join(parent, 'cache');
+  const fetchImpl = vi.fn(async () => {
+    await writeFile(directory, 'blocking file');
+    return new Response('{"value":1}', { status: 200 });
+  });
+  const client = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php', cacheDir: directory, fetchImpl, minIntervalMs: 0,
+  });
+
+  await expect(client.query({ action: 'query' })).rejects.toThrow(
+    /MediaWiki request failed for https:\/\/example\.test\/api\.php\?.*action=query.*cache write failed/,
+  );
+});
+
+it('labels a cache file write failure with its source URL and write phase', async () => {
+  const directory = await cacheDir();
+  const url = 'https://example.test/api.php?action=query&format=json&formatversion=2';
+  const cachePath = join(directory, `${createHash('sha256').update(url).digest('hex')}.json`);
+  const fetchImpl = vi.fn(async () => {
+    await mkdir(cachePath);
+    return new Response('{"value":1}', { status: 200 });
+  });
+  const client = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php', cacheDir: directory, fetchImpl, minIntervalMs: 0,
+  });
+
+  await expect(client.query({ action: 'query' })).rejects.toThrow(
+    /MediaWiki request failed for https:\/\/example\.test\/api\.php\?.*action=query.*cache write failed/,
+  );
 });
 
 it.each([429, 500, 503])('retries status %s three times', async (status) => {
@@ -151,4 +198,28 @@ it('aborts a source-labelled request after the configured timeout', async () => 
   ]);
 
   expect(result).toMatch(/MediaWiki request failed.*request timed out/);
+});
+
+it('releases request-start serialization when interval sleep rejects', async () => {
+  const sleep = vi.fn<(milliseconds: number) => Promise<void>>()
+    .mockRejectedValueOnce(new Error('interval sleep failed'))
+    .mockResolvedValue(undefined);
+  const fetchImpl = vi.fn(async () => new Response('{"value":1}', { status: 200 }));
+  const client = new MediaWikiClient({
+    endpoint: 'https://example.test/api.php',
+    cacheDir: await cacheDir(),
+    fetchImpl,
+    minIntervalMs: 60_000,
+    sleep,
+  });
+
+  await expect(client.query({ action: 'first' })).resolves.toEqual({ value: 1 });
+  await expect(client.query({ action: 'second' })).rejects.toThrow(/interval sleep failed/);
+  const third = await Promise.race([
+    client.query({ action: 'third' }).then(() => 'continued'),
+    new Promise<string>((resolve) => setTimeout(() => resolve('blocked'), 50)),
+  ]);
+
+  expect(third).toBe('continued');
+  expect(fetchImpl).toHaveBeenCalledTimes(2);
 });

@@ -73,7 +73,7 @@ export class MediaWikiClient {
 
   async #query<T>(url: string): Promise<T> {
     const cachePath = join(this.#cacheDir, `${createHash('sha256').update(url).digest('hex')}.json`);
-    const cached = await this.#readCache(cachePath);
+    const cached = await this.#readCache(url, cachePath);
     const headers: Record<string, string> = { 'User-Agent': USER_AGENT };
     if (cached?.etag) headers['If-None-Match'] = cached.etag;
     if (cached?.lastModified) headers['If-Modified-Since'] = cached.lastModified;
@@ -94,7 +94,7 @@ export class MediaWikiClient {
       if (response.ok) {
         const body = await response.text();
         const value = this.#parseApiResponse<T>(url, body);
-        await this.#writeCache(cachePath, {
+        await this.#writeCache(url, cachePath, {
           etag: response.headers.get('etag'),
           lastModified: response.headers.get('last-modified'),
           body,
@@ -113,7 +113,7 @@ export class MediaWikiClient {
 
   async #fetchText(url: string): Promise<string> {
     const cachePath = join(this.#cacheDir, `${createHash('sha256').update(url).digest('hex')}.json`);
-    const cached = await this.#readCache(cachePath);
+    const cached = await this.#readCache(url, cachePath);
     const headers: Record<string, string> = { 'User-Agent': USER_AGENT };
     if (cached?.etag) headers['If-None-Match'] = cached.etag;
     if (cached?.lastModified) headers['If-Modified-Since'] = cached.lastModified;
@@ -131,7 +131,7 @@ export class MediaWikiClient {
       }
       if (response.ok) {
         const body = await response.text();
-        await this.#writeCache(cachePath, {
+        await this.#writeCache(url, cachePath, {
           etag: response.headers.get('etag'),
           lastModified: response.headers.get('last-modified'),
           body,
@@ -152,28 +152,35 @@ export class MediaWikiClient {
     let release: () => void = () => undefined;
     this.#previousStart = new Promise<void>((resolve) => { release = resolve; });
     await previous;
-    const wait = Math.max(0, this.#lastStartedAt + this.#minIntervalMs - Date.now());
-    if (wait > 0) await this.#sleep(wait);
-    this.#lastStartedAt = Date.now();
-    release();
+    try {
+      const wait = Math.max(0, this.#lastStartedAt + this.#minIntervalMs - Date.now());
+      if (wait > 0) await this.#sleep(wait);
+      this.#lastStartedAt = Date.now();
+    } finally {
+      release();
+    }
     return this.#fetch(url, {
       headers,
       signal: AbortSignal.timeout(this.#requestTimeoutMs),
     });
   }
 
-  async #readCache(cachePath: string): Promise<CachedResponse | undefined> {
+  async #readCache(url: string, cachePath: string): Promise<CachedResponse | undefined> {
     try {
       return JSON.parse(await readFile(cachePath, 'utf8')) as CachedResponse;
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') return undefined;
-      throw error;
+      throw this.#sourceError(url, this.#phaseError('cache read failed', error));
     }
   }
 
-  async #writeCache(cachePath: string, cached: CachedResponse): Promise<void> {
-    await mkdir(this.#cacheDir, { recursive: true });
-    await writeFile(cachePath, JSON.stringify(cached), 'utf8');
+  async #writeCache(url: string, cachePath: string, cached: CachedResponse): Promise<void> {
+    try {
+      await mkdir(this.#cacheDir, { recursive: true });
+      await writeFile(cachePath, JSON.stringify(cached), 'utf8');
+    } catch (error) {
+      throw this.#sourceError(url, this.#phaseError('cache write failed', error));
+    }
   }
 
   #isRetryable(status: number): boolean {
@@ -183,6 +190,11 @@ export class MediaWikiClient {
   #sourceError(url: string, error: unknown): Error {
     const message = error instanceof Error ? error.message : String(error);
     return new Error(`MediaWiki request failed for ${url}: ${message}`);
+  }
+
+  #phaseError(phase: string, error: unknown): Error {
+    const message = error instanceof Error ? error.message : String(error);
+    return new Error(`${phase}: ${message}`);
   }
 
   #apiError(value: unknown): Error | undefined {

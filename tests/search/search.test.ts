@@ -1,5 +1,7 @@
 import { expect, it } from 'vitest';
+import snapshotJson from '../../data/operators.generated.json';
 import type { AliasRecord, OperatorRecord, SearchVariants } from '../../src/data/types.js';
+import type { OperatorSnapshot } from '../../src/data/types.js';
 import { findExactOperator, searchOperators } from '../../src/search/search.js';
 import { operators } from '../fixtures/operators.js';
 
@@ -50,6 +52,24 @@ it.each(['铃兰妈', 'linglanma', 'llm'])('returns 忍冬 through an alias for 
 
 it.each(['chongyue', 'zhongyue', 'cy', 'zy'])('ranks 重岳 first for %s', (query) => {
   expect(searchOperators(operators, query, 10)[0]?.operator.name).toBe('重岳');
+});
+
+it.each([
+  ['qiubai', 'name-pinyin'],
+  ['qb', 'name-initials'],
+] as const)('matches 仇白 through its official-name %s field', (query, matchedBy) => {
+  const snapshot = snapshotJson as OperatorSnapshot;
+  const result = searchOperators(snapshot.operators, query, 100)
+    .find(({ operator }) => operator.id === 'prts:270');
+
+  expect(result).toMatchObject({ matchedBy, matchedText: '仇白' });
+});
+
+it.each(['choubai', 'cb'])('does not treat %s as an alternate reading of 仇白', (query) => {
+  const snapshot = snapshotJson as OperatorSnapshot;
+
+  expect(searchOperators(snapshot.operators, query, 100)
+    .some(({ operator }) => operator.id === 'prts:270')).toBe(false);
 });
 
 it('ranks official initials before alias initials', () => {
