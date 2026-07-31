@@ -1,4 +1,14 @@
 import { expect, test, type Page } from '@playwright/test';
+import {
+  mkdir,
+  mkdtemp,
+  rm,
+  symlink,
+  unlink,
+  writeFile,
+} from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join, relative, sep } from 'node:path';
 
 const transparentPng = Buffer.from(
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
@@ -6,7 +16,14 @@ const transparentPng = Buffer.from(
 );
 const unexpectedRequests = new WeakMap<Page, string[]>();
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({ page }, testInfo) => {
+  if (testInfo.tags.includes('@server')) return;
+  if (
+    testInfo.tags.includes('@touch')
+    && !testInfo.project.name.startsWith('mobile-')
+  ) {
+    throw new Error('desktop projects must filter touch tests before page setup');
+  }
   unexpectedRequests.set(page, []);
   await page.route('**/*', async (route) => {
     const url = new URL(route.request().url());
@@ -34,6 +51,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.afterEach(async ({ page }) => {
+  if (!unexpectedRequests.has(page)) return;
   expect(unexpectedRequests.get(page), 'unexpected external request').toEqual([]);
 });
 
@@ -44,9 +62,55 @@ test('loads the single-script single-tag demo without external data access', asy
   await expect(page.locator('arknights-name-input')).toHaveCount(1);
 });
 
-test('static server rejects encoded path traversal', async ({ request }) => {
+test('static server rejects encoded path traversal', { tag: '@server' }, async ({ request }) => {
   const response = await request.get('/..%2Fpackage.json');
   expect(response.status()).toBe(400);
+});
+
+test('static server rejects links that resolve outside its root', { tag: '@server' }, async ({
+  request,
+}) => {
+  const cacheRoot = join(process.cwd(), '.cache');
+  await mkdir(cacheRoot, { recursive: true });
+  const linkContainer = await mkdtemp(join(cacheRoot, 'serve-static-link-'));
+  const outsideDirectory = await mkdtemp(join(tmpdir(), 'akni-server-outside-'));
+  const linkPath = join(linkContainer, 'escape');
+  await writeFile(join(outsideDirectory, 'secret.txt'), 'outside-root-secret');
+  let linkCreated = false;
+
+  try {
+    try {
+      await symlink(outsideDirectory, linkPath, 'junction');
+      linkCreated = true;
+    } catch (error) {
+      const code = error instanceof Error && 'code' in error
+        ? (error as NodeJS.ErrnoException).code
+        : undefined;
+      if (code === 'EPERM' || code === 'EACCES' || code === 'ENOSYS') {
+        await Promise.all([
+          rm(linkContainer, { recursive: true, force: true }),
+          rm(outsideDirectory, { recursive: true, force: true }),
+        ]);
+        test.skip(true, `link creation unavailable on this platform: ${code}`);
+        return;
+      }
+      throw error;
+    }
+
+    const escapedFile = relative(
+      process.cwd(),
+      join(linkPath, 'secret.txt'),
+    ).split(sep).join('/');
+    const response = await request.get(`/${escapedFile}`);
+
+    expect(response.status()).toBe(403);
+  } finally {
+    if (linkCreated) await unlink(linkPath);
+    await Promise.all([
+      rm(linkContainer, { recursive: true, force: true }),
+      rm(outsideDirectory, { recursive: true, force: true }),
+    ]);
+  }
 });
 
 test('searches initials, alias pinyin, and alternate name pronunciations', async ({
@@ -118,9 +182,7 @@ test('max-results limits visible candidates and click selects one', async ({
 });
 
 test.describe('touch selection', () => {
-  test.skip(({ isMobile }) => !isMobile, 'requires a mobile browser project');
-
-  test('selects a candidate in mobile projects', async ({ page }) => {
+  test('selects a candidate in mobile projects', { tag: '@touch' }, async ({ page }) => {
     const component = page.locator('arknights-name-input');
     const input = component.locator('input');
 

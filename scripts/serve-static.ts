@@ -1,10 +1,10 @@
 import { createReadStream } from 'node:fs';
-import { stat } from 'node:fs/promises';
+import { realpath, stat } from 'node:fs/promises';
 import { createServer } from 'node:http';
-import { dirname, extname, resolve, sep } from 'node:path';
+import { dirname, extname, isAbsolute, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const root = await realpath(resolve(dirname(fileURLToPath(import.meta.url)), '..'));
 const port = Number(process.env.PORT ?? 4173);
 if (!Number.isInteger(port) || port < 1 || port > 65535) {
   throw new Error('PORT must be an integer from 1 to 65535');
@@ -17,6 +17,15 @@ const contentTypes: Readonly<Record<string, string>> = {
   '.json': 'application/json; charset=utf-8',
   '.map': 'application/json; charset=utf-8',
 };
+
+function isWithinRoot(path: string): boolean {
+  const relativePath = relative(root, path);
+  return relativePath === '' || (
+    relativePath !== '..'
+    && !relativePath.startsWith(`..${sep}`)
+    && !isAbsolute(relativePath)
+  );
+}
 
 createServer(async (request, response) => {
   if (request.method !== 'GET' && request.method !== 'HEAD') {
@@ -41,13 +50,18 @@ createServer(async (request, response) => {
 
   const relativePath = pathname === '/' ? 'demo/index.html' : pathname.slice(1);
   const filePath = resolve(root, relativePath);
-  if (filePath !== root && !filePath.startsWith(`${root}${sep}`)) {
+  if (!isWithinRoot(filePath)) {
     response.writeHead(400).end('Bad Request');
     return;
   }
 
   try {
-    const fileStat = await stat(filePath);
+    const realFilePath = await realpath(filePath);
+    if (!isWithinRoot(realFilePath)) {
+      response.writeHead(403).end('Forbidden');
+      return;
+    }
+    const fileStat = await stat(realFilePath);
     if (!fileStat.isFile()) {
       response.writeHead(404).end('Not Found');
       return;
@@ -60,7 +74,11 @@ createServer(async (request, response) => {
       response.end();
       return;
     }
-    createReadStream(filePath).pipe(response);
+    const stream = createReadStream(realFilePath);
+    stream.once('error', () => {
+      response.destroy();
+    });
+    stream.pipe(response);
   } catch (error) {
     const code = error instanceof Error && 'code' in error
       ? (error as NodeJS.ErrnoException).code

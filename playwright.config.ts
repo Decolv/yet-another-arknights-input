@@ -16,14 +16,17 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      grepInvert: /@touch/,
       use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',
+      grepInvert: /@touch/,
       use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
+      grepInvert: /@touch/,
       use: { ...devices['Desktop Safari'] },
     },
     {
