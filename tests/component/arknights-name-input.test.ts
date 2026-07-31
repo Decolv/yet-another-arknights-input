@@ -288,12 +288,33 @@ describe('ArknightsNameInputElement autocomplete interaction', () => {
       cancelable: true,
       composed: true,
     });
+    Object.defineProperty(pointerdown, 'pointerType', { value: 'mouse' });
     option.dispatchEvent(pointerdown);
 
     expect(pointerdown.defaultPrevented).toBe(true);
     expect(element.shadowRoot?.activeElement).toBe(input);
     expect(blurListener).not.toHaveBeenCalled();
 
+    option.click();
+    expect(element.value).toBe('铃兰');
+  });
+
+  it('preserves touch pointer defaults and selects through compatibility click', () => {
+    const { element, input, list } = componentParts();
+    edit(input, 'linglan');
+    const option = list.querySelector<HTMLElement>('[role="option"]');
+    expect(option).toBeInstanceOf(HTMLElement);
+    if (!(option instanceof HTMLElement)) return;
+    const pointerdown = new Event('pointerdown', {
+      bubbles: true,
+      cancelable: true,
+      composed: true,
+    });
+    Object.defineProperty(pointerdown, 'pointerType', { value: 'touch' });
+
+    option.dispatchEvent(pointerdown);
+
+    expect(pointerdown.defaultPrevented).toBe(false);
     option.click();
     expect(element.value).toBe('铃兰');
   });

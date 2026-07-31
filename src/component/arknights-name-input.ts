@@ -264,7 +264,7 @@ export class ArknightsNameInputElement extends HTMLElement {
       name.textContent = result.operator.name;
       option.append(image, name);
       option.addEventListener('pointerdown', (event) => {
-        event.preventDefault();
+        if (event.pointerType !== 'touch') event.preventDefault();
       });
       option.addEventListener('click', () => {
         this.#selectResult(result);
