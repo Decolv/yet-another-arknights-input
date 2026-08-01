@@ -15,6 +15,15 @@ it('builds tone-less pinyin and initials for ordinary Chinese names', () => {
   });
 });
 
+it('adds a standalone er initial variant without tone marks', () => {
+  expect(buildSearchVariants('史尔特尔')).toEqual({
+    primaryPinyin: 'shierteer',
+    alternatePinyin: [],
+    primaryInitials: 'sete',
+    alternateInitials: ['srtr'],
+  });
+});
+
 it('preserves the curated 重岳 primary and alternate readings', () => {
   const overrides = loadPinyinOverrides(new URL('../../data/pinyin-overrides.json', import.meta.url));
   const override = overrides['prts:268']?.name;

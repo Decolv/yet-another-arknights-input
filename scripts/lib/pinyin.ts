@@ -30,11 +30,16 @@ export interface PinyinOverrideTarget {
 export function buildSearchVariants(text: string, override?: PronunciationOverride): SearchVariants {
   if (override) return variantsFromReadings(override.primary, override.alternates);
 
+  const syllables = pinyin(text, { toneType: 'none', type: 'array' });
+  const primaryPinyin = normalizeSearchText(syllables.join(''));
+  const primaryInitials = normalizeSearchText(syllables.map((syllable) => syllable[0] ?? '').join(''));
+  const erInitials = buildStandaloneErInitials(syllables);
+
   return {
-    primaryPinyin: normalizeSearchText(pinyin(text, { toneType: 'none', type: 'array' }).join('')),
+    primaryPinyin,
     alternatePinyin: [],
-    primaryInitials: normalizeSearchText(pinyin(text, { pattern: 'first', type: 'array' }).join('')),
-    alternateInitials: [],
+    primaryInitials,
+    alternateInitials: erInitials !== null && erInitials !== primaryInitials ? [erInitials] : [],
   };
 }
 
@@ -70,4 +75,9 @@ function variantsFromReadings(primary: Pronunciation, alternates: readonly Pronu
     primaryInitials: normalizeSearchText(primary.initials),
     alternateInitials: alternates.map((reading) => normalizeSearchText(reading.initials)),
   };
+}
+
+function buildStandaloneErInitials(syllables: readonly string[]): string | null {
+  if (!syllables.includes('er')) return null;
+  return normalizeSearchText(syllables.map((syllable) => syllable === 'er' ? 'r' : syllable[0] ?? '').join(''));
 }

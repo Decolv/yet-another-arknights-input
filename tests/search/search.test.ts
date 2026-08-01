@@ -65,6 +65,17 @@ it.each([
   expect(result).toMatchObject({ matchedBy, matchedText: '仇白' });
 });
 
+it.each([
+  ['sete', 'name-initials'],
+  ['srtr', 'name-initials-alt'],
+] as const)('matches 史尔特尔 through %s initials', (query, matchedBy) => {
+  const snapshot = snapshotJson as OperatorSnapshot;
+  const result = searchOperators(snapshot.operators, query, 100)
+    .find(({ operator }) => operator.id === 'prts:161');
+
+  expect(result).toMatchObject({ matchedBy, matchedText: '史尔特尔' });
+});
+
 it.each(['choubai', 'cb'])('does not treat %s as an alternate reading of 仇白', (query) => {
   const snapshot = snapshotJson as OperatorSnapshot;
 
