@@ -50,7 +50,7 @@ npm run build
 ></arknights-name-input>
 ```
 
-脚本执行后会自动注册 `<arknights-name-input>` 标签名，无需手动调用注册函数。输入「铃兰」「linglan」「ll」「铃兰妈」「zhongyue」都能命中对应干员。
+脚本执行后会自动注册 `<arknights-name-input>` 标签名，无需手动调用注册函数。输入「铃兰」「linglan」「ll」「zhongyue」都能命中对应干员。
 
 ## 3. 读取输入
 
@@ -92,11 +92,11 @@ operatorInput.addEventListener('character-select', (event) => {
 
 ```js
 {
-  id: 'prts:352',
-  name: '忍冬',
+  id: 'prts:147',
+  name: '铃兰',
   avatarUrl: 'https://media.prts.wiki/...',
-  matchedBy: 'alias-pinyin',
-  matchedText: '铃兰妈'
+  matchedBy: 'name-pinyin',
+  matchedText: 'linglan'
 }
 ```
 

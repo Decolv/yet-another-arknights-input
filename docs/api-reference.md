@@ -44,11 +44,11 @@
 
 ```js
 {
-  id: 'prts:352',
-  name: '忍冬',
+  id: 'prts:147',
+  name: '铃兰',
   avatarUrl: 'https://media.prts.wiki/...',
-  matchedBy: 'alias-pinyin',
-  matchedText: '铃兰妈'
+  matchedBy: 'name-pinyin',
+  matchedText: 'linglan'
 }
 ```
 

@@ -27,7 +27,7 @@ it('collects aliases by requested official name with redirects and explicit data
     titles: '忍冬|重岳（明日方舟）|铃兰|缺页',
   });
   expect(result.aliasesByName).toEqual(new Map([
-    ['忍冬', ['铃兰妈']],
+    ['忍冬', ['冬妈']],
     ['重岳（明日方舟）', ['大哥', '老陈', '陈sir']],
   ]));
   expect(result.warnings).toEqual([
@@ -80,7 +80,7 @@ it('keeps multiline nested templates and refs inside 别号 until the real next 
 
 it('extracts aliases only from the rendered 别号 row nickname element', async () => {
   const fetchRenderedPage = vi.fn(async (name: string) => ({
-    忍冬: `<table class="infotemplatebox"><tr><th>别号</th><td><span itemprop="nickname">铃兰妈<br>冬妈、<s>角峰p</s><sup class="reference"><a><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup></span></td></tr></table>
+    忍冬: `<table class="infotemplatebox"><tr><th>别号</th><td><span itemprop="nickname">冬妈、<s>角峰p</s><sup class="reference"><a><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup></span></td></tr></table>
       <p>正文里的忍冬妈绝不能采集</p>`,
     铃兰: '<table class="infotemplatebox"><tr><th>别号</th><td>正文称作小狐狸，但没有 nickname 标记</td></tr></table>',
   })[name]!);
@@ -88,7 +88,7 @@ it('extracts aliases only from the rendered 别号 row nickname element', async 
   const result = await fetchMoegirlRenderedAliases({ fetchRenderedPage }, ['忍冬', '铃兰']);
 
   expect(fetchRenderedPage).toHaveBeenCalledTimes(2);
-  expect(result.aliasesByName).toEqual(new Map([['忍冬', ['铃兰妈', '冬妈', '角峰p']]]));
+  expect(result.aliasesByName).toEqual(new Map([['忍冬', ['冬妈', '角峰p']]]));
   expect(result.warnings).toEqual(['Moegirl page 铃兰 has an empty 别号 field']);
 });
 

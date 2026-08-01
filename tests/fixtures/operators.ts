@@ -59,15 +59,7 @@ export const operators: OperatorRecord[] = [
       primaryInitials: 'rd',
       alternateInitials: [],
     },
-    aliases: [
-      {
-        text: '铃兰妈',
-        primaryPinyin: 'linglanma',
-        alternatePinyin: [],
-        primaryInitials: 'llm',
-        alternateInitials: [],
-      },
-    ],
+    aliases: [],
   },
   {
     id: 'prts:900',

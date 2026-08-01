@@ -156,7 +156,7 @@ it('rejects a source-labelled MediaWiki error restored from a legacy cache after
 
 it('fetches a rendered page from the endpoint origin and reuses it only after a 304', async () => {
   const fetchImpl = vi.fn()
-    .mockResolvedValueOnce(new Response('<main>铃兰妈</main>', {
+    .mockResolvedValueOnce(new Response('<main>忍冬页面</main>', {
       status: 200,
       headers: { etag: '"page-v1"' },
     }))
@@ -169,8 +169,8 @@ it('fetches a rendered page from the endpoint origin and reuses it only after a 
     endpoint: 'https://example.test/api.php', cacheDir: directory, fetchImpl, minIntervalMs: 0,
   });
 
-  expect(await first.fetchRenderedPage('忍冬')).toBe('<main>铃兰妈</main>');
-  expect(await second.fetchRenderedPage('忍冬')).toBe('<main>铃兰妈</main>');
+  expect(await first.fetchRenderedPage('忍冬')).toBe('<main>忍冬页面</main>');
+  expect(await second.fetchRenderedPage('忍冬')).toBe('<main>忍冬页面</main>');
   expect(fetchImpl.mock.calls[0]?.[0]).toBe(
     'https://example.test/rest.php/v1/page/%E5%BF%8D%E5%86%AC/html',
   );

@@ -425,7 +425,7 @@ it.each([
 
 - [ ] **Step 2: Add deterministic search fixtures and failing ranking tests**
 
-Create `tests/fixtures/operators.ts` with `铃兰` (`prts:147`), `重岳` (`prts:268`), `忍冬` (`prts:352`, alias `铃兰妈`), and a synthetic `prts:900` whose alias initials are `ll`.
+Create `tests/fixtures/operators.ts` with `铃兰` (`prts:147`), `重岳` (`prts:268`), `忍冬` (`prts:352`), and a synthetic `prts:900` whose alias initials are `ll`.
 
 ```ts
 import type { OperatorRecord } from '../../src/data/types.js';
@@ -457,7 +457,7 @@ export const operators: OperatorRecord[] = [
     name: '忍冬',
     avatarUrl: 'https://prts.wiki/images/avatar-rendong.png',
     nameSearch: variants('rendong', 'rd'),
-    aliases: [{ text: '铃兰妈', ...variants('linglanma', 'llm') }],
+    aliases: [],
   },
   {
     id: 'prts:900',
@@ -481,12 +481,6 @@ describe('searchOperators', () => {
     expect(searchOperators(operators, query, 8)[0]?.operator.name).toBe('铃兰');
   });
 
-  it.each(['铃兰妈', 'linglanma', 'llm'])('finds 忍冬 through alias %s', (query) => {
-    const result = searchOperators(operators, query, 8)[0];
-    expect(result?.operator.name).toBe('忍冬');
-    expect(result?.matchedBy.startsWith('alias')).toBe(true);
-  });
-
   it.each(['chongyue', 'zhongyue', 'cy', 'zy'])('finds 重岳 with %s', (query) => {
     expect(searchOperators(operators, query, 8)[0]?.operator.name).toBe('重岳');
   });
@@ -505,7 +499,6 @@ describe('searchOperators', () => {
   it('resolves only exact official display names as valid', () => {
     expect(findExactOperator(operators, '铃兰')?.id).toBe('prts:147');
     expect(findExactOperator(operators, 'll')).toBeNull();
-    expect(findExactOperator(operators, '铃兰妈')).toBeNull();
   });
 });
 ```
@@ -842,7 +835,7 @@ git commit -m "feat: add PRTS roster adapter"
 
 Create `tests/fixtures/moegirl-revisions-api.json` with:
 
-- A `忍冬` page whose main-slot wikitext includes `|别号=铃兰妈`.
+- A `忍冬` page whose main-slot wikitext includes `|别号=冬妈`.
 - A `重岳` page with two aliases separated by `<br>`.
 - A `铃兰` page with an empty `别号`.
 - A missing page.
@@ -859,12 +852,12 @@ import { parseMoegirlAliases } from '../../scripts/lib/moegirl.js';
 it('extracts only the 别号 field and removes wiki markup', () => {
   const source = [
     '{{人物信息',
-    '|代号=忍冬',
-    '|别号=[[铃兰|铃兰妈]]<ref>说明</ref>',
-    '|萌点=母亲',
+    '|代号=示例干员',
+    '|别号=[[目标|测试别名]]<ref>说明</ref>',
+    '|萌点=测试',
     '}}',
   ].join('\n');
-  expect(parseMoegirlAliases(source)).toEqual(['铃兰妈']);
+  expect(parseMoegirlAliases(source)).toEqual(['测试别名']);
 });
 
 it('splits line breaks and Chinese separators, then deduplicates', () => {
@@ -872,7 +865,7 @@ it('splits line breaks and Chinese separators, then deduplicates', () => {
 });
 
 it('does not infer aliases from body text or other fields', () => {
-  expect(parseMoegirlAliases('|萌点=铃兰妈\n正文称她为铃兰妈')).toEqual([]);
+  expect(parseMoegirlAliases('|萌点=测试别名\n正文称她为测试别名')).toEqual([]);
 });
 ```
 
@@ -1295,7 +1288,7 @@ Expected:
 - `data/operators.generated.json` contains at least 100 records.
 - It contains `prts:147` 铃兰, `prts:268` 重岳, and `prts:352` 忍冬.
 - 重岳 contains both `chongyue/cy` and `zhongyue/zy`.
-- 忍冬 includes `铃兰妈` when the source field is present.
+- 忍冬 includes its source alias when the source field is present.
 - No `sortId = -1` entry is present.
 - No entry with a release time after the effective Shanghai update time is present.
 - Hard errors are zero; soft warnings are printed explicitly.
@@ -1818,7 +1811,6 @@ git commit -m "docs: package and verify embeddable input"
 - [ ] `npm run update-data` prints source-labelled warnings and an explicit diff, then atomically writes only after validation.
 - [ ] `npm run check-data` rejects malformed, duplicate, empty, or implausibly small snapshots.
 - [ ] `ll` ranks 铃兰 above alias-initial-only matches.
-- [ ] `linglanma` and `llm` match 忍冬 through `铃兰妈`.
 - [ ] `chongyue`, `zhongyue`, `cy`, and `zy` match 重岳.
 - [ ] Duplicate aliases return every mapped operator up to `maxResults`.
 - [ ] Direct exact official-name entry sets `valid=true` without fabricating `character-select`.

@@ -85,6 +85,6 @@ it('reports an alias override that does not match the target aliases', () => {
     },
   };
 
-  expect(validatePinyinOverrides(overrides, [{ id: 'prts:147', name: '铃兰', aliases: ['铃兰妈'] }]))
+  expect(validatePinyinOverrides(overrides, [{ id: 'prts:147', name: '铃兰', aliases: ['不存在'] }]))
     .toEqual(['pinyin override alias 兰铃 does not exist for target prts:147']);
 });
