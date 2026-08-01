@@ -8,6 +8,7 @@ it.each([
   ['维娜·维多利亚', '维娜维多利亚'],
   ['U/Official', 'uofficial'],
   ['Back\\Slash', 'backslash'],
+  ['Shíěrtèěr / sětě', 'shierteersete'],
 ])('normalizes %s', (input, expected) => {
   expect(normalizeSearchText(input)).toBe(expected);
 });

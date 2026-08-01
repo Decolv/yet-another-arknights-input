@@ -24,6 +24,18 @@ it('adds a standalone er initial variant without tone marks', () => {
   });
 });
 
+it('strips tone marks from curated readings', () => {
+  expect(buildSearchVariants('占位', {
+    primary: { pinyin: 'shíěrtèěr', initials: 'sětě' },
+    alternates: [{ pinyin: 'shíěrtèěr', initials: 'sětě' }],
+  })).toEqual({
+    primaryPinyin: 'shierteer',
+    alternatePinyin: ['shierteer'],
+    primaryInitials: 'sete',
+    alternateInitials: ['sete'],
+  });
+});
+
 it('preserves the curated 重岳 primary and alternate readings', () => {
   const overrides = loadPinyinOverrides(new URL('../../data/pinyin-overrides.json', import.meta.url));
   const override = overrides['prts:268']?.name;
