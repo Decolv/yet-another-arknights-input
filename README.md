@@ -1,10 +1,12 @@
 # arknights-name-input
 
-一个可直接嵌入现有小游戏或普通网页的明日方舟干员名输入 Web Component。运行时角色、别号和拼音索引已打进单个 IIFE 文件；浏览器不会抓取角色表或别号数据。
+一个可直接嵌入现有小游戏或普通网页的明日方舟干员名输入 Web Component。角色、别号和拼音索引在构建期打进单个 IIFE 文件，运行时不调用 PRTS 或萌娘百科 API，不需要打包器或额外运行时依赖。
+
+> 想直接往已有游戏里塞？看 [`docs/embed-in-existing-game.md`](docs/embed-in-existing-game.md)——面向「我已有游戏」的分步接入指南，含打包器 / WebView / React / Vue 等宿主形态。本 README 是完整 API 手册。
 
 ## 快速开始：一个脚本、一个标签
 
-先运行 `npm run build`，再把 `dist/arknights-name-input.js` 与页面一同发布：
+本仓库不提交构建产物。先在本目录运行 `npm install && npm run build`，再把生成的 `dist/arknights-name-input.js` 复制进你的项目一并发布：
 
 ```html
 <script src="/assets/arknights-name-input.js"></script>
@@ -136,19 +138,24 @@ arknights-name-input {
 
 ## 数据维护和验证
 
+数据维护（不在浏览器运行）：
+
 ```powershell
-npm run update-data
-npm run check-data
-npm run typecheck
-npm test
-npm run build
-npm run test:e2e
+npm run update-data   # 从 PRTS / 萌娘百科来源更新并验证快照
+npm run check-data    # 检查已提交快照与拼音覆盖目标
 ```
 
-- `update-data` 从来源更新并验证快照；这是维护命令，不在浏览器运行。
-- `check-data` 检查已提交快照和拼音覆盖目标。
-- `build` 生成 `dist/arknights-name-input.js` 及 source map。
-- `test:e2e` 在 Chromium、Firefox、WebKit、Pixel 7 Chromium 和 iPhone 15 WebKit 项目中运行；首次使用前可执行 `npx playwright install chromium firefox webkit`。
+构建与验收：
+
+```powershell
+npm run typecheck     # TypeScript 类型检查
+npm test              # Vitest 单元/组件测试
+npm run build         # 生成 dist/arknights-name-input.js 及 source map
+npm run test:e2e      # Playwright（首次需 npx playwright install chromium firefox webkit）
+npm run check         # typecheck + test + build 一条龙
+```
+
+`test:e2e` 覆盖桌面端 Chromium、Firefox、WebKit 与移动端 Pixel 7 Chromium、iPhone 15 WebKit。
 
 多音字通过 `data/pinyin-overrides.json` 按稳定 PRTS ID 维护。例如重岳：
 
