@@ -4,16 +4,40 @@
 
 ## 1. 拿到脚本
 
-仓库没把构建产物提交进 git。在本仓库目录跑一次：
+嵌入方只需要一个 `arknights-name-input.js` 文件，不需要装 npm、跑构建，也不需要把整个仓库拖进你的项目。两种方式任选：
+
+### 方式 A：直接从 Releases 下载（推荐）
+
+每次发布都会自动构建并附带 `arknights-name-input.js` 和 `.js.map`：
+
+- 下载页：<https://github.com/Decolv/yet-another-arknights-input/releases>
+- 直链（替换 `v1.0.0` 为对应 tag）：
+  ```
+  https://github.com/Decolv/yet-another-arknights-input/releases/download/v1.0.0/arknights-name-input.js
+  ```
+
+把这个文件复制到你的项目里，例如 `/assets/arknights-name-input.js`。
+
+### 方式 B：直接当 `<script src>` 引用 Release 直链
+
+把上面的 release 直链直接塞进页面，连下载都省了：
+
+```html
+<script src="https://github.com/Decolv/yet-another-arknights-input/releases/download/v1.0.0/arknights-name-input.js"></script>
+```
+
+> GitHub Release 资产走标准 CDN，没有鉴权、不限速到影响小工具的程度。介意可用性可走方式 A 自托管。
+
+### 方式 C：本地构建（想改源码或抓未发布版本再用）
+
+仓库不提交构建产物。需要的话在本仓库目录跑：
 
 ```powershell
 npm install
 npm run build
 ```
 
-得到 `dist/arknights-name-input.js`（以及同名 `.js.map`）。把这个文件复制到你的项目里，例如 `/assets/arknights-name-input.js`。
-
-> 嵌入方只需要这个 `.js` 文件，不需要把整个仓库拖进你的项目。
+得到 `dist/arknights-name-input.js`（以及同名 `.js.map`）。
 
 ## 2. 放进页面：一个脚本、一个标签
 
