@@ -1,6 +1,6 @@
 # 把组件快速嵌入已有小游戏
 
-这份指南面向「我已经有一个跑着的小游戏，想把干员名输入框塞进去」的场景，目标是 30 秒跑通最小可用，再按需扩展。完整的属性、事件和 CSS 变量参考根目录 `README.md`。
+这份指南面向「我已经有一个跑着的小游戏，想把干员名输入框塞进去」的场景，目标是 30 秒跑通最小可用，再按需扩展。完整的属性、事件和 CSS 变量参考 [`docs/api-reference.md`](./api-reference.md)；想知道项目是什么，看根目录 `README.md`。
 
 ---
 
@@ -159,7 +159,7 @@ arknights-name-input {
 }
 ```
 
-完整变量表见 `README.md` 的「CSS 变量」一节。建议在组件外层用一个 `<div>` 包住并控制布局位置，组件自身宽度由 `--akni-width` 管理。
+完整变量表见 [`docs/api-reference.md`](./api-reference.md) 的「CSS 变量」一节。建议在组件外层用一个 `<div>` 包住并控制布局位置，组件自身宽度由 `--akni-width` 管理。
 
 ---
 
@@ -240,9 +240,9 @@ document.addEventListener('input', handler, true);
 
 ## 7. 想再深入
 
-- 完整属性、方法、事件、CSS 变量表：根目录 `README.md`
-- 数据是怎么生成、怎么更新的：`README.md` 的「数据维护和验证」
+- 完整属性、方法、事件、CSS 变量表：[`docs/api-reference.md`](./api-reference.md)
+- 数据是怎么生成、怎么更新的：[`docs/api-reference.md`](./api-reference.md) 的「数据维护和验证」
 - 组件实现细节：`src/component/arknights-name-input.ts`
 - 数据快照格式：`data/operators.generated.json`
 
-嵌入遇到问题，优先看 `README.md` 的「公共接口」和「头像和运行时网络」两节，那两节覆盖了 90% 的集成疑问。
+嵌入遇到问题，优先看 [`docs/api-reference.md`](./api-reference.md) 的「事件」和「头像和运行时网络」两节，那两节覆盖了 90% 的集成疑问。
