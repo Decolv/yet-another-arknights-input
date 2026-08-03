@@ -1,12 +1,24 @@
 {
   "name": "arknights-name-input",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "一个可直接嵌入现有网站或小游戏的明日方舟干员名输入框 Web Component",
+  "main": "dist/arknights-name-input.js",
+  "files": [
+    "dist",
+    "demo",
+    "docs",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Decolv/yet-another-arknights-input.git"
+  },
+  "homepage": "https://github.com/Decolv/yet-another-arknights-input#readme",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "prepack": "npm run build",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "test:watch": "vitest",
@@ -18,7 +30,6 @@
     "check": "npm run typecheck && npm test && npm run build"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
