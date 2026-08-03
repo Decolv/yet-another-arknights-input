@@ -425,6 +425,42 @@ describe('ArknightsNameInputElement autocomplete interaction', () => {
     expect(list.querySelectorAll('[role="option"]')).toHaveLength(0);
   });
 
+  it('reopens results when refocusing with existing text after blur', async () => {
+    const { element, input, list } = componentParts();
+    const outside = document.createElement('button');
+    document.body.append(outside);
+    input.focus();
+    edit(input, 'll');
+    expect(input.getAttribute('aria-expanded')).toBe('true');
+
+    outside.focus();
+    await Promise.resolve();
+    expect(input.getAttribute('aria-expanded')).toBe('false');
+    expect(list.querySelectorAll('[role="option"]')).toHaveLength(0);
+
+    input.focus();
+
+    expect(element.value).toBe('ll');
+    expect(input.getAttribute('aria-expanded')).toBe('true');
+    expect(list.querySelectorAll('[role="option"]').length).toBeGreaterThan(0);
+  });
+
+  it('does not reopen results on refocus when the input is empty', async () => {
+    const { element, input, list } = componentParts();
+    const outside = document.createElement('button');
+    document.body.append(outside);
+    input.focus();
+
+    outside.focus();
+    await Promise.resolve();
+
+    input.focus();
+
+    expect(element.value).toBe('');
+    expect(input.getAttribute('aria-expanded')).toBe('false');
+    expect(list.querySelectorAll('[role="option"]')).toHaveLength(0);
+  });
+
   it('hides a failed image and leaves the option selectable', () => {
     const { element, input, list } = componentParts();
     element.maxResults = 1;

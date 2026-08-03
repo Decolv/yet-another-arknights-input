@@ -120,6 +120,11 @@ export class ArknightsNameInputElement extends HTMLElement {
     this.#input.addEventListener('keydown', (event) => {
       this.#handleKeydown(event);
     });
+    this.#input.addEventListener('focus', () => {
+      // 重新聚焦时若已有输入文字，重新打开候选列表
+      // （blur 时 #closeResults 会清空 #results，光靠 input 事件不会重弹）
+      if (this.#input.value.trim().length > 0) this.#search();
+    });
     this.addEventListener('focusout', () => {
       queueMicrotask(() => {
         if (!this.matches(':focus-within')) this.#closeResults();

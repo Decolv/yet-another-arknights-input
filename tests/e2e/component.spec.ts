@@ -162,6 +162,24 @@ test('Escape closes candidates without changing free text', async ({ page }) => 
   await expect(input).not.toHaveAttribute('aria-activedescendant', /.*/);
 });
 
+test('refocusing with existing text reopens the candidate list', async ({ page }) => {
+  const component = page.locator('arknights-name-input');
+  const input = component.locator('input');
+
+  await input.fill('ll');
+  await expect(input).toHaveAttribute('aria-expanded', 'true');
+
+  // 点击 body 左边距（组件外），让组件失焦，候选应关闭
+  await page.mouse.click(2, 10);
+  await expect(input).toHaveAttribute('aria-expanded', 'false');
+
+  // 再点回输入框，候选应重新打开
+  await input.click();
+  await expect(input).toHaveAttribute('aria-expanded', 'true');
+  await expect(component.locator('[role=option]').first()).toContainText('铃兰');
+  await expect(input).toHaveValue('ll');
+});
+
 test('max-results limits visible candidates and click selects one', async ({
   page,
 }) => {
