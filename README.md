@@ -28,6 +28,16 @@
 <script src="https://github.com/Decolv/yet-another-arknights-input/releases/download/v1.0.0/arknights-name-input.js"></script>
 ```
 
+对可用性或完整性有要求的，建议加 `integrity`（SRI）校验：每个 Release 的 Release Notes 和 `sri.txt` 资产里都附了对应版本的 SHA-384 值，把 `sha384-...` 换成实际值即可：
+
+```html
+<script
+  src="https://github.com/Decolv/yet-another-arknights-input/releases/download/v1.0.0/arknights-name-input.js"
+  integrity="sha384-..."
+  crossorigin="anonymous"
+></script>
+```
+
 > GitHub Release 资产走标准 CDN，没有鉴权、不限速到影响小工具的程度。介意可用性可走方式 A 自托管。
 
 ### 方式 C：本地构建（想改源码或抓未发布版本再用）
@@ -53,6 +63,8 @@ npm run build
 ```
 
 脚本执行后会自动注册 `<arknights-name-input>` 标签名，无需手动调用注册函数。输入「铃兰」「linglan」「ll」「zhongyue」都能命中对应干员。
+
+> **输入方式建议**：使用英文输入法直接打拼音（如 `linglan`、`ll`、`zhongyue`）。组件按拼音索引匹配候选；若开着中文输入法，键入的字母会被提前替换成汉字，拼音匹配会失效。英文输入法下全拼、首拼、别号都能直接命中。
 
 ## 3. 读取输入
 
