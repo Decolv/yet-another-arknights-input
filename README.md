@@ -4,6 +4,8 @@
 
 **在线 Demo**：<https://decolv.github.io/yet-another-arknights-input/>（GitHub Pages 自动部署，可试输入「铃兰」「linglan」「ll」等）
 
+**建议使用英文输入法**
+
 ## 1. 拿到脚本
 
 嵌入方只需要一个 `arknights-name-input.js` 文件，不需要装 npm、跑构建，也不需要把整个仓库拖进你的项目。两种方式任选：
