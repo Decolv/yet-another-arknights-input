@@ -1,5 +1,7 @@
 .superpowers/
 .worktrees/
+.codegraph/
+.omo/
 node_modules/
 dist/
 .cache/
