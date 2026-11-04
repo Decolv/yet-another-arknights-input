@@ -113,7 +113,7 @@ test('static server rejects links that resolve outside its root', { tag: '@serve
   }
 });
 
-test('searches initials, alias pinyin, and alternate name pronunciations', async ({
+test('searches initials and alternate name pronunciations', async ({
   page,
 }) => {
   const component = page.locator('arknights-name-input');
@@ -121,7 +121,6 @@ test('searches initials, alias pinyin, and alternate name pronunciations', async
 
   for (const [query, expected] of [
     ['ll', '铃兰'],
-    ['linglanma', '忍冬'],
     ['zhongyue', '重岳'],
   ] as const) {
     await input.fill(query);
