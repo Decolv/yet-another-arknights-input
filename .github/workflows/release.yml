@@ -90,9 +90,10 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release-assets/arknights-name-input.js
-            release-assets/arknights-name-input.js.map
+            release-assets/dist/arknights-name-input.js
+            release-assets/dist/arknights-name-input.js.map
             release-assets/sri.txt
+          fail_on_unmatched_files: true
           generate_release_notes: true
           append_body: true
           body: |
