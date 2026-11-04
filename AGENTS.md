@@ -12,6 +12,7 @@ npm run build          # esbuild 打包 IIFE → dist/arknights-name-input.js（
 npm run demo           # 静态服务器 http://127.0.0.1:4173（服务 demo/index.html）
 npm run test:e2e       # Playwright（5 个项目：chromium/firefox/webkit + Pixel 7 / iPhone 15）
 npm run update-data    # 联网抓取数据 → 重写 data/operators.generated.json
+npm run refresh-search # 离线只重算快照里的拼音字段（改了拼音算法后跑这个，不联网）
 npm run check-data     # 离线校验快照与拼音覆盖（不联网、不写文件）
 ```
 

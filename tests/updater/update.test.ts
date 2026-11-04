@@ -56,6 +56,7 @@ it('merges aliases and pinyin into stable-ID ordered operators', () => {
     alternatePinyin: ['zhongyue'],
     primaryInitials: 'cy',
     alternateInitials: ['zy'],
+    hybridPinyin: ['chongy', 'cyue', 'zhongy', 'zyue'],
   });
   expect(result.operators[1]?.aliases.map(({ text }) => text)).toEqual(['大哥', '重岳哥']);
 });
@@ -143,6 +144,7 @@ it('reports every stable-ID diff section and legal alias collisions', () => {
     alternatePinyin: [],
     primaryInitials: 'jbh',
     alternateInitials: [],
+    hybridPinyin: [],
   }];
   const next = makeSnapshot(2);
   next.operators.shift();
@@ -153,6 +155,7 @@ it('reports every stable-ID diff section and legal alias collisions', () => {
     alternatePinyin: [],
     primaryInitials: 'tm',
     alternateInitials: [],
+    hybridPinyin: [],
   }];
   const added = makeSnapshot(3).operators[2]!;
   added.aliases = structuredClone(next.operators[0]!.aliases);

@@ -6,12 +6,26 @@ import {
   type PinyinOverrides,
 } from '../../scripts/lib/pinyin.js';
 
+const shiertelHybrids = [
+    'shiete', 'serte', 'shierte', 'setee', 'shietee', 'sertee', 'shiertee',
+    'seter', 'shieter', 'serter', 'shierter', 'seteer', 'shieteer', 'serteer',
+  ];
+
 it('builds tone-less pinyin and initials for ordinary Chinese names', () => {
   expect(buildSearchVariants('铃兰')).toEqual({
     primaryPinyin: 'linglan',
     alternatePinyin: [],
     primaryInitials: 'll',
     alternateInitials: [],
+    hybridPinyin: ['lingl', 'llan'],
+  });
+});
+
+it('builds hybrid spellings that mix whole syllables with bare initials', () => {
+  expect(buildSearchVariants('真言')).toMatchObject({
+    primaryPinyin: 'zhenyan',
+    primaryInitials: 'zy',
+    hybridPinyin: ['zheny', 'zyan'],
   });
 });
 
@@ -21,7 +35,13 @@ it('adds a standalone er initial variant without tone marks', () => {
     alternatePinyin: [],
     primaryInitials: 'sete',
     alternateInitials: ['srtr'],
+    hybridPinyin: shiertelHybrids,
   });
+});
+
+it('skips hybrid spellings once a name has more than four syllables', () => {
+  expect(buildSearchVariants('缄默德克萨斯').hybridPinyin).toEqual([]);
+  expect(buildSearchVariants('煌').hybridPinyin).toEqual([]);
 });
 
 it('strips tone marks from curated readings', () => {
@@ -33,6 +53,7 @@ it('strips tone marks from curated readings', () => {
     alternatePinyin: ['shierteer'],
     primaryInitials: 'sete',
     alternateInitials: ['sete'],
+    hybridPinyin: shiertelHybrids,
   });
 });
 
@@ -45,6 +66,7 @@ it('preserves the curated 重岳 primary and alternate readings', () => {
     alternatePinyin: ['zhongyue'],
     primaryInitials: 'cy',
     alternateInitials: ['zy'],
+    hybridPinyin: ['chongy', 'cyue', 'zhongy', 'zyue'],
   });
 });
 
@@ -57,6 +79,7 @@ it('preserves 仇白 official-name reading without treating the generic 仇 read
     alternatePinyin: [],
     primaryInitials: 'qb',
     alternateInitials: [],
+    hybridPinyin: ['qiub', 'qbai'],
   });
 });
 
@@ -66,6 +89,7 @@ it('normalizes Latin characters, digits, dots, and hyphens in generated keys', (
     alternatePinyin: [],
     primaryInitials: 'a1b',
     alternateInitials: [],
+    hybridPinyin: [],
   });
 });
 

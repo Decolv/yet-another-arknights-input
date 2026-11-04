@@ -62,11 +62,15 @@
 | `name-pinyin-alt` | 正式名备用读音 |
 | `name-initials` | 正式名主拼音首字母 |
 | `name-initials-alt` | 正式名备用读音首字母 |
+| `name-pinyin-hybrid` | 正式名混合拼写 |
 | `alias` | 别号 |
 | `alias-pinyin` | 别号主拼音 |
 | `alias-pinyin-alt` | 别号备用读音 |
 | `alias-initials` | 别号主拼音首字母 |
 | `alias-initials-alt` | 别号备用读音首字母 |
+| `alias-pinyin-hybrid` | 别号混合拼写 |
+
+`*-pinyin-hybrid` 是「混合拼写」：每个音节既可以整拼也可以只打首字母混着来，`zyan`、`zheny` 都能命中「真言」。音节数超过 4 的名字不生成混合拼写，只用全拼/首拼就能搜到。
 
 建议把用户事件监听器挂在组件本身或使用普通冒泡监听。组件会在内部捕获原始 `input` 并重新派发稳定的公共事件；祖先或 `document` 上的捕获阶段监听器可能先看到 Shadow DOM 原始事件，不适合作为唯一集成点。
 

@@ -9,7 +9,7 @@ const valid = {
     id: 'prts:268',
     name: '重岳',
     avatarUrl: 'https://prts.wiki/images/example.png',
-    nameSearch: { primaryPinyin: 'chongyue', alternatePinyin: ['zhongyue'], primaryInitials: 'cy', alternateInitials: ['zy'] },
+    nameSearch: { primaryPinyin: 'chongyue', alternatePinyin: ['zhongyue'], primaryInitials: 'cy', alternateInitials: ['zy'], hybridPinyin: ['chongy', 'cyue'] },
     aliases: [],
   }],
 };
@@ -24,6 +24,11 @@ describe('assertOperatorSnapshot', () => {
     noAlternateReadings.operators[0]!.nameSearch.alternatePinyin = [];
     noAlternateReadings.operators[0]!.nameSearch.alternateInitials = [];
     expect(() => assertOperatorSnapshot(noAlternateReadings)).not.toThrow();
+  });
+  it('rejects a malformed hybrid pinyin list', () => {
+    const malformed = structuredClone(valid);
+    (malformed.operators[0]!.nameSearch as Record<string, unknown>).hybridPinyin = 'zyan';
+    expect(() => assertOperatorSnapshot(malformed)).toThrow(/hybridPinyin must be an array of nonempty strings/);
   });
   it('rejects duplicate IDs', () => {
     const duplicate = { ...valid, operators: [valid.operators[0]!, valid.operators[0]!] };

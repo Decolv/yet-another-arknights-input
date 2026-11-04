@@ -14,7 +14,8 @@
         "primaryPinyin": "lancet2",
         "alternatePinyin": [],
         "primaryInitials": "lancet2",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -26,7 +27,8 @@
         "primaryPinyin": "castle3",
         "alternatePinyin": [],
         "primaryInitials": "castle3",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -38,7 +40,11 @@
         "primaryPinyin": "yedao",
         "alternatePinyin": [],
         "primaryInitials": "yd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yed",
+          "ydao"
+        ]
       },
       "aliases": []
     },
@@ -50,7 +56,11 @@
         "primaryPinyin": "heijiao",
         "alternatePinyin": [],
         "primaryInitials": "hj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "heij",
+          "hjiao"
+        ]
       },
       "aliases": []
     },
@@ -62,7 +72,15 @@
         "primaryPinyin": "xunlinzhe",
         "alternatePinyin": [],
         "primaryInitials": "xlz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xunlz",
+          "xlinz",
+          "xunlinz",
+          "xlzhe",
+          "xunlzhe",
+          "xlinzhe"
+        ]
       },
       "aliases": []
     },
@@ -74,7 +92,11 @@
         "primaryPinyin": "dulin",
         "alternatePinyin": [],
         "primaryInitials": "dl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dul",
+          "dlin"
+        ]
       },
       "aliases": []
     },
@@ -86,7 +108,8 @@
         "primaryPinyin": "12f",
         "alternatePinyin": [],
         "primaryInitials": "12f",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -98,7 +121,8 @@
         "primaryPinyin": "fen",
         "alternatePinyin": [],
         "primaryInitials": "f",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -110,7 +134,11 @@
         "primaryPinyin": "xiangcao",
         "alternatePinyin": [],
         "primaryInitials": "xc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xiangc",
+          "xcao"
+        ]
       },
       "aliases": []
     },
@@ -122,7 +150,11 @@
         "primaryPinyin": "lingyu",
         "alternatePinyin": [],
         "primaryInitials": "ly",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lingy",
+          "lyu"
+        ]
       },
       "aliases": []
     },
@@ -134,7 +166,15 @@
         "primaryPinyin": "meilansha",
         "alternatePinyin": [],
         "primaryInitials": "mls",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "meils",
+          "mlans",
+          "meilans",
+          "mlsha",
+          "meilsha",
+          "mlansha"
+        ]
       },
       "aliases": []
     },
@@ -146,7 +186,11 @@
         "primaryPinyin": "kati",
         "alternatePinyin": [],
         "primaryInitials": "kt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kat",
+          "kti"
+        ]
       },
       "aliases": []
     },
@@ -158,7 +202,15 @@
         "primaryPinyin": "migelu",
         "alternatePinyin": [],
         "primaryInitials": "mgl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "migl",
+          "mgel",
+          "migel",
+          "mglu",
+          "miglu",
+          "mgelu"
+        ]
       },
       "aliases": []
     },
@@ -170,7 +222,15 @@
         "primaryPinyin": "keluosi",
         "alternatePinyin": [],
         "primaryInitials": "kls",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kels",
+          "kluos",
+          "keluos",
+          "klsi",
+          "kelsi",
+          "kluosi"
+        ]
       },
       "aliases": []
     },
@@ -184,6 +244,22 @@
         "primaryInitials": "adqe",
         "alternateInitials": [
           "adqr"
+        ],
+        "hybridPinyin": [
+          "andqe",
+          "adeqe",
+          "andeqe",
+          "adqiee",
+          "andqiee",
+          "adeqiee",
+          "andeqiee",
+          "adqer",
+          "andqer",
+          "adeqer",
+          "andeqer",
+          "adqieer",
+          "andqieer",
+          "adeqieer"
         ]
       },
       "aliases": []
@@ -196,7 +272,11 @@
         "primaryPinyin": "yanrong",
         "alternatePinyin": [],
         "primaryInitials": "yr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yanr",
+          "yrong"
+        ]
       },
       "aliases": []
     },
@@ -208,7 +288,11 @@
         "primaryPinyin": "furong",
         "alternatePinyin": [],
         "primaryInitials": "fr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "fur",
+          "frong"
+        ]
       },
       "aliases": []
     },
@@ -222,6 +306,14 @@
         "primaryInitials": "ase",
         "alternateInitials": [
           "asr"
+        ],
+        "hybridPinyin": [
+          "anse",
+          "asaie",
+          "ansaie",
+          "aser",
+          "anser",
+          "asaier"
         ]
       },
       "aliases": []
@@ -234,7 +326,23 @@
         "primaryPinyin": "shidouhuade",
         "alternatePinyin": [],
         "primaryInitials": "sdhd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shidhd",
+          "sdouhd",
+          "shidouhd",
+          "sdhuad",
+          "shidhuad",
+          "sdouhuad",
+          "shidouhuad",
+          "sdhde",
+          "shidhde",
+          "sdouhde",
+          "shidouhde",
+          "sdhuade",
+          "shidhuade",
+          "sdouhuade"
+        ]
       },
       "aliases": []
     },
@@ -246,7 +354,11 @@
         "primaryPinyin": "zilan",
         "alternatePinyin": [],
         "primaryInitials": "zl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zil",
+          "zlan"
+        ]
       },
       "aliases": []
     },
@@ -258,7 +370,11 @@
         "primaryPinyin": "yeyan",
         "alternatePinyin": [],
         "primaryInitials": "yy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yey",
+          "yyan"
+        ]
       },
       "aliases": []
     },
@@ -270,7 +386,11 @@
         "primaryPinyin": "yuanshan",
         "alternatePinyin": [],
         "primaryInitials": "ys",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yuans",
+          "yshan"
+        ]
       },
       "aliases": []
     },
@@ -282,7 +402,15 @@
         "primaryPinyin": "jiexika",
         "alternatePinyin": [],
         "primaryInitials": "jxk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jiexk",
+          "jxik",
+          "jiexik",
+          "jxka",
+          "jiexka",
+          "jxika"
+        ]
       },
       "aliases": []
     },
@@ -294,7 +422,11 @@
         "primaryPinyin": "liuxing",
         "alternatePinyin": [],
         "primaryInitials": "lx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "liux",
+          "lxing"
+        ]
       },
       "aliases": []
     },
@@ -306,7 +438,11 @@
         "primaryPinyin": "baixue",
         "alternatePinyin": [],
         "primaryInitials": "bx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "baix",
+          "bxue"
+        ]
       },
       "aliases": []
     },
@@ -318,7 +454,11 @@
         "primaryPinyin": "xunshi",
         "alternatePinyin": [],
         "primaryInitials": "xs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xuns",
+          "xshi"
+        ]
       },
       "aliases": []
     },
@@ -330,7 +470,15 @@
         "primaryPinyin": "qingdaofu",
         "alternatePinyin": [],
         "primaryInitials": "qdf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "qingdf",
+          "qdaof",
+          "qingdaof",
+          "qdfu",
+          "qingdfu",
+          "qdaofu"
+        ]
       },
       "aliases": []
     },
@@ -342,7 +490,11 @@
         "primaryPinyin": "hongdou",
         "alternatePinyin": [],
         "primaryInitials": "hd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hongd",
+          "hdou"
+        ]
       },
       "aliases": []
     },
@@ -354,7 +506,11 @@
         "primaryPinyin": "dubin",
         "alternatePinyin": [],
         "primaryInitials": "db",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dub",
+          "dbin"
+        ]
       },
       "aliases": []
     },
@@ -366,7 +522,11 @@
         "primaryPinyin": "chanwan",
         "alternatePinyin": [],
         "primaryInitials": "cw",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "chanw",
+          "cwan"
+        ]
       },
       "aliases": []
     },
@@ -378,7 +538,11 @@
         "primaryPinyin": "shuangye",
         "alternatePinyin": [],
         "primaryInitials": "sy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shuangy",
+          "sye"
+        ]
       },
       "aliases": []
     },
@@ -392,6 +556,22 @@
         "primaryInitials": "asde",
         "alternateInitials": [
           "asdr"
+        ],
+        "hybridPinyin": [
+          "aisde",
+          "aside",
+          "aiside",
+          "asdaie",
+          "aisdaie",
+          "asidaie",
+          "aisidaie",
+          "asder",
+          "aisder",
+          "asider",
+          "aisider",
+          "asdaier",
+          "aisdaier",
+          "asidaier"
         ]
       },
       "aliases": []
@@ -404,7 +584,11 @@
         "primaryPinyin": "musi",
         "alternatePinyin": [],
         "primaryInitials": "ms",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mus",
+          "msi"
+        ]
       },
       "aliases": []
     },
@@ -416,7 +600,8 @@
         "primaryPinyin": "li",
         "alternatePinyin": [],
         "primaryInitials": "l",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -428,7 +613,11 @@
         "primaryPinyin": "ansuo",
         "alternatePinyin": [],
         "primaryInitials": "as",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ans",
+          "asuo"
+        ]
       },
       "aliases": []
     },
@@ -440,7 +629,11 @@
         "primaryPinyin": "moyao",
         "alternatePinyin": [],
         "primaryInitials": "my",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "moy",
+          "myao"
+        ]
       },
       "aliases": []
     },
@@ -454,6 +647,14 @@
         "primaryInitials": "jwe",
         "alternateInitials": [
           "jwr"
+        ],
+        "hybridPinyin": [
+          "jiawe",
+          "jweie",
+          "jiaweie",
+          "jwer",
+          "jiawer",
+          "jweier"
         ]
       },
       "aliases": []
@@ -466,7 +667,15 @@
         "primaryPinyin": "tiaoxiangshi",
         "alternatePinyin": [],
         "primaryInitials": "txs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tiaoxs",
+          "txiangs",
+          "tiaoxiangs",
+          "txshi",
+          "tiaoxshi",
+          "txiangshi"
+        ]
       },
       "aliases": []
     },
@@ -478,7 +687,11 @@
         "primaryPinyin": "jiaofeng",
         "alternatePinyin": [],
         "primaryInitials": "jf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jiaof",
+          "jfeng"
+        ]
       },
       "aliases": []
     },
@@ -490,7 +703,15 @@
         "primaryPinyin": "shetuxiang",
         "alternatePinyin": [],
         "primaryInitials": "stx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shetx",
+          "stux",
+          "shetux",
+          "stxiang",
+          "shetxiang",
+          "stuxiang"
+        ]
       },
       "aliases": []
     },
@@ -502,7 +723,11 @@
         "primaryPinyin": "gumi",
         "alternatePinyin": [],
         "primaryInitials": "gm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "gum",
+          "gmi"
+        ]
       },
       "aliases": []
     },
@@ -514,7 +739,15 @@
         "primaryPinyin": "shenhaise",
         "alternatePinyin": [],
         "primaryInitials": "shs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shenhs",
+          "shais",
+          "shenhais",
+          "shse",
+          "shenhse",
+          "shaise"
+        ]
       },
       "aliases": []
     },
@@ -526,7 +759,11 @@
         "primaryPinyin": "diling",
         "alternatePinyin": [],
         "primaryInitials": "dl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dil",
+          "dling"
+        ]
       },
       "aliases": []
     },
@@ -538,7 +775,8 @@
         "primaryPinyin": "axiao",
         "alternatePinyin": [],
         "primaryInitials": "ax",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -550,7 +788,15 @@
         "primaryPinyin": "baimianxiao",
         "alternatePinyin": [],
         "primaryInitials": "bmx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "baimx",
+          "bmianx",
+          "baimianx",
+          "bmxiao",
+          "baimxiao",
+          "bmianxiao"
+        ]
       },
       "aliases": []
     },
@@ -562,7 +808,11 @@
         "primaryPinyin": "lindong",
         "alternatePinyin": [],
         "primaryInitials": "ld",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lind",
+          "ldong"
+        ]
       },
       "aliases": []
     },
@@ -574,7 +824,23 @@
         "primaryPinyin": "dekesasi",
         "alternatePinyin": [],
         "primaryInitials": "dkss",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dekss",
+          "dkess",
+          "dekess",
+          "dksas",
+          "deksas",
+          "dkesas",
+          "dekesas",
+          "dkssi",
+          "dekssi",
+          "dkessi",
+          "dekessi",
+          "dksasi",
+          "deksasi",
+          "dkesasi"
+        ]
       },
       "aliases": []
     },
@@ -586,7 +852,15 @@
         "primaryPinyin": "fulanka",
         "alternatePinyin": [],
         "primaryInitials": "flk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "fulk",
+          "flank",
+          "fulank",
+          "flka",
+          "fulka",
+          "flanka"
+        ]
       },
       "aliases": []
     },
@@ -598,7 +872,15 @@
         "primaryPinyin": "yintuoluo",
         "alternatePinyin": [],
         "primaryInitials": "ytl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yintl",
+          "ytuol",
+          "yintuol",
+          "ytluo",
+          "yintluo",
+          "ytuoluo"
+        ]
       },
       "aliases": []
     },
@@ -610,7 +892,23 @@
         "primaryPinyin": "lapulande",
         "alternatePinyin": [],
         "primaryInitials": "lpld",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lapld",
+          "lpuld",
+          "lapuld",
+          "lpland",
+          "lapland",
+          "lpuland",
+          "lapuland",
+          "lplde",
+          "laplde",
+          "lpulde",
+          "lapulde",
+          "lplande",
+          "laplande",
+          "lpulande"
+        ]
       },
       "aliases": []
     },
@@ -622,7 +920,15 @@
         "primaryPinyin": "youlingsha",
         "alternatePinyin": [],
         "primaryInitials": "yls",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "youls",
+          "ylings",
+          "youlings",
+          "ylsha",
+          "youlsha",
+          "ylingsha"
+        ]
       },
       "aliases": []
     },
@@ -634,7 +940,11 @@
         "primaryPinyin": "landu",
         "alternatePinyin": [],
         "primaryInitials": "ld",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "land",
+          "ldu"
+        ]
       },
       "aliases": []
     },
@@ -646,7 +956,11 @@
         "primaryPinyin": "baijin",
         "alternatePinyin": [],
         "primaryInitials": "bj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "baij",
+          "bjin"
+        ]
       },
       "aliases": []
     },
@@ -658,7 +972,11 @@
         "primaryPinyin": "yunxing",
         "alternatePinyin": [],
         "primaryInitials": "yx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yunx",
+          "yxing"
+        ]
       },
       "aliases": []
     },
@@ -670,7 +988,11 @@
         "primaryPinyin": "amiya",
         "alternatePinyin": [],
         "primaryInitials": "amy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "amiy",
+          "amya"
+        ]
       },
       "aliases": []
     },
@@ -682,7 +1004,11 @@
         "primaryPinyin": "tianhuo",
         "alternatePinyin": [],
         "primaryInitials": "th",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tianh",
+          "thuo"
+        ]
       },
       "aliases": []
     },
@@ -696,6 +1022,10 @@
         "primaryInitials": "me",
         "alternateInitials": [
           "mr"
+        ],
+        "hybridPinyin": [
+          "meie",
+          "mer"
         ]
       },
       "aliases": []
@@ -708,7 +1038,11 @@
         "primaryPinyin": "hemo",
         "alternatePinyin": [],
         "primaryInitials": "hm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hem",
+          "hmo"
+        ]
       },
       "aliases": []
     },
@@ -720,7 +1054,15 @@
         "primaryPinyin": "huafalin",
         "alternatePinyin": [],
         "primaryInitials": "hfl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "huafl",
+          "hfal",
+          "huafal",
+          "hflin",
+          "huaflin",
+          "hfalin"
+        ]
       },
       "aliases": []
     },
@@ -732,7 +1074,11 @@
         "primaryPinyin": "linguang",
         "alternatePinyin": [],
         "primaryInitials": "lg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ling",
+          "lguang"
+        ]
       },
       "aliases": []
     },
@@ -744,7 +1090,8 @@
         "primaryPinyin": "hong",
         "alternatePinyin": [],
         "primaryInitials": "h",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -756,7 +1103,11 @@
         "primaryPinyin": "leishe",
         "alternatePinyin": [],
         "primaryInitials": "ls",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "leis",
+          "lshe"
+        ]
       },
       "aliases": []
     },
@@ -768,7 +1119,11 @@
         "primaryPinyin": "kesong",
         "alternatePinyin": [],
         "primaryInitials": "ks",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kes",
+          "ksong"
+        ]
       },
       "aliases": []
     },
@@ -780,7 +1135,11 @@
         "primaryPinyin": "huoshen",
         "alternatePinyin": [],
         "primaryInitials": "hs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "huos",
+          "hshen"
+        ]
       },
       "aliases": []
     },
@@ -792,7 +1151,23 @@
         "primaryPinyin": "puluowangsi",
         "alternatePinyin": [],
         "primaryInitials": "plws",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "pulws",
+          "pluows",
+          "puluows",
+          "plwangs",
+          "pulwangs",
+          "pluowangs",
+          "puluowangs",
+          "plwsi",
+          "pulwsi",
+          "pluowsi",
+          "puluowsi",
+          "plwangsi",
+          "pulwangsi",
+          "pluowangsi"
+        ]
       },
       "aliases": []
     },
@@ -804,7 +1179,15 @@
         "primaryPinyin": "shoulinren",
         "alternatePinyin": [],
         "primaryInitials": "slr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shoulr",
+          "slinr",
+          "shoulinr",
+          "slren",
+          "shoulren",
+          "slinren"
+        ]
       },
       "aliases": []
     },
@@ -816,7 +1199,11 @@
         "primaryPinyin": "yaxin",
         "alternatePinyin": [],
         "primaryInitials": "yx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yax",
+          "yxin"
+        ]
       },
       "aliases": []
     },
@@ -828,7 +1215,11 @@
         "primaryPinyin": "chuxue",
         "alternatePinyin": [],
         "primaryInitials": "cx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "chux",
+          "cxue"
+        ]
       },
       "aliases": []
     },
@@ -840,7 +1231,11 @@
         "primaryPinyin": "zhenli",
         "alternatePinyin": [],
         "primaryInitials": "zl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhenl",
+          "zli"
+        ]
       },
       "aliases": []
     },
@@ -852,7 +1247,8 @@
         "primaryPinyin": "kong",
         "alternatePinyin": [],
         "primaryInitials": "k",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -864,7 +1260,11 @@
         "primaryPinyin": "shixie",
         "alternatePinyin": [],
         "primaryInitials": "sx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shix",
+          "sxie"
+        ]
       },
       "aliases": []
     },
@@ -876,7 +1276,15 @@
         "primaryPinyin": "shitieshou",
         "alternatePinyin": [],
         "primaryInitials": "sts",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shits",
+          "sties",
+          "shities",
+          "stshou",
+          "shitshou",
+          "stieshou"
+        ]
       },
       "aliases": []
     },
@@ -888,7 +1296,15 @@
         "primaryPinyin": "nengtianshi",
         "alternatePinyin": [],
         "primaryInitials": "nts",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "nengts",
+          "ntians",
+          "nengtians",
+          "ntshi",
+          "nengtshi",
+          "ntianshi"
+        ]
       },
       "aliases": []
     },
@@ -900,7 +1316,23 @@
         "primaryPinyin": "tuijinzhiwang",
         "alternatePinyin": [],
         "primaryInitials": "tjzw",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tuijzw",
+          "tjinzw",
+          "tuijinzw",
+          "tjzhiw",
+          "tuijzhiw",
+          "tjinzhiw",
+          "tuijinzhiw",
+          "tjzwang",
+          "tuijzwang",
+          "tjinzwang",
+          "tuijinzwang",
+          "tjzhiwang",
+          "tuijzhiwang",
+          "tjinzhiwang"
+        ]
       },
       "aliases": []
     },
@@ -912,7 +1344,23 @@
         "primaryPinyin": "yifulite",
         "alternatePinyin": [],
         "primaryInitials": "yflt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yiflt",
+          "yfult",
+          "yifult",
+          "yflit",
+          "yiflit",
+          "yfulit",
+          "yifulit",
+          "yflte",
+          "yiflte",
+          "yfulte",
+          "yifulte",
+          "yflite",
+          "yiflite",
+          "yfulite"
+        ]
       },
       "aliases": []
     },
@@ -924,7 +1372,23 @@
         "primaryPinyin": "aiyafala",
         "alternatePinyin": [],
         "primaryInitials": "ayfl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "aiyfl",
+          "ayafl",
+          "aiyafl",
+          "ayfal",
+          "aiyfal",
+          "ayafal",
+          "aiyafal",
+          "ayfla",
+          "aiyfla",
+          "ayafla",
+          "aiyafla",
+          "ayfala",
+          "aiyfala",
+          "ayafala"
+        ]
       },
       "aliases": []
     },
@@ -936,7 +1400,23 @@
         "primaryPinyin": "anjielina",
         "alternatePinyin": [],
         "primaryInitials": "ajln",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "anjln",
+          "ajieln",
+          "anjieln",
+          "ajlin",
+          "anjlin",
+          "ajielin",
+          "anjielin",
+          "ajlna",
+          "anjlna",
+          "ajielna",
+          "anjielna",
+          "ajlina",
+          "anjlina",
+          "ajielina"
+        ]
       },
       "aliases": []
     },
@@ -948,7 +1428,11 @@
         "primaryPinyin": "shanling",
         "alternatePinyin": [],
         "primaryInitials": "sl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shanl",
+          "sling"
+        ]
       },
       "aliases": []
     },
@@ -960,7 +1444,11 @@
         "primaryPinyin": "yeying",
         "alternatePinyin": [],
         "primaryInitials": "yy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yey",
+          "yying"
+        ]
       },
       "aliases": []
     },
@@ -972,7 +1460,11 @@
         "primaryPinyin": "xingxiong",
         "alternatePinyin": [],
         "primaryInitials": "xx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xingx",
+          "xxiong"
+        ]
       },
       "aliases": []
     },
@@ -984,7 +1476,15 @@
         "primaryPinyin": "saileiya",
         "alternatePinyin": [],
         "primaryInitials": "sly",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "saily",
+          "sleiy",
+          "saileiy",
+          "slya",
+          "sailya",
+          "sleiya"
+        ]
       },
       "aliases": []
     },
@@ -996,7 +1496,11 @@
         "primaryPinyin": "yinhui",
         "alternatePinyin": [],
         "primaryInitials": "yh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yinh",
+          "yhui"
+        ]
       },
       "aliases": []
     },
@@ -1008,7 +1512,11 @@
         "primaryPinyin": "baoxing",
         "alternatePinyin": [],
         "primaryInitials": "bx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "baox",
+          "bxing"
+        ]
       },
       "aliases": []
     },
@@ -1020,7 +1528,11 @@
         "primaryPinyin": "kongbao",
         "alternatePinyin": [],
         "primaryInitials": "kb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kongb",
+          "kbao"
+        ]
       },
       "aliases": []
     },
@@ -1032,7 +1544,15 @@
         "primaryPinyin": "yuejianye",
         "alternatePinyin": [],
         "primaryInitials": "yjy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yuejy",
+          "yjiany",
+          "yuejiany",
+          "yjye",
+          "yuejye",
+          "yjianye"
+        ]
       },
       "aliases": []
     },
@@ -1044,7 +1564,11 @@
         "primaryPinyin": "liefeng",
         "alternatePinyin": [],
         "primaryInitials": "lf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lief",
+          "lfeng"
+        ]
       },
       "aliases": []
     },
@@ -1056,7 +1580,11 @@
         "primaryPinyin": "yemo",
         "alternatePinyin": [],
         "primaryInitials": "ym",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yem",
+          "ymo"
+        ]
       },
       "aliases": []
     },
@@ -1068,7 +1596,15 @@
         "primaryPinyin": "gelani",
         "alternatePinyin": [],
         "primaryInitials": "gln",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "geln",
+          "glan",
+          "gelan",
+          "glni",
+          "gelni",
+          "glani"
+        ]
       },
       "aliases": []
     },
@@ -1080,7 +1616,15 @@
         "primaryPinyin": "sikadi",
         "alternatePinyin": [],
         "primaryInitials": "skd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "sikd",
+          "skad",
+          "sikad",
+          "skdi",
+          "sikdi",
+          "skadi"
+        ]
       },
       "aliases": []
     },
@@ -1092,7 +1636,15 @@
         "primaryPinyin": "paopuka",
         "alternatePinyin": [],
         "primaryInitials": "ppk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "paopk",
+          "ppuk",
+          "paopuk",
+          "ppka",
+          "paopka",
+          "ppuka"
+        ]
       },
       "aliases": []
     },
@@ -1104,7 +1656,11 @@
         "primaryPinyin": "bandian",
         "alternatePinyin": [],
         "primaryInitials": "bd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "band",
+          "bdian"
+        ]
       },
       "aliases": []
     },
@@ -1116,7 +1672,15 @@
         "primaryPinyin": "geleiyi",
         "alternatePinyin": [],
         "primaryInitials": "gly",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "gely",
+          "gleiy",
+          "geleiy",
+          "glyi",
+          "gelyi",
+          "gleiyi"
+        ]
       },
       "aliases": []
     },
@@ -1128,7 +1692,15 @@
         "primaryPinyin": "shihuaiya",
         "alternatePinyin": [],
         "primaryInitials": "shy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shihy",
+          "shuaiy",
+          "shihuaiy",
+          "shya",
+          "shihya",
+          "shuaiya"
+        ]
       },
       "aliases": []
     },
@@ -1140,7 +1712,8 @@
         "primaryPinyin": "chen",
         "alternatePinyin": [],
         "primaryInitials": "c",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1152,7 +1725,15 @@
         "primaryPinyin": "susuluo",
         "alternatePinyin": [],
         "primaryInitials": "ssl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "susl",
+          "ssul",
+          "susul",
+          "ssluo",
+          "susluo",
+          "ssuluo"
+        ]
       },
       "aliases": []
     },
@@ -1164,7 +1745,11 @@
         "primaryPinyin": "xilan",
         "alternatePinyin": [],
         "primaryInitials": "xl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xil",
+          "xlan"
+        ]
       },
       "aliases": []
     },
@@ -1176,7 +1761,23 @@
         "primaryPinyin": "gelaokesi",
         "alternatePinyin": [],
         "primaryInitials": "glks",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "gelks",
+          "glaoks",
+          "gelaoks",
+          "glkes",
+          "gelkes",
+          "glaokes",
+          "gelaokes",
+          "glksi",
+          "gelksi",
+          "glaoksi",
+          "gelaoksi",
+          "glkesi",
+          "gelkesi",
+          "glaokesi"
+        ]
       },
       "aliases": []
     },
@@ -1188,7 +1789,8 @@
         "primaryPinyin": "hei",
         "alternatePinyin": [],
         "primaryInitials": "h",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1200,7 +1802,15 @@
         "primaryPinyin": "taojinniang",
         "alternatePinyin": [],
         "primaryInitials": "tjn",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "taojn",
+          "tjinn",
+          "taojinn",
+          "tjniang",
+          "taojniang",
+          "tjinniang"
+        ]
       },
       "aliases": []
     },
@@ -1212,7 +1822,11 @@
         "primaryPinyin": "xingji",
         "alternatePinyin": [],
         "primaryInitials": "xj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xingj",
+          "xji"
+        ]
       },
       "aliases": []
     },
@@ -1224,7 +1838,15 @@
         "primaryPinyin": "helage",
         "alternatePinyin": [],
         "primaryInitials": "hlg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "helg",
+          "hlag",
+          "helag",
+          "hlge",
+          "helge",
+          "hlage"
+        ]
       },
       "aliases": []
     },
@@ -1236,7 +1858,11 @@
         "primaryPinyin": "jianlei",
         "alternatePinyin": [],
         "primaryInitials": "jl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jianl",
+          "jlei"
+        ]
       },
       "aliases": []
     },
@@ -1248,7 +1874,11 @@
         "primaryPinyin": "hongyun",
         "alternatePinyin": [],
         "primaryInitials": "hy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hongy",
+          "hyun"
+        ]
       },
       "aliases": []
     },
@@ -1260,7 +1890,11 @@
         "primaryPinyin": "yanke",
         "alternatePinyin": [],
         "primaryInitials": "yk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yank",
+          "yke"
+        ]
       },
       "aliases": []
     },
@@ -1272,7 +1906,15 @@
         "primaryPinyin": "songzangren",
         "alternatePinyin": [],
         "primaryInitials": "szr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "songzr",
+          "szangr",
+          "songzangr",
+          "szren",
+          "songzren",
+          "szangren"
+        ]
       },
       "aliases": []
     },
@@ -1284,7 +1926,15 @@
         "primaryPinyin": "maizhelun",
         "alternatePinyin": [],
         "primaryInitials": "mzl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "maizl",
+          "mzhel",
+          "maizhel",
+          "mzlun",
+          "maizlun",
+          "mzhelun"
+        ]
       },
       "aliases": []
     },
@@ -1296,7 +1946,11 @@
         "primaryPinyin": "yisang",
         "alternatePinyin": [],
         "primaryInitials": "ys",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yis",
+          "ysang"
+        ]
       },
       "aliases": []
     },
@@ -1308,7 +1962,11 @@
         "primaryPinyin": "weifeng",
         "alternatePinyin": [],
         "primaryInitials": "wf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "weif",
+          "wfeng"
+        ]
       },
       "aliases": []
     },
@@ -1320,7 +1978,8 @@
         "primaryPinyin": "mei",
         "alternatePinyin": [],
         "primaryInitials": "m",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1332,7 +1991,11 @@
         "primaryPinyin": "baisong",
         "alternatePinyin": [],
         "primaryInitials": "bs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bais",
+          "bsong"
+        ]
       },
       "aliases": []
     },
@@ -1344,7 +2007,11 @@
         "primaryPinyin": "huaihu",
         "alternatePinyin": [],
         "primaryInitials": "hh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "huaih",
+          "hhu"
+        ]
       },
       "aliases": []
     },
@@ -1356,7 +2023,23 @@
         "primaryPinyin": "mositima",
         "alternatePinyin": [],
         "primaryInitials": "mstm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mostm",
+          "msitm",
+          "mositm",
+          "mstim",
+          "mostim",
+          "msitim",
+          "mositim",
+          "mstma",
+          "mostma",
+          "msitma",
+          "mositma",
+          "mstima",
+          "mostima",
+          "msitima"
+        ]
       },
       "aliases": []
     },
@@ -1368,7 +2051,11 @@
         "primaryPinyin": "weicao",
         "alternatePinyin": [],
         "primaryInitials": "wc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "weic",
+          "wcao"
+        ]
       },
       "aliases": []
     },
@@ -1380,7 +2067,15 @@
         "primaryPinyin": "buluoka",
         "alternatePinyin": [],
         "primaryInitials": "blk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bulk",
+          "bluok",
+          "buluok",
+          "blka",
+          "bulka",
+          "bluoka"
+        ]
       },
       "aliases": []
     },
@@ -1394,6 +2089,14 @@
         "primaryInitials": "abe",
         "alternateInitials": [
           "abr"
+        ],
+        "hybridPinyin": [
+          "anbe",
+          "abie",
+          "anbie",
+          "aber",
+          "anber",
+          "abier"
         ]
       },
       "aliases": []
@@ -1406,7 +2109,11 @@
         "primaryPinyin": "huihou",
         "alternatePinyin": [],
         "primaryInitials": "hh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "huih",
+          "hhou"
+        ]
       },
       "aliases": []
     },
@@ -1418,7 +2125,8 @@
         "primaryPinyin": "huang",
         "alternatePinyin": [],
         "primaryInitials": "h",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1430,7 +2138,11 @@
         "primaryPinyin": "xuezhi",
         "alternatePinyin": [],
         "primaryInitials": "xz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xuez",
+          "xzhi"
+        ]
       },
       "aliases": []
     },
@@ -1442,7 +2154,8 @@
         "primaryPinyin": "hong",
         "alternatePinyin": [],
         "primaryInitials": "h",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1454,7 +2167,8 @@
         "primaryPinyin": "a",
         "alternatePinyin": [],
         "primaryInitials": "a",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1466,7 +2180,8 @@
         "primaryPinyin": "nian",
         "alternatePinyin": [],
         "primaryInitials": "n",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1478,7 +2193,11 @@
         "primaryPinyin": "jingzhe",
         "alternatePinyin": [],
         "primaryInitials": "jz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jingz",
+          "jzhe"
+        ]
       },
       "aliases": []
     },
@@ -1490,7 +2209,11 @@
         "primaryPinyin": "keebai",
         "alternatePinyin": [],
         "primaryInitials": "keb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "keeb",
+          "kebai"
+        ]
       },
       "aliases": []
     },
@@ -1502,7 +2225,11 @@
         "primaryPinyin": "qingliu",
         "alternatePinyin": [],
         "primaryInitials": "ql",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "qingl",
+          "qliu"
+        ]
       },
       "aliases": []
     },
@@ -1514,7 +2241,8 @@
         "primaryPinyin": "yan",
         "alternatePinyin": [],
         "primaryInitials": "y",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1526,7 +2254,11 @@
         "primaryPinyin": "baihui",
         "alternatePinyin": [],
         "primaryInitials": "bh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "baih",
+          "bhui"
+        ]
       },
       "aliases": []
     },
@@ -1538,7 +2270,11 @@
         "primaryPinyin": "shesha",
         "alternatePinyin": [],
         "primaryInitials": "ss",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shes",
+          "ssha"
+        ]
       },
       "aliases": []
     },
@@ -1550,7 +2286,11 @@
         "primaryPinyin": "fengdi",
         "alternatePinyin": [],
         "primaryInitials": "fd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "fengd",
+          "fdi"
+        ]
       },
       "aliases": []
     },
@@ -1562,7 +2302,15 @@
         "primaryPinyin": "duanzuizhe",
         "alternatePinyin": [],
         "primaryInitials": "dzz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "duanzz",
+          "dzuiz",
+          "duanzuiz",
+          "dzzhe",
+          "duanzzhe",
+          "dzuizhe"
+        ]
       },
       "aliases": []
     },
@@ -1574,7 +2322,11 @@
         "primaryPinyin": "kedao",
         "alternatePinyin": [],
         "primaryInitials": "kd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ked",
+          "kdao"
+        ]
       },
       "aliases": []
     },
@@ -1586,7 +2338,11 @@
         "primaryPinyin": "zhutie",
         "alternatePinyin": [],
         "primaryInitials": "zt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhut",
+          "ztie"
+        ]
       },
       "aliases": []
     },
@@ -1598,7 +2354,11 @@
         "primaryPinyin": "wulian",
         "alternatePinyin": [],
         "primaryInitials": "wl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "wul",
+          "wlian"
+        ]
       },
       "aliases": []
     },
@@ -1610,7 +2370,11 @@
         "primaryPinyin": "kuiying",
         "alternatePinyin": [],
         "primaryInitials": "ky",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kuiy",
+          "kying"
+        ]
       },
       "aliases": []
     },
@@ -1622,7 +2386,8 @@
         "primaryPinyin": "thrmex",
         "alternatePinyin": [],
         "primaryInitials": "thrmex",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1634,7 +2399,11 @@
         "primaryPinyin": "jijing",
         "alternatePinyin": [],
         "primaryInitials": "jj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jij",
+          "jjing"
+        ]
       },
       "aliases": []
     },
@@ -1646,7 +2415,11 @@
         "primaryPinyin": "wendi",
         "alternatePinyin": [],
         "primaryInitials": "wd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "wend",
+          "wdi"
+        ]
       },
       "aliases": []
     },
@@ -1658,7 +2431,8 @@
         "primaryPinyin": "w",
         "alternatePinyin": [],
         "primaryInitials": "w",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1670,7 +2444,11 @@
         "primaryPinyin": "shimian",
         "alternatePinyin": [],
         "primaryInitials": "sm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shim",
+          "smian"
+        ]
       },
       "aliases": []
     },
@@ -1682,7 +2460,11 @@
         "primaryPinyin": "yuehe",
         "alternatePinyin": [],
         "primaryInitials": "yh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yueh",
+          "yhe"
+        ]
       },
       "aliases": []
     },
@@ -1694,7 +2476,15 @@
         "primaryPinyin": "bodengke",
         "alternatePinyin": [],
         "primaryInitials": "bdk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bodk",
+          "bdengk",
+          "bodengk",
+          "bdke",
+          "bodke",
+          "bdengke"
+        ]
       },
       "aliases": []
     },
@@ -1706,7 +2496,11 @@
         "primaryPinyin": "kuai",
         "alternatePinyin": [],
         "primaryInitials": "ka",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kua",
+          "kai"
+        ]
       },
       "aliases": []
     },
@@ -1718,7 +2512,23 @@
         "primaryPinyin": "laienhate",
         "alternatePinyin": [],
         "primaryInitials": "leht",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "laieht",
+          "lenht",
+          "laienht",
+          "lehat",
+          "laiehat",
+          "lenhat",
+          "laienhat",
+          "lehte",
+          "laiehte",
+          "lenhte",
+          "laienhte",
+          "lehate",
+          "laiehate",
+          "lenhate"
+        ]
       },
       "aliases": []
     },
@@ -1730,7 +2540,11 @@
         "primaryPinyin": "zaolu",
         "alternatePinyin": [],
         "primaryInitials": "zl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zaol",
+          "zlu"
+        ]
       },
       "aliases": []
     },
@@ -1742,7 +2556,11 @@
         "primaryPinyin": "kada",
         "alternatePinyin": [],
         "primaryInitials": "kd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kad",
+          "kda"
+        ]
       },
       "aliases": []
     },
@@ -1754,7 +2572,11 @@
         "primaryPinyin": "yaye",
         "alternatePinyin": [],
         "primaryInitials": "yy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yay",
+          "yye"
+        ]
       },
       "aliases": []
     },
@@ -1766,7 +2588,11 @@
         "primaryPinyin": "duanya",
         "alternatePinyin": [],
         "primaryInitials": "dy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "duany",
+          "dya"
+        ]
       },
       "aliases": []
     },
@@ -1778,7 +2604,11 @@
         "primaryPinyin": "linglan",
         "alternatePinyin": [],
         "primaryInitials": "ll",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lingl",
+          "llan"
+        ]
       },
       "aliases": []
     },
@@ -1790,7 +2620,11 @@
         "primaryPinyin": "xiyin",
         "alternatePinyin": [],
         "primaryInitials": "xy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xiy",
+          "xyin"
+        ]
       },
       "aliases": []
     },
@@ -1802,7 +2636,11 @@
         "primaryPinyin": "mila",
         "alternatePinyin": [],
         "primaryInitials": "ml",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mil",
+          "mla"
+        ]
       },
       "aliases": []
     },
@@ -1814,7 +2652,11 @@
         "primaryPinyin": "jiawei",
         "alternatePinyin": [],
         "primaryInitials": "jw",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jiaw",
+          "jwei"
+        ]
       },
       "aliases": []
     },
@@ -1826,7 +2668,8 @@
         "primaryPinyin": "jie",
         "alternatePinyin": [],
         "primaryInitials": "j",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -1838,7 +2681,15 @@
         "primaryPinyin": "anzhela",
         "alternatePinyin": [],
         "primaryInitials": "azl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "anzl",
+          "azhel",
+          "anzhel",
+          "azla",
+          "anzla",
+          "azhela"
+        ]
       },
       "aliases": []
     },
@@ -1850,7 +2701,11 @@
         "primaryPinyin": "jici",
         "alternatePinyin": [],
         "primaryInitials": "jc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jic",
+          "jci"
+        ]
       },
       "aliases": []
     },
@@ -1862,7 +2717,11 @@
         "primaryPinyin": "suantang",
         "alternatePinyin": [],
         "primaryInitials": "st",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "suant",
+          "stang"
+        ]
       },
       "aliases": []
     },
@@ -1874,7 +2733,15 @@
         "primaryPinyin": "temimi",
         "alternatePinyin": [],
         "primaryInitials": "tmm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "temm",
+          "tmim",
+          "temim",
+          "tmmi",
+          "temmi",
+          "tmimi"
+        ]
       },
       "aliases": []
     },
@@ -1886,7 +2753,11 @@
         "primaryPinyin": "suishi",
         "alternatePinyin": [],
         "primaryInitials": "ss",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "suis",
+          "sshi"
+        ]
       },
       "aliases": []
     },
@@ -1898,7 +2769,11 @@
         "primaryPinyin": "senran",
         "alternatePinyin": [],
         "primaryInitials": "sr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "senr",
+          "sran"
+        ]
       },
       "aliases": []
     },
@@ -1910,7 +2785,11 @@
         "primaryPinyin": "fangting",
         "alternatePinyin": [],
         "primaryInitials": "ft",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "fangt",
+          "fting"
+        ]
       },
       "aliases": []
     },
@@ -1922,7 +2801,11 @@
         "primaryPinyin": "baolu",
         "alternatePinyin": [],
         "primaryInitials": "bl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "baol",
+          "blu"
+        ]
       },
       "aliases": []
     },
@@ -1934,7 +2817,11 @@
         "primaryPinyin": "siyue",
         "alternatePinyin": [],
         "primaryInitials": "sy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "siy",
+          "syue"
+        ]
       },
       "aliases": []
     },
@@ -1948,6 +2835,22 @@
         "primaryInitials": "sete",
         "alternateInitials": [
           "srtr"
+        ],
+        "hybridPinyin": [
+          "shiete",
+          "serte",
+          "shierte",
+          "setee",
+          "shietee",
+          "sertee",
+          "shiertee",
+          "seter",
+          "shieter",
+          "serter",
+          "shierter",
+          "seteer",
+          "shieteer",
+          "serteer"
         ]
       },
       "aliases": []
@@ -1960,7 +2863,11 @@
         "primaryPinyin": "paopao",
         "alternatePinyin": [],
         "primaryInitials": "pp",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "paop",
+          "ppao"
+        ]
       },
       "aliases": []
     },
@@ -1972,7 +2879,11 @@
         "primaryPinyin": "bianren",
         "alternatePinyin": [],
         "primaryInitials": "br",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bianr",
+          "bren"
+        ]
       },
       "aliases": []
     },
@@ -1984,7 +2895,15 @@
         "primaryPinyin": "aosita",
         "alternatePinyin": [],
         "primaryInitials": "ast",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "aost",
+          "asit",
+          "aosit",
+          "asta",
+          "aosta",
+          "asita"
+        ]
       },
       "aliases": []
     },
@@ -1996,7 +2915,11 @@
         "primaryPinyin": "xiaguang",
         "alternatePinyin": [],
         "primaryInitials": "xg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xiag",
+          "xguang"
+        ]
       },
       "aliases": []
     },
@@ -2008,7 +2931,11 @@
         "primaryPinyin": "jieke",
         "alternatePinyin": [],
         "primaryInitials": "jk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jiek",
+          "jke"
+        ]
       },
       "aliases": []
     },
@@ -2020,7 +2947,11 @@
         "primaryPinyin": "xuyu",
         "alternatePinyin": [],
         "primaryInitials": "xy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xuy",
+          "xyu"
+        ]
       },
       "aliases": []
     },
@@ -2032,7 +2963,11 @@
         "primaryPinyin": "niyan",
         "alternatePinyin": [],
         "primaryInitials": "ny",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "niy",
+          "nyan"
+        ]
       },
       "aliases": []
     },
@@ -2044,7 +2979,15 @@
         "primaryPinyin": "midiexiang",
         "alternatePinyin": [],
         "primaryInitials": "mdx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "midx",
+          "mdiex",
+          "midiex",
+          "mdxiang",
+          "midxiang",
+          "mdiexiang"
+        ]
       },
       "aliases": []
     },
@@ -2056,7 +2999,8 @@
         "primaryPinyin": "amiya(jinwei)",
         "alternatePinyin": [],
         "primaryInitials": "amy(jw)",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2068,7 +3012,11 @@
         "primaryPinyin": "songguo",
         "alternatePinyin": [],
         "primaryInitials": "sg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "songg",
+          "sguo"
+        ]
       },
       "aliases": []
     },
@@ -2080,7 +3028,11 @@
         "primaryPinyin": "luobin",
         "alternatePinyin": [],
         "primaryInitials": "lb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "luob",
+          "lbin"
+        ]
       },
       "aliases": []
     },
@@ -2092,7 +3044,15 @@
         "primaryPinyin": "kafuka",
         "alternatePinyin": [],
         "primaryInitials": "kfk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kafk",
+          "kfuk",
+          "kafuk",
+          "kfka",
+          "kafka",
+          "kfuka"
+        ]
       },
       "aliases": []
     },
@@ -2104,7 +3064,8 @@
         "primaryPinyin": "shan",
         "alternatePinyin": [],
         "primaryInitials": "s",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2116,7 +3077,11 @@
         "primaryPinyin": "doumiao",
         "alternatePinyin": [],
         "primaryInitials": "dm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "doum",
+          "dmiao"
+        ]
       },
       "aliases": []
     },
@@ -2128,7 +3093,15 @@
         "primaryPinyin": "ailisi",
         "alternatePinyin": [],
         "primaryInitials": "als",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ails",
+          "alis",
+          "ailis",
+          "alsi",
+          "ailsi",
+          "alisi"
+        ]
       },
       "aliases": []
     },
@@ -2140,7 +3113,11 @@
         "primaryPinyin": "kongxian",
         "alternatePinyin": [],
         "primaryInitials": "kx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kongx",
+          "kxian"
+        ]
       },
       "aliases": []
     },
@@ -2152,7 +3129,11 @@
         "primaryPinyin": "tuye",
         "alternatePinyin": [],
         "primaryInitials": "ty",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tuy",
+          "tye"
+        ]
       },
       "aliases": []
     },
@@ -2164,7 +3145,23 @@
         "primaryPinyin": "yanyuyanrong",
         "alternatePinyin": [],
         "primaryInitials": "yyyr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yanyyr",
+          "yyuyr",
+          "yanyuyr",
+          "yyyanr",
+          "yanyyanr",
+          "yyuyanr",
+          "yanyuyanr",
+          "yyyrong",
+          "yanyyrong",
+          "yyuyrong",
+          "yanyuyrong",
+          "yyyanrong",
+          "yanyyanrong",
+          "yyuyanrong"
+        ]
       },
       "aliases": []
     },
@@ -2176,7 +3173,11 @@
         "primaryPinyin": "wuyou",
         "alternatePinyin": [],
         "primaryInitials": "wy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "wuy",
+          "wyou"
+        ]
       },
       "aliases": []
     },
@@ -2188,7 +3189,8 @@
         "primaryPinyin": "cuoe",
         "alternatePinyin": [],
         "primaryInitials": "ce",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2200,7 +3202,8 @@
         "primaryPinyin": "xi",
         "alternatePinyin": [],
         "primaryInitials": "x",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2212,7 +3215,11 @@
         "primaryPinyin": "zhanche",
         "alternatePinyin": [],
         "primaryInitials": "zc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhanc",
+          "zche"
+        ]
       },
       "aliases": []
     },
@@ -2224,7 +3231,11 @@
         "primaryPinyin": "shanji",
         "alternatePinyin": [],
         "primaryInitials": "sj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shanj",
+          "sji"
+        ]
       },
       "aliases": []
     },
@@ -2236,7 +3247,11 @@
         "primaryPinyin": "shuanghua",
         "alternatePinyin": [],
         "primaryInitials": "sh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shuangh",
+          "shua"
+        ]
       },
       "aliases": []
     },
@@ -2248,7 +3263,11 @@
         "primaryPinyin": "huijin",
         "alternatePinyin": [],
         "primaryInitials": "hj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "huij",
+          "hjin"
+        ]
       },
       "aliases": []
     },
@@ -2260,7 +3279,11 @@
         "primaryPinyin": "baoyu",
         "alternatePinyin": [],
         "primaryInitials": "by",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "baoy",
+          "byu"
+        ]
       },
       "aliases": []
     },
@@ -2272,7 +3295,11 @@
         "primaryPinyin": "rongquan",
         "alternatePinyin": [],
         "primaryInitials": "rq",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "rongq",
+          "rquan"
+        ]
       },
       "aliases": []
     },
@@ -2284,7 +3311,11 @@
         "primaryPinyin": "yike",
         "alternatePinyin": [],
         "primaryInitials": "yk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yik",
+          "yke"
+        ]
       },
       "aliases": []
     },
@@ -2296,7 +3327,11 @@
         "primaryPinyin": "chidong",
         "alternatePinyin": [],
         "primaryInitials": "cd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "chid",
+          "cdong"
+        ]
       },
       "aliases": []
     },
@@ -2308,7 +3343,23 @@
         "primaryPinyin": "geleidiya",
         "alternatePinyin": [],
         "primaryInitials": "gldy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "geldy",
+          "gleidy",
+          "geleidy",
+          "gldiy",
+          "geldiy",
+          "gleidiy",
+          "geleidiy",
+          "gldya",
+          "geldya",
+          "gleidya",
+          "geleidya",
+          "gldiya",
+          "geldiya",
+          "gleidiya"
+        ]
       },
       "aliases": []
     },
@@ -2322,6 +3373,14 @@
         "primaryInitials": "kex",
         "alternateInitials": [
           "krx"
+        ],
+        "hybridPinyin": [
+          "kaiex",
+          "kerx",
+          "kaierx",
+          "kexi",
+          "kaiexi",
+          "kerxi"
         ]
       },
       "aliases": []
@@ -2334,7 +3393,8 @@
         "primaryPinyin": "zhuoxinsikadi",
         "alternatePinyin": [],
         "primaryInitials": "zxskd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2346,7 +3406,11 @@
         "primaryPinyin": "shendian",
         "alternatePinyin": [],
         "primaryInitials": "sd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shend",
+          "sdian"
+        ]
       },
       "aliases": []
     },
@@ -2358,7 +3422,11 @@
         "primaryPinyin": "beina",
         "alternatePinyin": [],
         "primaryInitials": "bn",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bein",
+          "bna"
+        ]
       },
       "aliases": []
     },
@@ -2370,7 +3438,11 @@
         "primaryPinyin": "qiliang",
         "alternatePinyin": [],
         "primaryInitials": "ql",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "qil",
+          "qliang"
+        ]
       },
       "aliases": []
     },
@@ -2382,7 +3454,23 @@
         "primaryPinyin": "kanielian",
         "alternatePinyin": [],
         "primaryInitials": "knla",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kanla",
+          "kniela",
+          "kaniela",
+          "knlia",
+          "kanlia",
+          "knielia",
+          "kanielia",
+          "knlan",
+          "kanlan",
+          "knielan",
+          "kanielan",
+          "knlian",
+          "kanlian",
+          "knielian"
+        ]
       },
       "aliases": []
     },
@@ -2394,7 +3482,15 @@
         "primaryPinyin": "palasi",
         "alternatePinyin": [],
         "primaryInitials": "pls",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "pals",
+          "plas",
+          "palas",
+          "plsi",
+          "palsi",
+          "plasi"
+        ]
       },
       "aliases": []
     },
@@ -2406,7 +3502,15 @@
         "primaryPinyin": "longshelan",
         "alternatePinyin": [],
         "primaryInitials": "lsl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "longsl",
+          "lshel",
+          "longshel",
+          "lslan",
+          "longslan",
+          "lshelan"
+        ]
       },
       "aliases": []
     },
@@ -2418,7 +3522,15 @@
         "primaryPinyin": "yumaobi",
         "alternatePinyin": [],
         "primaryInitials": "ymb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yumb",
+          "ymaob",
+          "yumaob",
+          "ymbi",
+          "yumbi",
+          "ymaobi"
+        ]
       },
       "aliases": []
     },
@@ -2430,7 +3542,11 @@
         "primaryPinyin": "shuiyue",
         "alternatePinyin": [],
         "primaryInitials": "sy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shuiy",
+          "syue"
+        ]
       },
       "aliases": []
     },
@@ -2442,7 +3558,8 @@
         "primaryPinyin": "jiariweilongchen",
         "alternatePinyin": [],
         "primaryInitials": "jrwlc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2454,7 +3571,23 @@
         "primaryPinyin": "luobilata",
         "alternatePinyin": [],
         "primaryInitials": "lblt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "luoblt",
+          "lbilt",
+          "luobilt",
+          "lblat",
+          "luoblat",
+          "lbilat",
+          "luobilat",
+          "lblta",
+          "luoblta",
+          "lbilta",
+          "luobilta",
+          "lblata",
+          "luoblata",
+          "lbilata"
+        ]
       },
       "aliases": []
     },
@@ -2466,7 +3599,11 @@
         "primaryPinyin": "sangshen",
         "alternatePinyin": [],
         "primaryInitials": "ss",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "sangs",
+          "sshen"
+        ]
       },
       "aliases": []
     },
@@ -2478,7 +3615,11 @@
         "primaryPinyin": "qinliu",
         "alternatePinyin": [],
         "primaryInitials": "ql",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "qinl",
+          "qliu"
+        ]
       },
       "aliases": []
     },
@@ -2490,7 +3631,11 @@
         "primaryPinyin": "huihao",
         "alternatePinyin": [],
         "primaryInitials": "hh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "huih",
+          "hhao"
+        ]
       },
       "aliases": []
     },
@@ -2502,7 +3647,11 @@
         "primaryPinyin": "yuanya",
         "alternatePinyin": [],
         "primaryInitials": "yy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yuany",
+          "yya"
+        ]
       },
       "aliases": []
     },
@@ -2514,7 +3663,8 @@
         "primaryPinyin": "zhengyiqishihao",
         "alternatePinyin": [],
         "primaryInitials": "zyqsh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2526,7 +3676,11 @@
         "primaryPinyin": "buding",
         "alternatePinyin": [],
         "primaryInitials": "bd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bud",
+          "bding"
+        ]
       },
       "aliases": []
     },
@@ -2538,7 +3692,11 @@
         "primaryPinyin": "mimei",
         "alternatePinyin": [],
         "primaryInitials": "mm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mim",
+          "mmei"
+        ]
       },
       "aliases": []
     },
@@ -2550,7 +3708,11 @@
         "primaryPinyin": "yezong",
         "alternatePinyin": [],
         "primaryInitials": "yz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yez",
+          "yzong"
+        ]
       },
       "aliases": []
     },
@@ -2562,7 +3724,11 @@
         "primaryPinyin": "shiqing",
         "alternatePinyin": [],
         "primaryInitials": "sq",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shiq",
+          "sqing"
+        ]
       },
       "aliases": []
     },
@@ -2574,7 +3740,11 @@
         "primaryPinyin": "yanwei",
         "alternatePinyin": [],
         "primaryInitials": "yw",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yanw",
+          "ywei"
+        ]
       },
       "aliases": []
     },
@@ -2586,7 +3756,8 @@
         "primaryPinyin": "yaoqishilinguang",
         "alternatePinyin": [],
         "primaryInitials": "yqslg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2598,7 +3769,11 @@
         "primaryPinyin": "yela",
         "alternatePinyin": [],
         "primaryInitials": "yl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yel",
+          "yla"
+        ]
       },
       "aliases": []
     },
@@ -2610,7 +3785,11 @@
         "primaryPinyin": "jiguang",
         "alternatePinyin": [],
         "primaryInitials": "jg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jig",
+          "jguang"
+        ]
       },
       "aliases": []
     },
@@ -2622,7 +3801,11 @@
         "primaryPinyin": "lingzhi",
         "alternatePinyin": [],
         "primaryInitials": "lz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lingz",
+          "lzhi"
+        ]
       },
       "aliases": []
     },
@@ -2634,7 +3817,11 @@
         "primaryPinyin": "muluo",
         "alternatePinyin": [],
         "primaryInitials": "ml",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mul",
+          "mluo"
+        ]
       },
       "aliases": []
     },
@@ -2646,7 +3833,15 @@
         "primaryPinyin": "jiuselu",
         "alternatePinyin": [],
         "primaryInitials": "jsl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jiusl",
+          "jsel",
+          "jiusel",
+          "jslu",
+          "jiuslu",
+          "jselu"
+        ]
       },
       "aliases": []
     },
@@ -2658,7 +3853,8 @@
         "primaryPinyin": "hanmangkeluosi",
         "alternatePinyin": [],
         "primaryInitials": "hmkls",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2670,7 +3866,11 @@
         "primaryPinyin": "yeban",
         "alternatePinyin": [],
         "primaryInitials": "yb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yeb",
+          "yban"
+        ]
       },
       "aliases": []
     },
@@ -2682,7 +3882,11 @@
         "primaryPinyin": "laoli",
         "alternatePinyin": [],
         "primaryInitials": "ll",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "laol",
+          "lli"
+        ]
       },
       "aliases": []
     },
@@ -2694,7 +3898,8 @@
         "primaryPinyin": "ling",
         "alternatePinyin": [],
         "primaryInitials": "l",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2706,7 +3911,11 @@
         "primaryPinyin": "xiali",
         "alternatePinyin": [],
         "primaryInitials": "xl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xial",
+          "xli"
+        ]
       },
       "aliases": []
     },
@@ -2718,7 +3927,11 @@
         "primaryPinyin": "chengshan",
         "alternatePinyin": [],
         "primaryInitials": "cs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "chengs",
+          "cshan"
+        ]
       },
       "aliases": []
     },
@@ -2730,7 +3943,15 @@
         "primaryPinyin": "jianxingzhe",
         "alternatePinyin": [],
         "primaryInitials": "jxz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jianxz",
+          "jxingz",
+          "jianxingz",
+          "jxzhe",
+          "jianxzhe",
+          "jxingzhe"
+        ]
       },
       "aliases": []
     },
@@ -2742,7 +3963,11 @@
         "primaryPinyin": "fengwan",
         "alternatePinyin": [],
         "primaryInitials": "fw",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "fengw",
+          "fwan"
+        ]
       },
       "aliases": []
     },
@@ -2754,7 +3979,23 @@
         "primaryPinyin": "feiyameita",
         "alternatePinyin": [],
         "primaryInitials": "fymt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "feiymt",
+          "fyamt",
+          "feiyamt",
+          "fymeit",
+          "feiymeit",
+          "fyameit",
+          "feiyameit",
+          "fymta",
+          "feiymta",
+          "fyamta",
+          "feiyamta",
+          "fymeita",
+          "feiymeita",
+          "fyameita"
+        ]
       },
       "aliases": []
     },
@@ -2766,7 +4007,11 @@
         "primaryPinyin": "heguo",
         "alternatePinyin": [],
         "primaryInitials": "hg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "heg",
+          "hguo"
+        ]
       },
       "aliases": []
     },
@@ -2778,7 +4023,11 @@
         "primaryPinyin": "haidi",
         "alternatePinyin": [],
         "primaryInitials": "hd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "haid",
+          "hdi"
+        ]
       },
       "aliases": []
     },
@@ -2790,7 +4039,11 @@
         "primaryPinyin": "luoluo",
         "alternatePinyin": [],
         "primaryInitials": "ll",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "luol",
+          "lluo"
+        ]
       },
       "aliases": []
     },
@@ -2802,7 +4055,11 @@
         "primaryPinyin": "haojiao",
         "alternatePinyin": [],
         "primaryInitials": "hj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "haoj",
+          "hjiao"
+        ]
       },
       "aliases": []
     },
@@ -2814,7 +4071,11 @@
         "primaryPinyin": "luefeng",
         "alternatePinyin": [],
         "primaryInitials": "lf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "luef",
+          "lfeng"
+        ]
       },
       "aliases": []
     },
@@ -2826,7 +4087,11 @@
         "primaryPinyin": "liuming",
         "alternatePinyin": [],
         "primaryInitials": "lm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lium",
+          "lming"
+        ]
       },
       "aliases": []
     },
@@ -2838,7 +4103,15 @@
         "primaryPinyin": "ailini",
         "alternatePinyin": [],
         "primaryInitials": "aln",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ailn",
+          "alin",
+          "ailin",
+          "alni",
+          "ailni",
+          "alini"
+        ]
       },
       "aliases": []
     },
@@ -2850,7 +4123,8 @@
         "primaryPinyin": "guimingyoulingsha",
         "alternatePinyin": [],
         "primaryInitials": "gmyls",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2862,7 +4136,15 @@
         "primaryPinyin": "ailatuo",
         "alternatePinyin": [],
         "primaryInitials": "alt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ailt",
+          "alat",
+          "ailat",
+          "altuo",
+          "ailtuo",
+          "alatuo"
+        ]
       },
       "aliases": []
     },
@@ -2876,6 +4158,14 @@
         "primaryInitials": "cen",
         "alternateInitials": [
           "crn"
+        ],
+        "hybridPinyin": [
+          "cheen",
+          "cern",
+          "cheern",
+          "ceni",
+          "cheeni",
+          "cerni"
         ]
       },
       "aliases": []
@@ -2888,7 +4178,23 @@
         "primaryPinyin": "zhuochenfurong",
         "alternatePinyin": [],
         "primaryInitials": "zcfr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhuocfr",
+          "zchenfr",
+          "zhuochenfr",
+          "zcfur",
+          "zhuocfur",
+          "zchenfur",
+          "zhuochenfur",
+          "zcfrong",
+          "zhuocfrong",
+          "zchenfrong",
+          "zhuochenfrong",
+          "zcfurong",
+          "zhuocfurong",
+          "zchenfurong"
+        ]
       },
       "aliases": []
     },
@@ -2900,7 +4206,11 @@
         "primaryPinyin": "heijian",
         "alternatePinyin": [],
         "primaryInitials": "hj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "heij",
+          "hjian"
+        ]
       },
       "aliases": []
     },
@@ -2912,7 +4222,11 @@
         "primaryPinyin": "xingyuan",
         "alternatePinyin": [],
         "primaryInitials": "xy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xingy",
+          "xyuan"
+        ]
       },
       "aliases": []
     },
@@ -2924,7 +4238,8 @@
         "primaryPinyin": "chengxigeleiyi",
         "alternatePinyin": [],
         "primaryInitials": "cxgly",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2936,7 +4251,15 @@
         "primaryPinyin": "duoluoxi",
         "alternatePinyin": [],
         "primaryInitials": "dlx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "duolx",
+          "dluox",
+          "duoluox",
+          "dlxi",
+          "duolxi",
+          "dluoxi"
+        ]
       },
       "aliases": []
     },
@@ -2948,7 +4271,11 @@
         "primaryPinyin": "zhijian",
         "alternatePinyin": [],
         "primaryInitials": "zj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhij",
+          "zjian"
+        ]
       },
       "aliases": []
     },
@@ -2960,7 +4287,11 @@
         "primaryPinyin": "xiaoge",
         "alternatePinyin": [],
         "primaryInitials": "xg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xiaog",
+          "xge"
+        ]
       },
       "aliases": []
     },
@@ -2972,7 +4303,11 @@
         "primaryPinyin": "hongxue",
         "alternatePinyin": [],
         "primaryInitials": "hx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hongx",
+          "hxue"
+        ]
       },
       "aliases": []
     },
@@ -2986,7 +4321,8 @@
         "primaryInitials": "bljwe",
         "alternateInitials": [
           "bljwr"
-        ]
+        ],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -2998,7 +4334,11 @@
         "primaryPinyin": "danshu",
         "alternatePinyin": [],
         "primaryInitials": "ds",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dans",
+          "dshu"
+        ]
       },
       "aliases": []
     },
@@ -3010,7 +4350,15 @@
         "primaryPinyin": "maenna",
         "alternatePinyin": [],
         "primaryInitials": "men",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "maen",
+          "menn",
+          "maenn",
+          "mena",
+          "maena",
+          "menna"
+        ]
       },
       "aliases": []
     },
@@ -3022,7 +4370,15 @@
         "primaryPinyin": "luoxiaohei",
         "alternatePinyin": [],
         "primaryInitials": "lxh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "luoxh",
+          "lxiaoh",
+          "luoxiaoh",
+          "lxhei",
+          "luoxhei",
+          "lxiaohei"
+        ]
       },
       "aliases": []
     },
@@ -3034,7 +4390,11 @@
         "primaryPinyin": "haimo",
         "alternatePinyin": [],
         "primaryInitials": "hm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "haim",
+          "hmo"
+        ]
       },
       "aliases": []
     },
@@ -3046,7 +4406,11 @@
         "primaryPinyin": "qianhuai",
         "alternatePinyin": [],
         "primaryInitials": "qh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "qianh",
+          "qhuai"
+        ]
       },
       "aliases": []
     },
@@ -3058,7 +4422,15 @@
         "primaryPinyin": "dageda",
         "alternatePinyin": [],
         "primaryInitials": "dgd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dagd",
+          "dged",
+          "daged",
+          "dgda",
+          "dagda",
+          "dgeda"
+        ]
       },
       "aliases": []
     },
@@ -3070,7 +4442,11 @@
         "primaryPinyin": "mingjiao",
         "alternatePinyin": [],
         "primaryInitials": "mj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mingj",
+          "mjiao"
+        ]
       },
       "aliases": []
     },
@@ -3082,7 +4458,11 @@
         "primaryPinyin": "baitie",
         "alternatePinyin": [],
         "primaryInitials": "bt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bait",
+          "btie"
+        ]
       },
       "aliases": []
     },
@@ -3094,7 +4474,11 @@
         "primaryPinyin": "shiying",
         "alternatePinyin": [],
         "primaryInitials": "sy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shiy",
+          "sying"
+        ]
       },
       "aliases": []
     },
@@ -3106,7 +4490,11 @@
         "primaryPinyin": "xuerong",
         "alternatePinyin": [],
         "primaryInitials": "xr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xuer",
+          "xrong"
+        ]
       },
       "aliases": []
     },
@@ -3118,7 +4506,11 @@
         "primaryPinyin": "ziyue",
         "alternatePinyin": [],
         "primaryInitials": "zy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ziy",
+          "zyue"
+        ]
       },
       "aliases": []
     },
@@ -3130,7 +4522,11 @@
         "primaryPinyin": "siye",
         "alternatePinyin": [],
         "primaryInitials": "sy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "siy",
+          "sye"
+        ]
       },
       "aliases": []
     },
@@ -3142,7 +4538,11 @@
         "primaryPinyin": "chizui",
         "alternatePinyin": [],
         "primaryInitials": "cz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "chiz",
+          "czui"
+        ]
       },
       "aliases": []
     },
@@ -3154,7 +4554,8 @@
         "primaryPinyin": "jianmodekesasi",
         "alternatePinyin": [],
         "primaryInitials": "jmdkss",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3166,7 +4567,11 @@
         "primaryPinyin": "mitu",
         "alternatePinyin": [],
         "primaryInitials": "mt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mit",
+          "mtu"
+        ]
       },
       "aliases": []
     },
@@ -3178,7 +4583,11 @@
         "primaryPinyin": "hexian",
         "alternatePinyin": [],
         "primaryInitials": "hx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hex",
+          "hxian"
+        ]
       },
       "aliases": []
     },
@@ -3190,7 +4599,23 @@
         "primaryPinyin": "yanyingweicao",
         "alternatePinyin": [],
         "primaryInitials": "yywc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yanywc",
+          "yyingwc",
+          "yanyingwc",
+          "yyweic",
+          "yanyweic",
+          "yyingweic",
+          "yanyingweic",
+          "yywcao",
+          "yanywcao",
+          "yyingwcao",
+          "yanyingwcao",
+          "yyweicao",
+          "yanyweicao",
+          "yyingweicao"
+        ]
       },
       "aliases": []
     },
@@ -3202,7 +4627,11 @@
         "primaryPinyin": "jieyun",
         "alternatePinyin": [],
         "primaryInitials": "jy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jiey",
+          "jyun"
+        ]
       },
       "aliases": []
     },
@@ -3214,7 +4643,11 @@
         "primaryPinyin": "huoshao",
         "alternatePinyin": [],
         "primaryInitials": "hs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "huos",
+          "hshao"
+        ]
       },
       "aliases": []
     },
@@ -3226,7 +4659,8 @@
         "primaryPinyin": "lin",
         "alternatePinyin": [],
         "primaryInitials": "l",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3242,6 +4676,12 @@
         "primaryInitials": "cy",
         "alternateInitials": [
           "zy"
+        ],
+        "hybridPinyin": [
+          "chongy",
+          "cyue",
+          "zhongy",
+          "zyue"
         ]
       },
       "aliases": []
@@ -3254,7 +4694,11 @@
         "primaryPinyin": "duoling",
         "alternatePinyin": [],
         "primaryInitials": "dl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "duol",
+          "dling"
+        ]
       },
       "aliases": []
     },
@@ -3266,7 +4710,11 @@
         "primaryPinyin": "qiubai",
         "alternatePinyin": [],
         "primaryInitials": "qb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "qiub",
+          "qbai"
+        ]
       },
       "aliases": []
     },
@@ -3278,7 +4726,8 @@
         "primaryPinyin": "tailadaludiaochatuan",
         "alternatePinyin": [],
         "primaryInitials": "tldldct",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3290,7 +4739,8 @@
         "primaryPinyin": "huolongsheijiao",
         "alternatePinyin": [],
         "primaryInitials": "hlshj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3302,7 +4752,8 @@
         "primaryPinyin": "qilinryedao",
         "alternatePinyin": [],
         "primaryInitials": "qlryd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3314,7 +4765,8 @@
         "primaryPinyin": "uofficial",
         "alternatePinyin": [],
         "primaryInitials": "uofficial",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3326,7 +4778,15 @@
         "primaryPinyin": "xiumosi",
         "alternatePinyin": [],
         "primaryInitials": "xms",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xiums",
+          "xmos",
+          "xiumos",
+          "xmsi",
+          "xiumsi",
+          "xmosi"
+        ]
       },
       "aliases": []
     },
@@ -3338,7 +4798,11 @@
         "primaryPinyin": "mogen",
         "alternatePinyin": [],
         "primaryInitials": "mg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mog",
+          "mgen"
+        ]
       },
       "aliases": []
     },
@@ -3350,7 +4814,11 @@
         "primaryPinyin": "yanghui",
         "alternatePinyin": [],
         "primaryInitials": "yh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yangh",
+          "yhui"
+        ]
       },
       "aliases": []
     },
@@ -3362,7 +4830,15 @@
         "primaryPinyin": "yineisi",
         "alternatePinyin": [],
         "primaryInitials": "yns",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yins",
+          "yneis",
+          "yineis",
+          "ynsi",
+          "yinsi",
+          "yneisi"
+        ]
       },
       "aliases": []
     },
@@ -3374,7 +4850,11 @@
         "primaryPinyin": "meila",
         "alternatePinyin": [],
         "primaryInitials": "ml",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "meil",
+          "mla"
+        ]
       },
       "aliases": []
     },
@@ -3386,7 +4866,23 @@
         "primaryPinyin": "cuiyuhemo",
         "alternatePinyin": [],
         "primaryInitials": "cyhm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "cuiyhm",
+          "cyuhm",
+          "cuiyuhm",
+          "cyhem",
+          "cuiyhem",
+          "cyuhem",
+          "cuiyuhem",
+          "cyhmo",
+          "cuiyhmo",
+          "cyuhmo",
+          "cuiyuhmo",
+          "cyhemo",
+          "cuiyhemo",
+          "cyuhemo"
+        ]
       },
       "aliases": []
     },
@@ -3400,6 +4896,22 @@
         "primaryInitials": "hehy",
         "alternateInitials": [
           "hrhy"
+        ],
+        "hybridPinyin": [
+          "huoehy",
+          "herhy",
+          "huoerhy",
+          "hehaiy",
+          "huoehaiy",
+          "herhaiy",
+          "huoerhaiy",
+          "hehya",
+          "huoehya",
+          "herhya",
+          "huoerhya",
+          "hehaiya",
+          "huoehaiya",
+          "herhaiya"
         ]
       },
       "aliases": []
@@ -3414,6 +4926,22 @@
         "primaryInitials": "mess",
         "alternateInitials": [
           "mrss"
+        ],
+        "hybridPinyin": [
+          "miuess",
+          "merss",
+          "miuerss",
+          "mesais",
+          "miuesais",
+          "mersais",
+          "miuersais",
+          "messi",
+          "miuessi",
+          "merssi",
+          "miuerssi",
+          "mesaisi",
+          "miuesaisi",
+          "mersaisi"
         ]
       },
       "aliases": []
@@ -3426,7 +4954,8 @@
         "primaryPinyin": "friston3",
         "alternatePinyin": [],
         "primaryInitials": "friston3",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3438,7 +4967,11 @@
         "primaryPinyin": "yinxian",
         "alternatePinyin": [],
         "primaryInitials": "yx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yinx",
+          "yxian"
+        ]
       },
       "aliases": []
     },
@@ -3450,7 +4983,11 @@
         "primaryPinyin": "konggou",
         "alternatePinyin": [],
         "primaryInitials": "kg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kongg",
+          "kgou"
+        ]
       },
       "aliases": []
     },
@@ -3462,7 +4999,8 @@
         "primaryPinyin": "shengyuesongzangren",
         "alternatePinyin": [],
         "primaryInitials": "syszr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3474,7 +5012,11 @@
         "primaryPinyin": "hantan",
         "alternatePinyin": [],
         "primaryInitials": "ht",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hant",
+          "htan"
+        ]
       },
       "aliases": []
     },
@@ -3486,7 +5028,11 @@
         "primaryPinyin": "tifeng",
         "alternatePinyin": [],
         "primaryInitials": "tf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tif",
+          "tfeng"
+        ]
       },
       "aliases": []
     },
@@ -3498,7 +5044,11 @@
         "primaryPinyin": "linshi",
         "alternatePinyin": [],
         "primaryInitials": "ls",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lins",
+          "lshi"
+        ]
       },
       "aliases": []
     },
@@ -3510,7 +5060,11 @@
         "primaryPinyin": "cangtai",
         "alternatePinyin": [],
         "primaryInitials": "ct",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "cangt",
+          "ctai"
+        ]
       },
       "aliases": []
     },
@@ -3522,7 +5076,11 @@
         "primaryPinyin": "qingzhi",
         "alternatePinyin": [],
         "primaryInitials": "qz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "qingz",
+          "qzhi"
+        ]
       },
       "aliases": []
     },
@@ -3534,7 +5092,8 @@
         "primaryPinyin": "linlangshihuaiya",
         "alternatePinyin": [],
         "primaryInitials": "llshy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3546,7 +5105,8 @@
         "primaryPinyin": "chunjinaiyafala",
         "alternatePinyin": [],
         "primaryInitials": "cjayfl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3558,7 +5118,11 @@
         "primaryPinyin": "bingniang",
         "alternatePinyin": [],
         "primaryInitials": "bn",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bingn",
+          "bniang"
+        ]
       },
       "aliases": []
     },
@@ -3570,7 +5134,11 @@
         "primaryPinyin": "xingren",
         "alternatePinyin": [],
         "primaryInitials": "xr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xingr",
+          "xren"
+        ]
       },
       "aliases": []
     },
@@ -3582,7 +5150,8 @@
         "primaryPinyin": "dihuojiexika",
         "alternatePinyin": [],
         "primaryInitials": "dhjxk",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3594,7 +5163,11 @@
         "primaryPinyin": "weidi",
         "alternatePinyin": [],
         "primaryInitials": "wd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "weid",
+          "wdi"
+        ]
       },
       "aliases": []
     },
@@ -3606,7 +5179,15 @@
         "primaryPinyin": "daifeien",
         "alternatePinyin": [],
         "primaryInitials": "dfe",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "daife",
+          "dfeie",
+          "daifeie",
+          "dfen",
+          "daifen",
+          "dfeien"
+        ]
       },
       "aliases": []
     },
@@ -3618,7 +5199,11 @@
         "primaryPinyin": "cimei",
         "alternatePinyin": [],
         "primaryInitials": "cm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "cim",
+          "cmei"
+        ]
       },
       "aliases": []
     },
@@ -3630,7 +5215,15 @@
         "primaryPinyin": "hedelei",
         "alternatePinyin": [],
         "primaryInitials": "hdl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hedl",
+          "hdel",
+          "hedel",
+          "hdlei",
+          "hedlei",
+          "hdelei"
+        ]
       },
       "aliases": []
     },
@@ -3642,7 +5235,11 @@
         "primaryPinyin": "yueyue",
         "alternatePinyin": [],
         "primaryInitials": "yy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yuey",
+          "yyue"
+        ]
       },
       "aliases": []
     },
@@ -3654,7 +5251,11 @@
         "primaryPinyin": "zheguang",
         "alternatePinyin": [],
         "primaryInitials": "zg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zheg",
+          "zguang"
+        ]
       },
       "aliases": []
     },
@@ -3666,7 +5267,11 @@
         "primaryPinyin": "shenlu",
         "alternatePinyin": [],
         "primaryInitials": "sl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shenl",
+          "slu"
+        ]
       },
       "aliases": []
     },
@@ -3678,7 +5283,11 @@
         "primaryPinyin": "zhisong",
         "alternatePinyin": [],
         "primaryInitials": "zs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhis",
+          "zsong"
+        ]
       },
       "aliases": []
     },
@@ -3690,7 +5299,23 @@
         "primaryPinyin": "weiweianna",
         "alternatePinyin": [],
         "primaryInitials": "wwan",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "weiwan",
+          "wweian",
+          "weiweian",
+          "wwann",
+          "weiwann",
+          "wweiann",
+          "weiweiann",
+          "wwana",
+          "weiwana",
+          "wweiana",
+          "weiweiana",
+          "wwanna",
+          "weiwanna",
+          "wweianna"
+        ]
       },
       "aliases": []
     },
@@ -3702,7 +5327,11 @@
         "primaryPinyin": "suxin",
         "alternatePinyin": [],
         "primaryInitials": "sx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "sux",
+          "sxin"
+        ]
       },
       "aliases": []
     },
@@ -3714,7 +5343,15 @@
         "primaryPinyin": "haluode",
         "alternatePinyin": [],
         "primaryInitials": "hld",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hald",
+          "hluod",
+          "haluod",
+          "hlde",
+          "halde",
+          "hluode"
+        ]
       },
       "aliases": []
     },
@@ -3726,7 +5363,11 @@
         "primaryPinyin": "liexia",
         "alternatePinyin": [],
         "primaryInitials": "lx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "liex",
+          "lxia"
+        ]
       },
       "aliases": []
     },
@@ -3738,7 +5379,8 @@
         "primaryPinyin": "jian",
         "alternatePinyin": [],
         "primaryInitials": "j",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3750,7 +5392,11 @@
         "primaryPinyin": "wenmi",
         "alternatePinyin": [],
         "primaryInitials": "wm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "wenm",
+          "wmi"
+        ]
       },
       "aliases": []
     },
@@ -3762,7 +5408,11 @@
         "primaryPinyin": "laiyi",
         "alternatePinyin": [],
         "primaryInitials": "ly",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "laiy",
+          "lyi"
+        ]
       },
       "aliases": []
     },
@@ -3774,7 +5424,11 @@
         "primaryPinyin": "wanqing",
         "alternatePinyin": [],
         "primaryInitials": "wq",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "wanq",
+          "wqing"
+        ]
       },
       "aliases": []
     },
@@ -3786,7 +5440,11 @@
         "primaryPinyin": "xiaoman",
         "alternatePinyin": [],
         "primaryInitials": "xm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xiaom",
+          "xman"
+        ]
       },
       "aliases": []
     },
@@ -3798,7 +5456,11 @@
         "primaryPinyin": "zuole",
         "alternatePinyin": [],
         "primaryInitials": "zl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zuol",
+          "zle"
+        ]
       },
       "aliases": []
     },
@@ -3810,7 +5472,8 @@
         "primaryPinyin": "shu",
         "alternatePinyin": [],
         "primaryInitials": "s",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3822,7 +5485,11 @@
         "primaryPinyin": "hongsun",
         "alternatePinyin": [],
         "primaryInitials": "hs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hongs",
+          "hsun"
+        ]
       },
       "aliases": []
     },
@@ -3834,7 +5501,15 @@
         "primaryPinyin": "daohuosuo",
         "alternatePinyin": [],
         "primaryInitials": "dhs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "daohs",
+          "dhuos",
+          "daohuos",
+          "dhsuo",
+          "daohsuo",
+          "dhuosuo"
+        ]
       },
       "aliases": []
     },
@@ -3846,7 +5521,11 @@
         "primaryPinyin": "shuangyue",
         "alternatePinyin": [],
         "primaryInitials": "sy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shuangy",
+          "syue"
+        ]
       },
       "aliases": []
     },
@@ -3858,7 +5537,11 @@
         "primaryPinyin": "yisheng",
         "alternatePinyin": [],
         "primaryInitials": "ys",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yis",
+          "ysheng"
+        ]
       },
       "aliases": []
     },
@@ -3870,7 +5553,11 @@
         "primaryPinyin": "aila",
         "alternatePinyin": [],
         "primaryInitials": "al",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ail",
+          "ala"
+        ]
       },
       "aliases": []
     },
@@ -3882,7 +5569,11 @@
         "primaryPinyin": "lutuo",
         "alternatePinyin": [],
         "primaryInitials": "lt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lut",
+          "ltuo"
+        ]
       },
       "aliases": []
     },
@@ -3894,7 +5585,11 @@
         "primaryPinyin": "aoda",
         "alternatePinyin": [],
         "primaryInitials": "ad",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "aod",
+          "ada"
+        ]
       },
       "aliases": []
     },
@@ -3906,7 +5601,11 @@
         "primaryPinyin": "aluoma",
         "alternatePinyin": [],
         "primaryInitials": "alm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "aluom",
+          "alma"
+        ]
       },
       "aliases": []
     },
@@ -3918,7 +5617,15 @@
         "primaryPinyin": "asikalun",
         "alternatePinyin": [],
         "primaryInitials": "askl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "asikl",
+          "askal",
+          "asikal",
+          "asklun",
+          "asiklun",
+          "askalun"
+        ]
       },
       "aliases": []
     },
@@ -3930,7 +5637,8 @@
         "primaryPinyin": "phonor0",
         "alternatePinyin": [],
         "primaryInitials": "phonor0",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3942,7 +5650,8 @@
         "primaryPinyin": "lizhenruiqiangfen",
         "alternatePinyin": [],
         "primaryInitials": "lzrqf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -3954,7 +5663,11 @@
         "primaryPinyin": "mowang",
         "alternatePinyin": [],
         "primaryInitials": "mw",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "mow",
+          "mwang"
+        ]
       },
       "aliases": []
     },
@@ -3966,7 +5679,15 @@
         "primaryPinyin": "luogesi",
         "alternatePinyin": [],
         "primaryInitials": "lgs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "luogs",
+          "lges",
+          "luoges",
+          "lgsi",
+          "luogsi",
+          "lgesi"
+        ]
       },
       "aliases": []
     },
@@ -3980,6 +5701,22 @@
         "primaryInitials": "wsde",
         "alternateInitials": [
           "wsdr"
+        ],
+        "hybridPinyin": [
+          "weisde",
+          "wshende",
+          "weishende",
+          "wsdaie",
+          "weisdaie",
+          "wshendaie",
+          "weishendaie",
+          "wsder",
+          "weisder",
+          "wshender",
+          "weishender",
+          "wsdaier",
+          "weisdaier",
+          "wshendaier"
         ]
       },
       "aliases": []
@@ -3992,7 +5729,8 @@
         "primaryPinyin": "amiya(yiliao)",
         "alternatePinyin": [],
         "primaryInitials": "amy(yl)",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4004,7 +5742,11 @@
         "primaryPinyin": "shenxun",
         "alternatePinyin": [],
         "primaryInitials": "sx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shenx",
+          "sxun"
+        ]
       },
       "aliases": []
     },
@@ -4016,7 +5758,11 @@
         "primaryPinyin": "haini",
         "alternatePinyin": [],
         "primaryInitials": "hn",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hain",
+          "hni"
+        ]
       },
       "aliases": []
     },
@@ -4030,6 +5776,22 @@
         "primaryInitials": "weba",
         "alternateInitials": [
           "wrba"
+        ],
+        "hybridPinyin": [
+          "wueba",
+          "werba",
+          "wuerba",
+          "webia",
+          "wuebia",
+          "werbia",
+          "wuerbia",
+          "weban",
+          "wueban",
+          "werban",
+          "wuerban",
+          "webian",
+          "wuebian",
+          "werbian"
         ]
       },
       "aliases": []
@@ -4042,7 +5804,11 @@
         "primaryPinyin": "duqiao",
         "alternatePinyin": [],
         "primaryInitials": "dq",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "duq",
+          "dqiao"
+        ]
       },
       "aliases": []
     },
@@ -4054,7 +5820,11 @@
         "primaryPinyin": "nifu",
         "alternatePinyin": [],
         "primaryInitials": "nf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "nif",
+          "nfu"
+        ]
       },
       "aliases": []
     },
@@ -4066,7 +5836,11 @@
         "primaryPinyin": "xiren",
         "alternatePinyin": [],
         "primaryInitials": "xr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xir",
+          "xren"
+        ]
       },
       "aliases": []
     },
@@ -4078,7 +5852,11 @@
         "primaryPinyin": "suocao",
         "alternatePinyin": [],
         "primaryInitials": "sc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "suoc",
+          "scao"
+        ]
       },
       "aliases": []
     },
@@ -4090,7 +5868,11 @@
         "primaryPinyin": "hengsha",
         "alternatePinyin": [],
         "primaryInitials": "hs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hengs",
+          "hsha"
+        ]
       },
       "aliases": []
     },
@@ -4102,7 +5884,23 @@
         "primaryPinyin": "narentuya",
         "alternatePinyin": [],
         "primaryInitials": "nrty",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "narty",
+          "nrenty",
+          "narenty",
+          "nrtuy",
+          "nartuy",
+          "nrentuy",
+          "narentuy",
+          "nrtya",
+          "nartya",
+          "nrentya",
+          "narentya",
+          "nrtuya",
+          "nartuya",
+          "nrentuya"
+        ]
       },
       "aliases": []
     },
@@ -4114,7 +5912,11 @@
         "primaryPinyin": "peipei",
         "alternatePinyin": [],
         "primaryInitials": "pp",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "peip",
+          "ppei"
+        ]
       },
       "aliases": []
     },
@@ -4126,7 +5928,11 @@
         "primaryPinyin": "senxi",
         "alternatePinyin": [],
         "primaryInitials": "sx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "senx",
+          "sxi"
+        ]
       },
       "aliases": []
     },
@@ -4140,6 +5946,22 @@
         "primaryInitials": "qeck",
         "alternateInitials": [
           "qrck"
+        ],
+        "hybridPinyin": [
+          "qieck",
+          "qerck",
+          "qierck",
+          "qechak",
+          "qiechak",
+          "qerchak",
+          "qierchak",
+          "qecke",
+          "qiecke",
+          "qercke",
+          "qiercke",
+          "qechake",
+          "qiechake",
+          "qerchake"
         ]
       },
       "aliases": []
@@ -4152,7 +5974,15 @@
         "primaryPinyin": "laiousi",
         "alternatePinyin": [],
         "primaryInitials": "los",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "laios",
+          "lous",
+          "laious",
+          "losi",
+          "laiosi",
+          "lousi"
+        ]
       },
       "aliases": []
     },
@@ -4166,6 +5996,22 @@
         "primaryInitials": "mlxe",
         "alternateInitials": [
           "mlxr"
+        ],
+        "hybridPinyin": [
+          "malxe",
+          "mluxe",
+          "maluxe",
+          "mlxie",
+          "malxie",
+          "mluxie",
+          "maluxie",
+          "mlxer",
+          "malxer",
+          "mluxer",
+          "maluxer",
+          "mlxier",
+          "malxier",
+          "mluxier"
         ]
       },
       "aliases": []
@@ -4178,7 +6024,15 @@
         "primaryPinyin": "kaiselin",
         "alternatePinyin": [],
         "primaryInitials": "ksl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kaisl",
+          "ksel",
+          "kaisel",
+          "kslin",
+          "kaislin",
+          "kselin"
+        ]
       },
       "aliases": []
     },
@@ -4190,7 +6044,11 @@
         "primaryPinyin": "bobu",
         "alternatePinyin": [],
         "primaryInitials": "bb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bob",
+          "bbu"
+        ]
       },
       "aliases": []
     },
@@ -4202,7 +6060,8 @@
         "primaryPinyin": "weinaweiduoliya",
         "alternatePinyin": [],
         "primaryInitials": "wnwdly",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4214,7 +6073,11 @@
         "primaryPinyin": "yunji",
         "alternatePinyin": [],
         "primaryInitials": "yj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yunj",
+          "yji"
+        ]
       },
       "aliases": []
     },
@@ -4226,7 +6089,11 @@
         "primaryPinyin": "feilai",
         "alternatePinyin": [],
         "primaryInitials": "fl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "feil",
+          "flai"
+        ]
       },
       "aliases": []
     },
@@ -4238,7 +6105,11 @@
         "primaryPinyin": "caidu",
         "alternatePinyin": [],
         "primaryInitials": "cd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "caid",
+          "cdu"
+        ]
       },
       "aliases": []
     },
@@ -4250,7 +6121,15 @@
         "primaryPinyin": "shijunzhe",
         "alternatePinyin": [],
         "primaryInitials": "sjz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shijz",
+          "sjunz",
+          "shijunz",
+          "sjzhe",
+          "shijzhe",
+          "sjunzhe"
+        ]
       },
       "aliases": []
     },
@@ -4262,7 +6141,11 @@
         "primaryPinyin": "rendong",
         "alternatePinyin": [],
         "primaryInitials": "rd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "rend",
+          "rdong"
+        ]
       },
       "aliases": []
     },
@@ -4274,7 +6157,8 @@
         "primaryPinyin": "huangwulapulande",
         "alternatePinyin": [],
         "primaryInitials": "hwlpld",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4286,7 +6170,11 @@
         "primaryPinyin": "guiyan",
         "alternatePinyin": [],
         "primaryInitials": "gy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "guiy",
+          "gyan"
+        ]
       },
       "aliases": []
     },
@@ -4298,7 +6186,15 @@
         "primaryPinyin": "tekenuo",
         "alternatePinyin": [],
         "primaryInitials": "tkn",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tekn",
+          "tken",
+          "teken",
+          "tknuo",
+          "teknuo",
+          "tkenuo"
+        ]
       },
       "aliases": []
     },
@@ -4310,7 +6206,23 @@
         "primaryPinyin": "yinxingjici",
         "alternatePinyin": [],
         "primaryInitials": "yxjc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yinxjc",
+          "yxingjc",
+          "yinxingjc",
+          "yxjic",
+          "yinxjic",
+          "yxingjic",
+          "yinxingjic",
+          "yxjci",
+          "yinxjci",
+          "yxingjci",
+          "yinxingjci",
+          "yxjici",
+          "yinxjici",
+          "yxingjici"
+        ]
       },
       "aliases": []
     },
@@ -4322,7 +6234,11 @@
         "primaryPinyin": "xingzhu",
         "alternatePinyin": [],
         "primaryInitials": "xz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xingz",
+          "xzhu"
+        ]
       },
       "aliases": []
     },
@@ -4334,7 +6250,11 @@
         "primaryPinyin": "xunlan",
         "alternatePinyin": [],
         "primaryInitials": "xl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xunl",
+          "xlan"
+        ]
       },
       "aliases": []
     },
@@ -4346,7 +6266,11 @@
         "primaryPinyin": "zhuhuang",
         "alternatePinyin": [],
         "primaryInitials": "zh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhuh",
+          "zhuang"
+        ]
       },
       "aliases": []
     },
@@ -4358,7 +6282,8 @@
         "primaryPinyin": "yu",
         "alternatePinyin": [],
         "primaryInitials": "y",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4372,6 +6297,14 @@
         "primaryInitials": "nwe",
         "alternateInitials": [
           "nwr"
+        ],
+        "hybridPinyin": [
+          "nuowe",
+          "nweie",
+          "nuoweie",
+          "nwer",
+          "nuower",
+          "nweier"
         ]
       },
       "aliases": []
@@ -4384,7 +6317,23 @@
         "primaryPinyin": "yindelaixi",
         "alternatePinyin": [],
         "primaryInitials": "ydlx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "yindlx",
+          "ydelx",
+          "yindelx",
+          "ydlaix",
+          "yindlaix",
+          "ydelaix",
+          "yindelaix",
+          "ydlxi",
+          "yindlxi",
+          "ydelxi",
+          "yindelxi",
+          "ydlaixi",
+          "yindlaixi",
+          "ydelaixi"
+        ]
       },
       "aliases": []
     },
@@ -4396,7 +6345,15 @@
         "primaryPinyin": "shuidengxin",
         "alternatePinyin": [],
         "primaryInitials": "sdx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shuidx",
+          "sdengx",
+          "shuidengx",
+          "sdxin",
+          "shuidxin",
+          "sdengxin"
+        ]
       },
       "aliases": []
     },
@@ -4408,7 +6365,11 @@
         "primaryPinyin": "muqian",
         "alternatePinyin": [],
         "primaryInitials": "mq",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "muq",
+          "mqian"
+        ]
       },
       "aliases": []
     },
@@ -4420,7 +6381,11 @@
         "primaryPinyin": "simang",
         "alternatePinyin": [],
         "primaryInitials": "sm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "sim",
+          "smang"
+        ]
       },
       "aliases": []
     },
@@ -4432,7 +6397,11 @@
         "primaryPinyin": "chengfeng",
         "alternatePinyin": [],
         "primaryInitials": "cf",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "chengf",
+          "cfeng"
+        ]
       },
       "aliases": []
     },
@@ -4444,7 +6413,11 @@
         "primaryPinyin": "alanna",
         "alternatePinyin": [],
         "primaryInitials": "aln",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "alann",
+          "alna"
+        ]
       },
       "aliases": []
     },
@@ -4456,7 +6429,8 @@
         "primaryPinyin": "mon3tr",
         "alternatePinyin": [],
         "primaryInitials": "mon3tr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4468,7 +6442,8 @@
         "primaryPinyin": "confess47",
         "alternatePinyin": [],
         "primaryInitials": "confess47",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4480,7 +6455,11 @@
         "primaryPinyin": "lingyin",
         "alternatePinyin": [],
         "primaryInitials": "ly",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lingy",
+          "lyin"
+        ]
       },
       "aliases": []
     },
@@ -4492,7 +6471,8 @@
         "primaryPinyin": "xinyangjiaobanji",
         "alternatePinyin": [],
         "primaryInitials": "xyjbj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4504,7 +6484,15 @@
         "primaryPinyin": "leimiuan",
         "alternatePinyin": [],
         "primaryInitials": "lma",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "leima",
+          "lmiua",
+          "leimiua",
+          "lman",
+          "leiman",
+          "lmiuan"
+        ]
       },
       "aliases": []
     },
@@ -4516,7 +6504,8 @@
         "primaryPinyin": "xinyuenengtianshi",
         "alternatePinyin": [],
         "primaryInitials": "xynts",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4528,7 +6517,8 @@
         "primaryPinyin": "misschristine",
         "alternatePinyin": [],
         "primaryInitials": "misschristine",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4540,7 +6530,11 @@
         "primaryPinyin": "dibi",
         "alternatePinyin": [],
         "primaryInitials": "db",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dib",
+          "dbi"
+        ]
       },
       "aliases": []
     },
@@ -4552,7 +6546,11 @@
         "primaryPinyin": "jiushen",
         "alternatePinyin": [],
         "primaryInitials": "js",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jius",
+          "jshen"
+        ]
       },
       "aliases": []
     },
@@ -4564,7 +6562,15 @@
         "primaryPinyin": "luwuguan",
         "alternatePinyin": [],
         "primaryInitials": "lwg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "luwg",
+          "lwug",
+          "luwug",
+          "lwguan",
+          "luwguan",
+          "lwuguan"
+        ]
       },
       "aliases": []
     },
@@ -4576,7 +6582,23 @@
         "primaryPinyin": "sitingjingzhe",
         "alternatePinyin": [],
         "primaryInitials": "stjz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "sitjz",
+          "stingjz",
+          "sitingjz",
+          "stjingz",
+          "sitjingz",
+          "stingjingz",
+          "sitingjingz",
+          "stjzhe",
+          "sitjzhe",
+          "stingjzhe",
+          "sitingjzhe",
+          "stjingzhe",
+          "sitjingzhe",
+          "stingjingzhe"
+        ]
       },
       "aliases": []
     },
@@ -4588,7 +6610,11 @@
         "primaryPinyin": "dianhu",
         "alternatePinyin": [],
         "primaryInitials": "dh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dianh",
+          "dhu"
+        ]
       },
       "aliases": []
     },
@@ -4600,7 +6626,11 @@
         "primaryPinyin": "songtong",
         "alternatePinyin": [],
         "primaryInitials": "st",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "songt",
+          "stong"
+        ]
       },
       "aliases": []
     },
@@ -4612,7 +6642,11 @@
         "primaryPinyin": "jixing",
         "alternatePinyin": [],
         "primaryInitials": "jx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jix",
+          "jxing"
+        ]
       },
       "aliases": []
     },
@@ -4624,7 +6658,8 @@
         "primaryPinyin": "yao",
         "alternatePinyin": [],
         "primaryInitials": "y",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4636,7 +6671,23 @@
         "primaryPinyin": "zhanyexingxiong",
         "alternatePinyin": [],
         "primaryInitials": "zyxx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhanyxx",
+          "zyexx",
+          "zhanyexx",
+          "zyxingx",
+          "zhanyxingx",
+          "zyexingx",
+          "zhanyexingx",
+          "zyxxiong",
+          "zhanyxxiong",
+          "zyexxiong",
+          "zhanyexxiong",
+          "zyxingxiong",
+          "zhanyxingxiong",
+          "zyexingxiong"
+        ]
       },
       "aliases": []
     },
@@ -4648,7 +6699,8 @@
         "primaryPinyin": "youtiansiruomai",
         "alternatePinyin": [],
         "primaryInitials": "ytsrm",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4660,7 +6712,23 @@
         "primaryPinyin": "bafanhailing",
         "alternatePinyin": [],
         "primaryInitials": "bfhl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "bafhl",
+          "bfanhl",
+          "bafanhl",
+          "bfhail",
+          "bafhail",
+          "bfanhail",
+          "bafanhail",
+          "bfhling",
+          "bafhling",
+          "bfanhling",
+          "bafanhling",
+          "bfhailing",
+          "bafhailing",
+          "bfanhailing"
+        ]
       },
       "aliases": []
     },
@@ -4672,7 +6740,15 @@
         "primaryPinyin": "ruoyemu",
         "alternatePinyin": [],
         "primaryInitials": "rym",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "ruoym",
+          "ryem",
+          "ruoyem",
+          "rymu",
+          "ruoymu",
+          "ryemu"
+        ]
       },
       "aliases": []
     },
@@ -4684,7 +6760,23 @@
         "primaryPinyin": "sanjiaochuhua",
         "alternatePinyin": [],
         "primaryInitials": "sjch",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "sanjch",
+          "sjiaoch",
+          "sanjiaoch",
+          "sjchuh",
+          "sanjchuh",
+          "sjiaochuh",
+          "sanjiaochuh",
+          "sjchua",
+          "sanjchua",
+          "sjiaochua",
+          "sanjiaochua",
+          "sjchuhua",
+          "sanjchuhua",
+          "sjiaochuhua"
+        ]
       },
       "aliases": []
     },
@@ -4696,7 +6788,23 @@
         "primaryPinyin": "fengchuanxiangzi",
         "alternatePinyin": [],
         "primaryInitials": "fcxz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "fengcxz",
+          "fchuanxz",
+          "fengchuanxz",
+          "fcxiangz",
+          "fengcxiangz",
+          "fchuanxiangz",
+          "fengchuanxiangz",
+          "fcxzi",
+          "fengcxzi",
+          "fchuanxzi",
+          "fengchuanxzi",
+          "fcxiangzi",
+          "fengcxiangzi",
+          "fchuanxiangzi"
+        ]
       },
       "aliases": []
     },
@@ -4708,7 +6816,11 @@
         "primaryPinyin": "dongshi",
         "alternatePinyin": [],
         "primaryInitials": "ds",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dongs",
+          "dshi"
+        ]
       },
       "aliases": []
     },
@@ -4720,7 +6832,11 @@
         "primaryPinyin": "zheya",
         "alternatePinyin": [],
         "primaryInitials": "zy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zhey",
+          "zya"
+        ]
       },
       "aliases": []
     },
@@ -4732,7 +6848,11 @@
         "primaryPinyin": "zhenyan",
         "alternatePinyin": [],
         "primaryInitials": "zy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "zheny",
+          "zyan"
+        ]
       },
       "aliases": []
     },
@@ -4744,7 +6864,11 @@
         "primaryPinyin": "xielu",
         "alternatePinyin": [],
         "primaryInitials": "xl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xiel",
+          "xlu"
+        ]
       },
       "aliases": []
     },
@@ -4756,7 +6880,15 @@
         "primaryPinyin": "hadiya",
         "alternatePinyin": [],
         "primaryInitials": "hdy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hady",
+          "hdiy",
+          "hadiy",
+          "hdya",
+          "hadya",
+          "hdiya"
+        ]
       },
       "aliases": []
     },
@@ -4768,7 +6900,11 @@
         "primaryPinyin": "xuelie",
         "alternatePinyin": [],
         "primaryInitials": "xl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xuel",
+          "xlie"
+        ]
       },
       "aliases": []
     },
@@ -4780,7 +6916,23 @@
         "primaryPinyin": "suguangxingyuan",
         "alternatePinyin": [],
         "primaryInitials": "sgxy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "sugxy",
+          "sguangxy",
+          "suguangxy",
+          "sgxingy",
+          "sugxingy",
+          "sguangxingy",
+          "suguangxingy",
+          "sgxyuan",
+          "sugxyuan",
+          "sguangxyuan",
+          "suguangxyuan",
+          "sgxingyuan",
+          "sugxingyuan",
+          "sguangxingyuan"
+        ]
       },
       "aliases": []
     },
@@ -4792,7 +6944,23 @@
         "primaryPinyin": "shenglingchuxue",
         "alternatePinyin": [],
         "primaryInitials": "slcx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shenglcx",
+          "slingcx",
+          "shenglingcx",
+          "slchux",
+          "shenglchux",
+          "slingchux",
+          "shenglingchux",
+          "slcxue",
+          "shenglcxue",
+          "slingcxue",
+          "shenglingcxue",
+          "slchuxue",
+          "shenglchuxue",
+          "slingchuxue"
+        ]
       },
       "aliases": []
     },
@@ -4804,7 +6972,23 @@
         "primaryPinyin": "linyuyinhui",
         "alternatePinyin": [],
         "primaryInitials": "lyyh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "linyyh",
+          "lyuyh",
+          "linyuyh",
+          "lyyinh",
+          "linyyinh",
+          "lyuyinh",
+          "linyuyinh",
+          "lyyhui",
+          "linyyhui",
+          "lyuyhui",
+          "linyuyhui",
+          "lyyinhui",
+          "linyyinhui",
+          "lyuyinhui"
+        ]
       },
       "aliases": []
     },
@@ -4816,7 +7000,15 @@
         "primaryPinyin": "tiankonghe",
         "alternatePinyin": [],
         "primaryInitials": "tkh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tiankh",
+          "tkongh",
+          "tiankongh",
+          "tkhe",
+          "tiankhe",
+          "tkonghe"
+        ]
       },
       "aliases": []
     },
@@ -4828,7 +7020,11 @@
         "primaryPinyin": "xiangshi",
         "alternatePinyin": [],
         "primaryInitials": "xs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xiangs",
+          "xshi"
+        ]
       },
       "aliases": []
     },
@@ -4840,7 +7036,15 @@
         "primaryPinyin": "nasiti",
         "alternatePinyin": [],
         "primaryInitials": "nst",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "nast",
+          "nsit",
+          "nasit",
+          "nsti",
+          "nasti",
+          "nsiti"
+        ]
       },
       "aliases": []
     },
@@ -4852,7 +7056,15 @@
         "primaryPinyin": "baiduren",
         "alternatePinyin": [],
         "primaryInitials": "bdr",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "baidr",
+          "bdur",
+          "baidur",
+          "bdren",
+          "baidren",
+          "bduren"
+        ]
       },
       "aliases": []
     },
@@ -4864,7 +7076,8 @@
         "primaryPinyin": "xieyingtiaoxiangshi",
         "alternatePinyin": [],
         "primaryInitials": "xytxs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4876,7 +7089,11 @@
         "primaryPinyin": "titi",
         "alternatePinyin": [],
         "primaryInitials": "tt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tit",
+          "tti"
+        ]
       },
       "aliases": []
     },
@@ -4888,7 +7105,8 @@
         "primaryPinyin": "ju",
         "alternatePinyin": [],
         "primaryInitials": "j",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4900,7 +7118,11 @@
         "primaryPinyin": "fengxu",
         "alternatePinyin": [],
         "primaryInitials": "fx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "fengx",
+          "fxu"
+        ]
       },
       "aliases": []
     },
@@ -4912,7 +7134,8 @@
         "primaryPinyin": "chirenmingxiaochen",
         "alternatePinyin": [],
         "primaryInitials": "crmxc",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4924,7 +7147,8 @@
         "primaryPinyin": "wang",
         "alternatePinyin": [],
         "primaryInitials": "w",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -4936,7 +7160,11 @@
         "primaryPinyin": "fuzou",
         "alternatePinyin": [],
         "primaryInitials": "fz",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "fuz",
+          "fzou"
+        ]
       },
       "aliases": []
     },
@@ -4948,7 +7176,15 @@
         "primaryPinyin": "beiluonei",
         "alternatePinyin": [],
         "primaryInitials": "bln",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "beiln",
+          "bluon",
+          "beiluon",
+          "blnei",
+          "beilnei",
+          "bluonei"
+        ]
       },
       "aliases": []
     },
@@ -4960,7 +7196,15 @@
         "primaryPinyin": "botani",
         "alternatePinyin": [],
         "primaryInitials": "btn",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "botn",
+          "btan",
+          "botan",
+          "btni",
+          "botni",
+          "btani"
+        ]
       },
       "aliases": []
     },
@@ -4972,7 +7216,11 @@
         "primaryPinyin": "wujiu",
         "alternatePinyin": [],
         "primaryInitials": "wj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "wuj",
+          "wjiu"
+        ]
       },
       "aliases": []
     },
@@ -4984,7 +7232,23 @@
         "primaryPinyin": "nuchaolindong",
         "alternatePinyin": [],
         "primaryInitials": "ncld",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "nucld",
+          "nchaold",
+          "nuchaold",
+          "nclind",
+          "nuclind",
+          "nchaolind",
+          "nuchaolind",
+          "ncldong",
+          "nucldong",
+          "nchaoldong",
+          "nuchaoldong",
+          "nclindong",
+          "nuclindong",
+          "nchaolindong"
+        ]
       },
       "aliases": []
     },
@@ -4996,7 +7260,8 @@
         "primaryPinyin": "gallus2",
         "alternatePinyin": [],
         "primaryInitials": "gallus2",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -5008,7 +7273,11 @@
         "primaryPinyin": "liexiang",
         "alternatePinyin": [],
         "primaryInitials": "lx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "liex",
+          "lxiang"
+        ]
       },
       "aliases": []
     },
@@ -5020,7 +7289,11 @@
         "primaryPinyin": "weiyi",
         "alternatePinyin": [],
         "primaryInitials": "wy",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "weiy",
+          "wyi"
+        ]
       },
       "aliases": []
     },
@@ -5034,6 +7307,22 @@
         "primaryInitials": "klxe",
         "alternateInitials": [
           "klxr"
+        ],
+        "hybridPinyin": [
+          "kelxe",
+          "kluxe",
+          "keluxe",
+          "klxie",
+          "kelxie",
+          "kluxie",
+          "keluxie",
+          "klxer",
+          "kelxer",
+          "kluxer",
+          "keluxer",
+          "klxier",
+          "kelxier",
+          "kluxier"
         ]
       },
       "aliases": []
@@ -5048,7 +7337,8 @@
         "primaryInitials": "kexsht",
         "alternateInitials": [
           "krxsht"
-        ]
+        ],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -5060,7 +7350,8 @@
         "primaryPinyin": "luodedaoyinmidui",
         "alternatePinyin": [],
         "primaryInitials": "lddymd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -5072,7 +7363,8 @@
         "primaryPinyin": "leilanglongskongbao",
         "alternatePinyin": [],
         "primaryInitials": "lllskb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -5084,7 +7376,8 @@
         "primaryPinyin": "yanhulongzilan",
         "alternatePinyin": [],
         "primaryInitials": "yhlzl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -5096,7 +7389,15 @@
         "primaryPinyin": "peideluo",
         "alternatePinyin": [],
         "primaryInitials": "pdl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "peidl",
+          "pdel",
+          "peidel",
+          "pdluo",
+          "peidluo",
+          "pdeluo"
+        ]
       },
       "aliases": []
     },
@@ -5108,7 +7409,11 @@
         "primaryPinyin": "miuyin",
         "alternatePinyin": [],
         "primaryInitials": "my",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "miuy",
+          "myin"
+        ]
       },
       "aliases": []
     },
@@ -5120,7 +7425,15 @@
         "primaryPinyin": "jixieshi",
         "alternatePinyin": [],
         "primaryInitials": "jxs",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jixs",
+          "jxies",
+          "jixies",
+          "jxshi",
+          "jixshi",
+          "jxieshi"
+        ]
       },
       "aliases": []
     },
@@ -5132,7 +7445,11 @@
         "primaryPinyin": "shixi",
         "alternatePinyin": [],
         "primaryInitials": "sx",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shix",
+          "sxi"
+        ]
       },
       "aliases": []
     },
@@ -5144,7 +7461,15 @@
         "primaryPinyin": "jiaxinta",
         "alternatePinyin": [],
         "primaryInitials": "jxt",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jiaxt",
+          "jxint",
+          "jiaxint",
+          "jxta",
+          "jiaxta",
+          "jxinta"
+        ]
       },
       "aliases": []
     },
@@ -5156,7 +7481,11 @@
         "primaryPinyin": "shanbi",
         "alternatePinyin": [],
         "primaryInitials": "sb",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "shanb",
+          "sbi"
+        ]
       },
       "aliases": []
     },
@@ -5168,7 +7497,8 @@
         "primaryPinyin": "yuyuananjielina",
         "alternatePinyin": [],
         "primaryInitials": "yyajln",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -5180,7 +7510,15 @@
         "primaryPinyin": "hulangwan",
         "alternatePinyin": [],
         "primaryInitials": "hlw",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "hulw",
+          "hlangw",
+          "hulangw",
+          "hlwan",
+          "hulwan",
+          "hlangwan"
+        ]
       },
       "aliases": []
     },
@@ -5192,7 +7530,8 @@
         "primaryPinyin": "yueyuyoujiali",
         "alternatePinyin": [],
         "primaryInitials": "yyyjl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -5204,7 +7543,15 @@
         "primaryPinyin": "aiguisi",
         "alternatePinyin": [],
         "primaryInitials": "ags",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "aigs",
+          "aguis",
+          "aiguis",
+          "agsi",
+          "aigsi",
+          "aguisi"
+        ]
       },
       "aliases": []
     },
@@ -5216,7 +7563,15 @@
         "primaryPinyin": "jiechengli",
         "alternatePinyin": [],
         "primaryInitials": "jcl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jiecl",
+          "jchengl",
+          "jiechengl",
+          "jcli",
+          "jiecli",
+          "jchengli"
+        ]
       },
       "aliases": []
     },
@@ -5228,7 +7583,11 @@
         "primaryPinyin": "lugu",
         "alternatePinyin": [],
         "primaryInitials": "lg",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "lug",
+          "lgu"
+        ]
       },
       "aliases": []
     },
@@ -5240,7 +7599,8 @@
         "primaryPinyin": "detuolaiduo",
         "alternatePinyin": [],
         "primaryInitials": "dtld",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": []
       },
       "aliases": []
     },
@@ -5252,7 +7612,23 @@
         "primaryPinyin": "kelaimensha",
         "alternatePinyin": [],
         "primaryInitials": "klms",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "kelms",
+          "klaims",
+          "kelaims",
+          "klmens",
+          "kelmens",
+          "klaimens",
+          "kelaimens",
+          "klmsha",
+          "kelmsha",
+          "klaimsha",
+          "kelaimsha",
+          "klmensha",
+          "kelmensha",
+          "klaimensha"
+        ]
       },
       "aliases": []
     },
@@ -5264,7 +7640,11 @@
         "primaryPinyin": "xingling",
         "alternatePinyin": [],
         "primaryInitials": "xl",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "xingl",
+          "xling"
+        ]
       },
       "aliases": []
     },
@@ -5276,7 +7656,11 @@
         "primaryPinyin": "jingjiang",
         "alternatePinyin": [],
         "primaryInitials": "jj",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "jingj",
+          "jjiang"
+        ]
       },
       "aliases": []
     },
@@ -5290,6 +7674,14 @@
         "primaryInitials": "aej",
         "alternateInitials": [
           "arj"
+        ],
+        "hybridPinyin": [
+          "aoej",
+          "aerj",
+          "aoerj",
+          "aejia",
+          "aoejia",
+          "aerjia"
         ]
       },
       "aliases": []
@@ -5302,7 +7694,11 @@
         "primaryPinyin": "guodu",
         "alternatePinyin": [],
         "primaryInitials": "gd",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "guod",
+          "gdu"
+        ]
       },
       "aliases": []
     },
@@ -5314,7 +7710,11 @@
         "primaryPinyin": "donghe",
         "alternatePinyin": [],
         "primaryInitials": "dh",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "dongh",
+          "dhe"
+        ]
       },
       "aliases": []
     },
@@ -5326,7 +7726,15 @@
         "primaryPinyin": "talula",
         "alternatePinyin": [],
         "primaryInitials": "tll",
-        "alternateInitials": []
+        "alternateInitials": [],
+        "hybridPinyin": [
+          "tall",
+          "tlul",
+          "talul",
+          "tlla",
+          "talla",
+          "tlula"
+        ]
       },
       "aliases": []
     }

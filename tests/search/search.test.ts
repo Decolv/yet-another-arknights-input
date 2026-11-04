@@ -20,9 +20,22 @@ function rankingOperator(
       alternatePinyin: [],
       primaryInitials: 'ot',
       alternateInitials: [],
+      hybridPinyin: [],
       ...nameSearch,
     },
     aliases,
+  };
+}
+
+function rankingAlias(text: string, search: Partial<SearchVariants> = {}): AliasRecord {
+  return {
+    text,
+    primaryPinyin: 'other',
+    alternatePinyin: [],
+    primaryInitials: 'ot',
+    alternateInitials: [],
+    hybridPinyin: [],
+    ...search,
   };
 }
 
@@ -32,19 +45,47 @@ const priorityOperators: OperatorRecord[] = [
   rankingOperator('prts:103', '官方备拼音', { alternatePinyin: ['tier'] }),
   rankingOperator('prts:104', '官方主首字母', { primaryInitials: 'tier' }),
   rankingOperator('prts:105', '官方备首字母', { alternateInitials: ['tier'] }),
-  rankingOperator('prts:106', '别名中文', {}, [{ text: 'tier', primaryPinyin: 'other', alternatePinyin: [], primaryInitials: 'ot', alternateInitials: [] }]),
-  rankingOperator('prts:107', '别名主拼音', {}, [{ text: '别名', primaryPinyin: 'tier', alternatePinyin: [], primaryInitials: 'ot', alternateInitials: [] }]),
-  rankingOperator('prts:108', '别名备拼音', {}, [{ text: '别名', primaryPinyin: 'other', alternatePinyin: ['tier'], primaryInitials: 'ot', alternateInitials: [] }]),
-  rankingOperator('prts:109', '别名主首字母', {}, [{ text: '别名', primaryPinyin: 'other', alternatePinyin: [], primaryInitials: 'tier', alternateInitials: [] }]),
-  rankingOperator('prts:110', '别名备首字母', {}, [{ text: '别名', primaryPinyin: 'other', alternatePinyin: [], primaryInitials: 'ot', alternateInitials: ['tier'] }]),
+  rankingOperator('prts:106', '官方混合拼写', { hybridPinyin: ['tier'] }),
+  rankingOperator('prts:107', '别名中文', {}, [rankingAlias('tier')]),
+  rankingOperator('prts:108', '别名主拼音', {}, [rankingAlias('别名', { primaryPinyin: 'tier' })]),
+  rankingOperator('prts:109', '别名备拼音', {}, [rankingAlias('别名', { alternatePinyin: ['tier'] })]),
+  rankingOperator('prts:110', '别名主首字母', {}, [rankingAlias('别名', { primaryInitials: 'tier' })]),
+  rankingOperator('prts:111', '别名备首字母', {}, [rankingAlias('别名', { alternateInitials: ['tier'] })]),
+  rankingOperator('prts:112', '别名混合拼写', {}, [rankingAlias('别名', { hybridPinyin: ['tier'] })]),
 ];
 
-it.each(['铃兰', '铃', 'linglan', 'ling', 'll'])('ranks 铃兰 first for %s', (query) => {
+it.each(['铃兰', '铃', 'linglan', 'ling', 'll', 'lingl', 'llan'])('ranks 铃兰 first for %s', (query) => {
   expect(searchOperators(operators, query, 10)[0]?.operator.name).toBe('铃兰');
 });
 
 it.each(['chongyue', 'zhongyue', 'cy', 'zy'])('ranks 重岳 first for %s', (query) => {
   expect(searchOperators(operators, query, 10)[0]?.operator.name).toBe('重岳');
+});
+
+it.each(['zyan', 'zheny'])('ranks 真言 first for hybrid spelling %s', (query) => {
+  const snapshot = snapshotJson as OperatorSnapshot;
+  expect(searchOperators(snapshot.operators, query, 10)[0]?.operator.name).toBe('真言');
+});
+
+it.each(['zya', 'zhen'])('finds 真言 with the partial spelling %s', (query) => {
+  const snapshot = snapshotJson as OperatorSnapshot;
+  expect(searchOperators(snapshot.operators, query, 100).map(({ operator }) => operator.name)).toContain('真言');
+});
+
+it('ranks a whole-pinyin prefix above a hybrid prefix', () => {
+  const snapshot = snapshotJson as OperatorSnapshot;
+  const names = searchOperators(snapshot.operators, 'zhen', 10).map(({ operator }) => operator.name);
+
+  expect(names[0]).toBe('真理');
+  expect(names).toContain('真言');
+});
+
+it('reports the hybrid field for 真言', () => {
+  const snapshot = snapshotJson as OperatorSnapshot;
+  const result = searchOperators(snapshot.operators, 'zyan', 100)
+    .find(({ operator }) => operator.id === 'prts:391');
+
+  expect(result).toMatchObject({ matchedBy: 'name-pinyin-hybrid', matchedText: '真言' });
 });
 
 it.each([
@@ -93,8 +134,8 @@ it('ranks exact matches above prefixes and prefixes above substrings', () => {
 
 it('uses every adjacent fixed field priority for equally exact matches', () => {
   expect(searchOperators(priorityOperators, 'tier', 100).map(({ operator }) => operator.id)).toEqual([
-    'prts:101', 'prts:102', 'prts:103', 'prts:104', 'prts:105',
-    'prts:106', 'prts:107', 'prts:108', 'prts:109', 'prts:110',
+    'prts:101', 'prts:102', 'prts:103', 'prts:104', 'prts:105', 'prts:106',
+    'prts:107', 'prts:108', 'prts:109', 'prts:110', 'prts:111', 'prts:112',
   ]);
 });
 

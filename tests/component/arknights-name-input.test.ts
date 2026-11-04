@@ -229,6 +229,15 @@ describe('ArknightsNameInputElement autocomplete interaction', () => {
     expect(images[0]?.src).toMatch(/^https:\/\//);
   });
 
+  it('offers 真言 for the hybrid spelling zyan', () => {
+    const { input, list } = componentParts();
+
+    edit(input, 'zyan');
+
+    const names = Array.from(list.querySelectorAll('[role="option"] .name'), (node) => node.textContent);
+    expect(names[0]).toBe('真言');
+  });
+
   it('moves aria-activedescendant with wrapping ArrowDown and ArrowUp', () => {
     const { element, input, list } = componentParts();
     element.maxResults = 2;
