@@ -63,12 +63,8 @@ async function main(): Promise<void> {
       fetchRoster: (now) => fetchPrtsRoster(prtsClient, now),
       fetchAvatarUrls: (roster) => fetchPrtsAvatarUrls(prtsClient, roster),
       fetchAliases: async (names) => {
-        console.log(`Moegirl rendered pages requested: ${names.length}`);
-        try {
-          return await fetchMoegirlRenderedAliases(moegirlClient, names);
-        } finally {
-          console.log(`Moegirl rendered pages processed: ${names.length}`);
-        }
+        console.log(`Skipping Moegirl alias fetching for ${names.length} operators`);
+        return { aliasesByName: new Map(), warnings: [] };
       },
     },
   });

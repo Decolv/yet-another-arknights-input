@@ -26,21 +26,24 @@ function aliasFields(alias: AliasRecord): SearchField[] {
   ];
 }
 
-function operatorFields(operator: OperatorRecord): SearchField[] {
-  return [
+function operatorFields(operator: OperatorRecord, disableAliases: boolean): SearchField[] {
+  const nameFields = [
     { matchedBy: 'name', matchedText: operator.name, priority: 10, value: operator.name },
     { matchedBy: 'name-pinyin', matchedText: operator.name, priority: 9, value: operator.nameSearch.primaryPinyin },
     ...operator.nameSearch.alternatePinyin.map((value): SearchField => ({ matchedBy: 'name-pinyin-alt', matchedText: operator.name, priority: 8, value })),
     { matchedBy: 'name-initials', matchedText: operator.name, priority: 7, value: operator.nameSearch.primaryInitials },
     ...operator.nameSearch.alternateInitials.map((value): SearchField => ({ matchedBy: 'name-initials-alt', matchedText: operator.name, priority: 6, value })),
-    ...operator.aliases.flatMap(aliasFields),
-  ];
+  ] as SearchField[];
+
+  if (disableAliases) return nameFields;
+
+  return [...nameFields, ...operator.aliases.flatMap(aliasFields)];
 }
 
-function bestMatch(operator: OperatorRecord, query: string): SearchResult | null {
+function bestMatch(operator: OperatorRecord, query: string, disableAliases: boolean): SearchResult | null {
   let best: SearchResult | null = null;
 
-  for (const field of operatorFields(operator)) {
+  for (const field of operatorFields(operator, disableAliases)) {
     const quality = matchQuality(normalizeSearchText(field.value), query);
     if (quality === 0) continue;
     if (best === null || quality > best.quality || (quality === best.quality && field.priority > best.fieldPriority)) {
@@ -51,12 +54,12 @@ function bestMatch(operator: OperatorRecord, query: string): SearchResult | null
   return best;
 }
 
-export function searchOperators(operators: readonly OperatorRecord[], query: string, limit: number): SearchResult[] {
+export function searchOperators(operators: readonly OperatorRecord[], query: string, limit: number, disableAliases = false): SearchResult[] {
   const normalizedQuery = normalizeSearchText(query);
   if (normalizedQuery.length === 0 || !Number.isInteger(limit) || limit <= 0) return [];
 
   return operators
-    .map((operator) => bestMatch(operator, normalizedQuery))
+    .map((operator) => bestMatch(operator, normalizedQuery, disableAliases))
     .filter((result): result is SearchResult => result !== null)
     .sort((left, right) => right.quality - left.quality || right.fieldPriority - left.fieldPriority || stableIdNumber(left.operator.id) - stableIdNumber(right.operator.id))
     .slice(0, limit);

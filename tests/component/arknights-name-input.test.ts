@@ -57,12 +57,13 @@ function press(input: HTMLInputElement, key: string): KeyboardEvent {
 }
 
 describe('ArknightsNameInputElement public API', () => {
-  it('observes exactly the four public attributes', () => {
+  it('observes exactly the five public attributes', () => {
     expect(ArknightsNameInputElement.observedAttributes).toEqual([
       'value',
       'placeholder',
       'disabled',
       'max-results',
+      'disable-aliases',
     ]);
   });
 

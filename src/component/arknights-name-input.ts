@@ -27,6 +27,7 @@ export class ArknightsNameInputElement extends HTMLElement {
     'placeholder',
     'disabled',
     'max-results',
+    'disable-aliases',
   ];
 
   static readonly defaultMaxResults = 8;
@@ -38,6 +39,7 @@ export class ArknightsNameInputElement extends HTMLElement {
   readonly #listId: string;
   #value = '';
   #maxResults = ArknightsNameInputElement.defaultMaxResults;
+  #disableAliases = true;
   #selectedCharacter: SelectedCharacter | null = null;
   #isReflectingAttribute = false;
   #results: SearchResult[] = [];
@@ -152,6 +154,9 @@ export class ArknightsNameInputElement extends HTMLElement {
       case 'max-results':
         this.#setMaxResults(newValue ?? '', true);
         break;
+      case 'disable-aliases':
+        this.#setDisableAliases(newValue !== null, true);
+        break;
     }
   }
 
@@ -187,6 +192,14 @@ export class ArknightsNameInputElement extends HTMLElement {
 
   set maxResults(value: number) {
     this.#setMaxResults(value, true);
+  }
+
+  get disableAliases(): boolean {
+    return this.#disableAliases;
+  }
+
+  set disableAliases(value: boolean) {
+    this.#setDisableAliases(Boolean(value), true);
   }
 
   get valid(): boolean {
@@ -236,11 +249,17 @@ export class ArknightsNameInputElement extends HTMLElement {
     if (reflect) this.#reflectBooleanAttribute('disabled', value);
   }
 
+  #setDisableAliases(value: boolean, reflect: boolean): void {
+    this.#disableAliases = value;
+    if (reflect) this.#reflectBooleanAttribute('disable-aliases', value);
+  }
+
   #search(): void {
     this.#results = searchOperators(
       this.#operators,
       this.#input.value,
       this.#maxResults,
+      this.#disableAliases,
     );
     this.#activeIndex = -1;
     this.#renderResults();

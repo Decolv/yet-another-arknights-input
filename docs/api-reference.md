@@ -12,6 +12,7 @@
 | `placeholder` | `placeholder` | `string` | 内部输入框占位文字 |
 | `disabled` | `disabled` | `boolean` | 禁用输入 |
 | `max-results` | `maxResults` | `number` | 最多显示候选数，默认 8，必须为正整数 |
+| `disable-aliases` | `disableAliases` | `boolean` | 禁用别名搜索（仅保留干员正式名和拼音），默认 `true` |
 
 只读属性：
 
